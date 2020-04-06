@@ -7,7 +7,6 @@ import java.util.Random;
 public class Support {
     Faker faker = new Faker();
 
-
     public String getRandomSymbols() {
         String SALTCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
         StringBuilder salt = new StringBuilder();

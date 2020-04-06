@@ -6,12 +6,12 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import support.Domain;
+import static client_App.GekoDriver.*;
 
 public class Login implements Domain {
     @Test
-    public void LoginTest ()  {
-        System.setProperty("webdriver.gecko.driver", "src/main/resources/geckodriver-v-0.26.0");
-        FirefoxDriver driver = new FirefoxDriver();
+    public void LoginTest_Positive()  {
+        FirefoxDriver driver = firefoxDriver();
         WebDriverWait wait = new WebDriverWait(driver,10);
 
         driver.get(LOGIN);
@@ -19,9 +19,8 @@ public class Login implements Domain {
 
         driver.findElement(By.id("loginId")).sendKeys("EvgQA");
         driver.findElement(By.id("passwordId")).sendKeys("12345678");
+        driver.findElement(By.xpath("//*[@id=\"__next\"]/div/div/section/div/section/div[2]/div[2]/div[3]/button")).click();
+        driver.close();
 
-        // ned to find element button and finish test
-//        driver.findElement(By.)
-//        driver.close();
     }
 }
