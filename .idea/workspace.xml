@@ -1,7 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="69d1e222-5815-4ea6-92e4-f4cf1bdece43" name="Default Changelist" comment="" />
+    <list default="true" id="69d1e222-5815-4ea6-92e4-f4cf1bdece43" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/Streambet_New.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/chromedriver" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/client_App/ChromeDriverBuild.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/chromiumdriver_80.0.3987" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/client_App/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/client_App/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/client_App/RecoveryPass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/client_App/RecoveryPass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/client_App/Registration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/client_App/Registration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chromiumdriver_80.0.3987" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Run.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Run.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/client_App/GekoDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/client_App/GekoDriver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/client_App/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/client_App/Login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/client_App/RecoveryPass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/client_App/RecoveryPass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/client_App/Registration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/client_App/Registration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/support/Domain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/support/Domain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/support/Support.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/support/Support.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,35 +54,41 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
-    <option name="UPDATE_TYPE" value="MERGE" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
   </component>
   <component name="ProjectId" id="1a277CMFtXx1MK8JTaOI2Prb9Ae" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Homework" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3045977" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
-  <component name="RunManager" selected="JUnit.RecoveryPass.recoveryPassTest">
-    <configuration name="Run" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Run" />
+  <component name="RunManager" selected="JUnit.Login.LoginTest_Positive">
+    <configuration name="ChromeDriverBuild.chromeDriver" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Streambet_New" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="client_App.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="client_App" />
+      <option name="MAIN_CLASS_NAME" value="client_App.ChromeDriverBuild" />
+      <option name="METHOD_NAME" value="chromeDriver" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -115,11 +159,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Login.LoginTest_Positive" />
+        <item itemvalue="JUnit.ChromeDriverBuild.chromeDriver" />
         <item itemvalue="JUnit.RecoveryPass.recoveryPassTest" />
         <item itemvalue="JUnit.Registration.RegistrationTest_Positive" />
-        <item itemvalue="JUnit.Login.LoginTest_Positive" />
         <item itemvalue="JUnit.Registration.RegistrationTest" />
-        <item itemvalue="Application.Run" />
       </list>
     </recent_temporary>
   </component>
@@ -136,7 +180,20 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
@@ -146,30 +203,34 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="555" y="215" width="847" height="684" key="#Project_Structure/0.27.1920.1053@0.27.1920.1053" timestamp="1585921753673" />
-    <state x="743" y="304" width="424" height="485" key="FileChooserDialogImpl" timestamp="1586165551556">
+    <state x="743" y="304" width="424" height="485" key="FileChooserDialogImpl" timestamp="1587735309746">
       <screen x="0" y="27" width="1920" height="1027" />
     </state>
-    <state x="743" y="304" width="424" height="485" key="FileChooserDialogImpl/0.27.1920.1027@0.27.1920.1027" timestamp="1586165551556" />
+    <state x="743" y="304" width="424" height="485" key="FileChooserDialogImpl/0.27.1920.1027@0.27.1920.1027" timestamp="1587735309746" />
     <state x="743" y="311" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1585921969045" />
-    <state width="1874" height="270" key="GridCell.Tab.0.bottom" timestamp="1586168221724">
-      <screen x="0" y="27" width="1920" height="1027" />
+    <state width="1874" height="421" key="GridCell.Tab.0.bottom" timestamp="1588078599133">
+      <screen x="0" y="27" width="1920" height="1029" />
     </state>
-    <state width="1874" height="270" key="GridCell.Tab.0.bottom/0.27.1920.1027@0.27.1920.1027" timestamp="1586168221724" />
+    <state width="1874" height="420" key="GridCell.Tab.0.bottom/0.27.1920.1027@0.27.1920.1027" timestamp="1587735311286" />
+    <state width="1874" height="421" key="GridCell.Tab.0.bottom/0.27.1920.1029@0.27.1920.1029" timestamp="1588078599133" />
     <state width="1874" height="340" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1586035396773" />
-    <state width="1874" height="270" key="GridCell.Tab.0.center" timestamp="1586168221724">
-      <screen x="0" y="27" width="1920" height="1027" />
+    <state width="1874" height="421" key="GridCell.Tab.0.center" timestamp="1588078599133">
+      <screen x="0" y="27" width="1920" height="1029" />
     </state>
-    <state width="1874" height="270" key="GridCell.Tab.0.center/0.27.1920.1027@0.27.1920.1027" timestamp="1586168221724" />
+    <state width="1874" height="420" key="GridCell.Tab.0.center/0.27.1920.1027@0.27.1920.1027" timestamp="1587735311286" />
+    <state width="1874" height="421" key="GridCell.Tab.0.center/0.27.1920.1029@0.27.1920.1029" timestamp="1588078599133" />
     <state width="1874" height="340" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1586035396772" />
-    <state width="1874" height="270" key="GridCell.Tab.0.left" timestamp="1586168221724">
-      <screen x="0" y="27" width="1920" height="1027" />
+    <state width="1874" height="421" key="GridCell.Tab.0.left" timestamp="1588078599133">
+      <screen x="0" y="27" width="1920" height="1029" />
     </state>
-    <state width="1874" height="270" key="GridCell.Tab.0.left/0.27.1920.1027@0.27.1920.1027" timestamp="1586168221724" />
+    <state width="1874" height="420" key="GridCell.Tab.0.left/0.27.1920.1027@0.27.1920.1027" timestamp="1587735311285" />
+    <state width="1874" height="421" key="GridCell.Tab.0.left/0.27.1920.1029@0.27.1920.1029" timestamp="1588078599133" />
     <state width="1874" height="340" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1586035396772" />
-    <state width="1874" height="270" key="GridCell.Tab.0.right" timestamp="1586168221724">
-      <screen x="0" y="27" width="1920" height="1027" />
+    <state width="1874" height="421" key="GridCell.Tab.0.right" timestamp="1588078599133">
+      <screen x="0" y="27" width="1920" height="1029" />
     </state>
-    <state width="1874" height="270" key="GridCell.Tab.0.right/0.27.1920.1027@0.27.1920.1027" timestamp="1586168221724" />
+    <state width="1874" height="420" key="GridCell.Tab.0.right/0.27.1920.1027@0.27.1920.1027" timestamp="1587735311286" />
+    <state width="1874" height="421" key="GridCell.Tab.0.right/0.27.1920.1029@0.27.1920.1029" timestamp="1588078599133" />
     <state width="1874" height="340" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1586035396773" />
     <state width="1874" height="340" key="GridCell.Tab.1.bottom" timestamp="1586035396773">
       <screen x="0" y="27" width="1920" height="1053" />
@@ -187,10 +248,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1874" height="340" key="GridCell.Tab.1.right/0.27.1920.1053@0.27.1920.1053" timestamp="1586035396773" />
-    <state x="449" y="184" width="1022" height="731" key="SettingsEditor" timestamp="1586119584733">
+    <state x="449" y="184" width="1022" height="731" key="SettingsEditor" timestamp="1587534474995">
       <screen x="0" y="27" width="1920" height="1027" />
     </state>
-    <state x="449" y="184" width="1022" height="731" key="SettingsEditor/0.27.1920.1027@0.27.1920.1027" timestamp="1586119584733" />
+    <state x="449" y="184" width="1022" height="731" key="SettingsEditor/0.27.1920.1027@0.27.1920.1027" timestamp="1587534474995" />
     <state x="449" y="188" width="1022" height="737" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1585921935940" />
   </component>
 </project>

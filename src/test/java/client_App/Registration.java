@@ -3,6 +3,7 @@ package client_App;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -10,10 +11,14 @@ import support.Domain;
 import support.Support;
 
 import static client_App.GekoDriver.firefoxDriver;
+import static client_App.ChromeDriverBuild.*;
 
 public class Registration extends Support implements Domain {
     @Test
     public void RegistrationTest_Positive() {
+//        ChromeDriver chromeDriver = chromeDriver ();
+//        WebDriverWait chromeWaiter = new WebDriverWait(chromeDriver, 10);
+
         FirefoxDriver driver = firefoxDriver();
         WebDriverWait wait = new WebDriverWait(driver,20);
 
