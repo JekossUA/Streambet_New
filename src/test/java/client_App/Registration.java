@@ -16,29 +16,30 @@ import static client_App.ChromeDriverBuild.*;
 public class Registration extends Support implements Domain {
     @Test
     public void RegistrationTest_Positive() {
-//        ChromeDriver chromeDriver = chromeDriver ();
-//        WebDriverWait chromeWaiter = new WebDriverWait(chromeDriver, 10);
+        ChromeDriver chromeDriver = chromeDriver ();
+        WebDriverWait chromeWaiter = new WebDriverWait(chromeDriver, 10);
 
-        FirefoxDriver driver = firefoxDriver();
-        WebDriverWait wait = new WebDriverWait(driver,20);
+//        FirefoxDriver firefoxDriver = firefoxDriver();
+//        WebDriverWait firefoxWaiter = new WebDriverWait(firefoxDriver,10);
 
-        driver.get(REGISTRATION);
-        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("loginId")));
-        driver.findElement(By.id("loginId")).sendKeys(setRandomFirstName());
-        driver.findElement(By.id("emeilId")).sendKeys(setRandomEmail());
+        chromeDriver.get(REGISTRATION);
+        chromeWaiter.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("loginId")));
+        chromeDriver.findElement(By.id("loginId")).sendKeys(setRandomFirstName());
+        chromeDriver.findElement(By.id("emeilId")).sendKeys(setRandomEmail());
 
         String password = setRandomPhoneNum();
-        driver.findElement(By.id("passwordId")).sendKeys(password);
-        driver.findElement(By.id("passwordRepeatId")).sendKeys(password);
-        driver.findElement(By.xpath("//*[@id=\"__next\"]/div/div/section/div/section/div[2]/div[2]/div[5]/label")).click();
+        chromeDriver.findElement(By.id("passwordId")).sendKeys(password);
+        chromeDriver.findElement(By.id("passwordRepeatId")).sendKeys(password);
+        chromeDriver.findElement(By.cssSelector("#__next > div > div > section > div > section > div.OverlayForms_overlay-" +
+                "form__3Wo8U > div.OverlayForms_overlay-form__wrapper__s9rus > div:nth-child(5) > div > label")).click();
 
-        WebElement currenciesDropdown = driver.findElement(By.id("selectId"));
+        WebElement currenciesDropdown = chromeDriver.findElement(By.id("selectId"));
         currenciesDropdown.click();
         currenciesDropdown.findElements(By.tagName("option")).get(2).click();
 
-        driver.findElement(By.xpath("//*[@id=\"__next\"]/div/div/section/div/section/div[2]/div[2]/div[7]/button")).click();
+        chromeDriver.findElement(By.xpath("//*[@id=\"__next\"]/div/div/section/div/section/div[2]/div[2]/div[7]/button")).click();
 
-        driver.close();
+        chromeDriver.close();
 
     }
 }

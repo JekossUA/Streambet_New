@@ -21,6 +21,14 @@
   <component name="ChangeListManager">
     <list default="true" id="69d1e222-5815-4ea6-92e4-f4cf1bdece43" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Run.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Run.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/client_App/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/client_App/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/client_App/RecoveryPass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/client_App/RecoveryPass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/client_App/Registration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/client_App/Registration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/Streambet_New.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/client_App/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/client_App/Login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/client_App/RecoveryPass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/client_App/RecoveryPass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/client_App/Registration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/client_App/Registration.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,13 +61,20 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3045977" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
-  <component name="RunManager" selected="JUnit.Login.LoginTest_Positive">
-    <configuration name="ChromeDriverBuild.chromeDriver" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Run">
+    <configuration name="Run" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Run" />
+      <module name="Streambet_New" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Login" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Streambet_New" />
       <extension name="coverage">
         <pattern>
@@ -68,8 +83,39 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="client_App" />
-      <option name="MAIN_CLASS_NAME" value="client_App.ChromeDriverBuild" />
-      <option name="METHOD_NAME" value="chromeDriver" />
+      <option name="MAIN_CLASS_NAME" value="client_App.Login" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Login.LoginTest_Negative_4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Streambet_New" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="client_App.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="client_App" />
+      <option name="MAIN_CLASS_NAME" value="client_App.Login" />
+      <option name="METHOD_NAME" value="LoginTest_Negative_4" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Login.LoginTest_Negative_5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Streambet_New" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="client_App.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="client_App" />
+      <option name="MAIN_CLASS_NAME" value="client_App.Login" />
+      <option name="METHOD_NAME" value="LoginTest_Negative_5" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -91,61 +137,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RecoveryPass.recoveryPassTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Streambet_New" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="client_App.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="client_App" />
-      <option name="MAIN_CLASS_NAME" value="client_App.RecoveryPass" />
-      <option name="METHOD_NAME" value="recoveryPassTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Registration.RegistrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Streambet_New" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="client_App.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="client_App" />
-      <option name="MAIN_CLASS_NAME" value="client_App.Registration" />
-      <option name="METHOD_NAME" value="RegistrationTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Registration.RegistrationTest_Positive" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Streambet_New" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="client_App.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="client_App" />
-      <option name="MAIN_CLASS_NAME" value="client_App.Registration" />
-      <option name="METHOD_NAME" value="RegistrationTest_Positive" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Run" />
+        <item itemvalue="JUnit.Login" />
         <item itemvalue="JUnit.Login.LoginTest_Positive" />
-        <item itemvalue="JUnit.ChromeDriverBuild.chromeDriver" />
-        <item itemvalue="JUnit.RecoveryPass.recoveryPassTest" />
-        <item itemvalue="JUnit.Registration.RegistrationTest_Positive" />
-        <item itemvalue="JUnit.Registration.RegistrationTest" />
+        <item itemvalue="JUnit.Login.LoginTest_Negative_5" />
+        <item itemvalue="JUnit.Login.LoginTest_Negative_4" />
       </list>
     </recent_temporary>
   </component>
@@ -190,50 +188,55 @@
     </state>
     <state x="743" y="304" width="424" height="485" key="FileChooserDialogImpl/0.27.1920.1027@0.27.1920.1027" timestamp="1587735309746" />
     <state x="743" y="311" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1585921969045" />
-    <state width="1874" height="217" key="GridCell.Tab.0.bottom" timestamp="1588078784637">
+    <state width="1874" height="320" key="GridCell.Tab.0.bottom" timestamp="1588874774899">
       <screen x="0" y="27" width="1920" height="1029" />
     </state>
     <state width="1874" height="420" key="GridCell.Tab.0.bottom/0.27.1920.1027@0.27.1920.1027" timestamp="1587735311286" />
-    <state width="1874" height="217" key="GridCell.Tab.0.bottom/0.27.1920.1029@0.27.1920.1029" timestamp="1588078784637" />
+    <state width="1874" height="320" key="GridCell.Tab.0.bottom/0.27.1920.1029@0.27.1920.1029" timestamp="1588874774899" />
     <state width="1874" height="340" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1586035396773" />
-    <state width="1874" height="217" key="GridCell.Tab.0.center" timestamp="1588078784637">
+    <state width="1874" height="320" key="GridCell.Tab.0.center" timestamp="1588874774899">
       <screen x="0" y="27" width="1920" height="1029" />
     </state>
     <state width="1874" height="420" key="GridCell.Tab.0.center/0.27.1920.1027@0.27.1920.1027" timestamp="1587735311286" />
-    <state width="1874" height="217" key="GridCell.Tab.0.center/0.27.1920.1029@0.27.1920.1029" timestamp="1588078784637" />
+    <state width="1874" height="320" key="GridCell.Tab.0.center/0.27.1920.1029@0.27.1920.1029" timestamp="1588874774899" />
     <state width="1874" height="340" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1586035396772" />
-    <state width="1874" height="217" key="GridCell.Tab.0.left" timestamp="1588078784637">
+    <state width="1874" height="320" key="GridCell.Tab.0.left" timestamp="1588874774899">
       <screen x="0" y="27" width="1920" height="1029" />
     </state>
     <state width="1874" height="420" key="GridCell.Tab.0.left/0.27.1920.1027@0.27.1920.1027" timestamp="1587735311285" />
-    <state width="1874" height="217" key="GridCell.Tab.0.left/0.27.1920.1029@0.27.1920.1029" timestamp="1588078784637" />
+    <state width="1874" height="320" key="GridCell.Tab.0.left/0.27.1920.1029@0.27.1920.1029" timestamp="1588874774899" />
     <state width="1874" height="340" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1586035396772" />
-    <state width="1874" height="217" key="GridCell.Tab.0.right" timestamp="1588078784637">
+    <state width="1874" height="320" key="GridCell.Tab.0.right" timestamp="1588874774899">
       <screen x="0" y="27" width="1920" height="1029" />
     </state>
     <state width="1874" height="420" key="GridCell.Tab.0.right/0.27.1920.1027@0.27.1920.1027" timestamp="1587735311286" />
-    <state width="1874" height="217" key="GridCell.Tab.0.right/0.27.1920.1029@0.27.1920.1029" timestamp="1588078784637" />
+    <state width="1874" height="320" key="GridCell.Tab.0.right/0.27.1920.1029@0.27.1920.1029" timestamp="1588874774899" />
     <state width="1874" height="340" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1586035396773" />
-    <state width="1874" height="340" key="GridCell.Tab.1.bottom" timestamp="1586035396773">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state width="1874" height="335" key="GridCell.Tab.1.bottom" timestamp="1588874614539">
+      <screen x="0" y="27" width="1920" height="1029" />
     </state>
+    <state width="1874" height="335" key="GridCell.Tab.1.bottom/0.27.1920.1029@0.27.1920.1029" timestamp="1588874614539" />
     <state width="1874" height="340" key="GridCell.Tab.1.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1586035396773" />
-    <state width="1874" height="340" key="GridCell.Tab.1.center" timestamp="1586035396773">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state width="1874" height="335" key="GridCell.Tab.1.center" timestamp="1588874614539">
+      <screen x="0" y="27" width="1920" height="1029" />
     </state>
+    <state width="1874" height="335" key="GridCell.Tab.1.center/0.27.1920.1029@0.27.1920.1029" timestamp="1588874614539" />
     <state width="1874" height="340" key="GridCell.Tab.1.center/0.27.1920.1053@0.27.1920.1053" timestamp="1586035396773" />
-    <state width="1874" height="340" key="GridCell.Tab.1.left" timestamp="1586035396773">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state width="1874" height="335" key="GridCell.Tab.1.left" timestamp="1588874614539">
+      <screen x="0" y="27" width="1920" height="1029" />
     </state>
+    <state width="1874" height="335" key="GridCell.Tab.1.left/0.27.1920.1029@0.27.1920.1029" timestamp="1588874614539" />
     <state width="1874" height="340" key="GridCell.Tab.1.left/0.27.1920.1053@0.27.1920.1053" timestamp="1586035396773" />
-    <state width="1874" height="340" key="GridCell.Tab.1.right" timestamp="1586035396773">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state width="1874" height="335" key="GridCell.Tab.1.right" timestamp="1588874614539">
+      <screen x="0" y="27" width="1920" height="1029" />
     </state>
+    <state width="1874" height="335" key="GridCell.Tab.1.right/0.27.1920.1029@0.27.1920.1029" timestamp="1588874614539" />
     <state width="1874" height="340" key="GridCell.Tab.1.right/0.27.1920.1053@0.27.1920.1053" timestamp="1586035396773" />
-    <state x="449" y="184" width="1022" height="731" key="SettingsEditor" timestamp="1587534474995">
-      <screen x="0" y="27" width="1920" height="1027" />
+    <state x="449" y="184" width="1022" height="731" key="SettingsEditor" timestamp="1588842034253">
+      <screen x="0" y="27" width="1920" height="1029" />
     </state>
     <state x="449" y="184" width="1022" height="731" key="SettingsEditor/0.27.1920.1027@0.27.1920.1027" timestamp="1587534474995" />
+    <state x="449" y="184" key="SettingsEditor/0.27.1920.1029@0.27.1920.1029" timestamp="1588842034253" />
     <state x="449" y="188" width="1022" height="737" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1585921935940" />
   </component>
 </project>

@@ -13,18 +13,18 @@ import static client_App.ChromeDriverBuild.*;
 public class RecoveryPass implements Domain {
     @Test
     public void recoveryPassTest () {
-//        ChromeDriver chromeDriver = chromeDriver ();
-//        WebDriverWait chromeWaiter = new WebDriverWait(chromeDriver, 10);
+        ChromeDriver chromeDriver = chromeDriver ();
+        WebDriverWait chromeWaiter = new WebDriverWait(chromeDriver, 10);
 
-        FirefoxDriver driver = firefoxDriver();
-        WebDriverWait wait = new WebDriverWait(driver, 20);
+//        FirefoxDriver firefoxDriver = firefoxDriver();
+//        WebDriverWait firefoxWaiter = new WebDriverWait(firefoxDriver,10);
 
-        driver.get(RECOVERYPASS);
-        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//*[@id=\"__next\"]/div/div/section" +
+        chromeDriver.get(RECOVERYPASS);
+        chromeWaiter.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//*[@id=\"__next\"]/div/div/section" +
                 "/div/section/div[2]/div[2]/div[1]/input")));
-        driver.findElement(By.xpath("//*[@id=\"__next\"]/div/div/section" +
+        chromeDriver.findElement(By.xpath("//*[@id=\"__next\"]/div/div/section" +
                 "/div/section/div[2]/div[2]/div[1]/input")).sendKeys("evgqa66@yopmail.com");
-        driver.findElement(By.xpath("//*[@id=\"__next\"]/div/div/section/div/section/div[2]/div[2]/div[2]/button")).click();
-        driver.close();
+        chromeDriver.findElement(By.xpath("//*[@id=\"__next\"]/div/div/section/div/section/div[2]/div[2]/div[2]/button")).click();
+        chromeDriver.close();
     }
 }
