@@ -29,14 +29,13 @@ public class Login implements Domain {
         chromeDriver.findElement(By.id("loginId")).sendKeys("evgqa1220@yopmail.com");
         chromeDriver.findElement(By.id("passwordId")).sendKeys("12345678");
         chromeDriver.findElement(By.xpath("//*[@id=\"__next\"]/div/div/section/div/section/div[2]/div[2]/div[3]/button")).click();
-
-//        String token = chromeDriver.getLocalStorage().getItem("Key");
-//        if (token != null) {
-//            System.out.println(token);
-//            chromeDriver.close();
-//        }
-        chromeDriver.close();
-        System.out.println("Login passed");
+        chromeWaiter.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.tagName("footer")));
+        String token = chromeDriver.getLocalStorage().getItem("token");
+        if (token != null) {
+            System.out.println(token);
+            chromeDriver.close();
+            System.out.println("Login passed");
+        }
     }
     @Test
     public void LoginTest_Negative_1() {
