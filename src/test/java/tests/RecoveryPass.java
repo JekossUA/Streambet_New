@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import support.Domain;
 
-import static tests.ChromeDriverBuild.*;
+import static tests.ChromeDriverBuilder.*;
 
 public class RecoveryPass implements Domain {
     ChromeDriver chromeDriver = chromeDriver ();

@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import support.Domain;
 import support.Support;
 
-import static tests.ChromeDriverBuild.*;
+import static tests.ChromeDriverBuilder.*;
 
 public class Registration extends Support implements Domain {
     ChromeDriver chromeDriver = chromeDriver ();
