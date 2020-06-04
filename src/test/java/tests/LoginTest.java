@@ -26,7 +26,7 @@ public class LoginTest extends LoginPage implements Domain {
                 testSettings.chromeDriver.close();
             }
         } catch (Exception e){
-            testSettings.screenshot.createScreenshot("LoginTest_Positive");
+            testSettings.screenshotBuilder.createScreenshot("LoginTest_Positive", testSettings.chromeDriver);
             testSettings.chromeDriver.close();
         }
     }
@@ -49,7 +49,7 @@ public class LoginTest extends LoginPage implements Domain {
                 testSettings.chromeDriver.close();
             }
         }catch (Exception e){
-            testSettings.screenshot.createScreenshot("LoginTest_Negative_EmptyLogin");
+            testSettings.screenshotBuilder.createScreenshot("LoginTest_Negative_EmptyLogin", testSettings.chromeDriver);
             testSettings.chromeDriver.close();
         }
 
@@ -74,7 +74,7 @@ public class LoginTest extends LoginPage implements Domain {
             System.out.println("Empty password passed");
 
         } catch (Exception e){
-            testSettings.screenshot.createScreenshot("LoginTest_Negative_EmptyPassword");
+            testSettings.screenshotBuilder.createScreenshot("LoginTest_Negative_EmptyPassword", testSettings.chromeDriver);
             testSettings.chromeDriver.close();
         }
     }
@@ -96,7 +96,7 @@ public class LoginTest extends LoginPage implements Domain {
             testSettings.chromeDriver.close();
             System.out.println("Empty fields passed");
         }catch (Exception e){
-            testSettings.screenshot.createScreenshot("LoginTest_Negative_EmptyFields");
+            testSettings.screenshotBuilder.createScreenshot("LoginTest_Negative_EmptyFields", testSettings.chromeDriver);
             testSettings.chromeDriver.close();
         }
 
@@ -121,7 +121,7 @@ public class LoginTest extends LoginPage implements Domain {
 
             System.out.println("Wrong login passed");
         }catch (Exception e){
-            testSettings.screenshot.createScreenshot("LoginTest_Negative_WrongLogin");
+            testSettings.screenshotBuilder.createScreenshot("LoginTest_Negative_WrongLogin", testSettings.chromeDriver);
             testSettings.chromeDriver.close();
         }
 
@@ -145,7 +145,7 @@ public class LoginTest extends LoginPage implements Domain {
 
             System.out.println("Wrong password passed");
         } catch (Exception e){
-            testSettings.screenshot.createScreenshot("LoginTest_Negative_WrongPassword");
+            testSettings.screenshotBuilder.createScreenshot("LoginTest_Negative_WrongPassword", testSettings.chromeDriver);
             testSettings.chromeDriver.close();
         }
     }

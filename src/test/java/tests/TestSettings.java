@@ -7,7 +7,7 @@ public class TestSettings extends ChromeDriverBuilder {
 
     ChromeDriver chromeDriver = chromeDriver ();
     WebDriverWait chromeWaiter = new WebDriverWait(chromeDriver, 10);
-    Screenshot screenshot = new Screenshot();
+    ScreenshotBuilder screenshotBuilder = new ScreenshotBuilder();
 
     public void runMaximizeWindow () {
         chromeDriver.manage().window().maximize();
