@@ -1,13 +1,13 @@
-package tests;
+package support;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class TestSettings extends ChromeDriverBuilder {
 
-    ChromeDriver chromeDriver = chromeDriver ();
-    WebDriverWait chromeWaiter = new WebDriverWait(chromeDriver, 10);
-    ScreenshotBuilder screenshotBuilder = new ScreenshotBuilder();
+   public ChromeDriver chromeDriver = chromeDriver ();
+    public WebDriverWait chromeWaiter = new WebDriverWait(chromeDriver, 10);
+    public ScreenshotBuilder screenshotBuilder = new ScreenshotBuilder();
 
     public void runMaximizeWindow () {
         chromeDriver.manage().window().maximize();

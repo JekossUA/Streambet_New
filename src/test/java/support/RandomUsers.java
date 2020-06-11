@@ -4,7 +4,7 @@ import com.github.javafaker.Faker;
 
 import java.util.Random;
 
-public class Support {
+public class RandomUsers {
     Faker faker = new Faker();
 
     public String getRandomSymbols() {

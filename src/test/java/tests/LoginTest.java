@@ -4,12 +4,15 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.LoginPage;
-import support.Domain;
+import support.*;
+
 
 
 public class LoginTest extends LoginPage implements Domain {
+
     @Test
     public void LoginTest_Positive() throws Exception  {
+        RandomUsers randomUsers = new RandomUsers();
         TestSettings testSettings = new TestSettings();
         testSettings.runMaximizeWindow();
         try {

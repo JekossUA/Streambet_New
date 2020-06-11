@@ -1,4 +1,4 @@
-package tests;
+package support;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 import ru.yandex.qatools.ashot.AShot;

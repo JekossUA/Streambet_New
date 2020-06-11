@@ -20,15 +20,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69d1e222-5815-4ea6-92e4-f4cf1bdece43" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/ScreenshotBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/screenshots/LoginTest_Negative_WrongLogin - 11 06 2020_16 25.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/RegistrationPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/support/Support.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/support/RandomUsers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/ChromeDriverBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/support/ChromeDriverBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LoginTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/Screenshot.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/TestSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TestSettings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/RecoveryPass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/RecoveryPass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/Registration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/Registration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/ScreenshotBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/support/ScreenshotBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/TestSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/support/TestSettings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/ChromeDriverBuilder.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/tests/LoginTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/LoginTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/Screenshot.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/TestSettings.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/TestSettings.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/RecoveryPass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/Registration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/ScreenshotBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/TestSettings.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,18 +74,26 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Homework" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3045977" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="support" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="support" />
+    </key>
   </component>
   <component name="RunManager" selected="JUnit.LoginTest">
     <configuration name="LoginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Streambet_New" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.*" />
+          <option name="PATTERN" value="support.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -93,7 +108,7 @@
       <module name="Streambet_New" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.*" />
+          <option name="PATTERN" value="support.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -109,7 +124,7 @@
       <module name="Streambet_New" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.*" />
+          <option name="PATTERN" value="support.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -141,7 +156,7 @@
       <module name="Streambet_New" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.*" />
+          <option name="PATTERN" value="support.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -199,47 +214,51 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="555" y="215" width="847" height="684" key="#Project_Structure/0.27.1920.1053@0.27.1920.1053" timestamp="1585921753673" />
+    <state x="717" y="432" width="486" height="222" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1591883527598">
+      <screen x="0" y="27" width="1920" height="1029" />
+    </state>
+    <state x="717" y="432" width="486" height="222" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.27.1920.1029@0.27.1920.1029" timestamp="1591883527598" />
     <state x="276" y="27" width="1349" height="1029" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1591271256608">
       <screen x="0" y="27" width="1920" height="1029" />
     </state>
     <state x="276" y="27" width="1349" height="1029" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.27.1920.1029@0.27.1920.1029" timestamp="1591271256608" />
-    <state x="693" y="288" width="524" height="503" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1589810542025">
+    <state x="693" y="288" width="524" height="503" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1591883536189">
       <screen x="0" y="27" width="1920" height="1029" />
     </state>
-    <state x="693" y="288" width="524" height="503" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1920.1029@0.27.1920.1029" timestamp="1589810542025" />
+    <state x="693" y="288" width="524" height="503" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1920.1029@0.27.1920.1029" timestamp="1591883536189" />
     <state width="525" height="526" key="DebuggerActiveHint" timestamp="1590494552849">
       <screen x="0" y="27" width="1920" height="1029" />
     </state>
     <state width="525" height="526" key="DebuggerActiveHint/0.27.1920.1029@0.27.1920.1029" timestamp="1590494552849" />
-    <state x="743" y="305" width="424" height="484" key="FileChooserDialogImpl" timestamp="1591176933473">
+    <state x="743" y="305" width="424" height="484" key="FileChooserDialogImpl" timestamp="1591882561285">
       <screen x="0" y="27" width="1920" height="1029" />
     </state>
     <state x="743" y="304" width="424" height="485" key="FileChooserDialogImpl/0.27.1920.1027@0.27.1920.1027" timestamp="1587735309746" />
-    <state x="743" y="305" width="424" height="484" key="FileChooserDialogImpl/0.27.1920.1029@0.27.1920.1029" timestamp="1591176933473" />
+    <state x="743" y="305" width="424" height="484" key="FileChooserDialogImpl/0.27.1920.1029@0.27.1920.1029" timestamp="1591882561285" />
     <state x="743" y="311" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1585921969045" />
-    <state width="1874" height="261" key="GridCell.Tab.0.bottom" timestamp="1591278111628">
+    <state width="1874" height="145" key="GridCell.Tab.0.bottom" timestamp="1591882026507">
       <screen x="0" y="27" width="1920" height="1029" />
     </state>
     <state width="1874" height="420" key="GridCell.Tab.0.bottom/0.27.1920.1027@0.27.1920.1027" timestamp="1587735311286" />
-    <state width="1874" height="261" key="GridCell.Tab.0.bottom/0.27.1920.1029@0.27.1920.1029" timestamp="1591278111628" />
+    <state width="1874" height="145" key="GridCell.Tab.0.bottom/0.27.1920.1029@0.27.1920.1029" timestamp="1591882026507" />
     <state width="1874" height="340" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1586035396773" />
-    <state width="1874" height="261" key="GridCell.Tab.0.center" timestamp="1591278111628">
+    <state width="1874" height="145" key="GridCell.Tab.0.center" timestamp="1591882026507">
       <screen x="0" y="27" width="1920" height="1029" />
     </state>
     <state width="1874" height="420" key="GridCell.Tab.0.center/0.27.1920.1027@0.27.1920.1027" timestamp="1587735311286" />
-    <state width="1874" height="261" key="GridCell.Tab.0.center/0.27.1920.1029@0.27.1920.1029" timestamp="1591278111627" />
+    <state width="1874" height="145" key="GridCell.Tab.0.center/0.27.1920.1029@0.27.1920.1029" timestamp="1591882026507" />
     <state width="1874" height="340" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1586035396772" />
-    <state width="1874" height="261" key="GridCell.Tab.0.left" timestamp="1591278111627">
+    <state width="1874" height="145" key="GridCell.Tab.0.left" timestamp="1591882026507">
       <screen x="0" y="27" width="1920" height="1029" />
     </state>
     <state width="1874" height="420" key="GridCell.Tab.0.left/0.27.1920.1027@0.27.1920.1027" timestamp="1587735311285" />
-    <state width="1874" height="261" key="GridCell.Tab.0.left/0.27.1920.1029@0.27.1920.1029" timestamp="1591278111627" />
+    <state width="1874" height="145" key="GridCell.Tab.0.left/0.27.1920.1029@0.27.1920.1029" timestamp="1591882026507" />
     <state width="1874" height="340" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1586035396772" />
-    <state width="1874" height="261" key="GridCell.Tab.0.right" timestamp="1591278111628">
+    <state width="1874" height="145" key="GridCell.Tab.0.right" timestamp="1591882026507">
       <screen x="0" y="27" width="1920" height="1029" />
     </state>
     <state width="1874" height="420" key="GridCell.Tab.0.right/0.27.1920.1027@0.27.1920.1027" timestamp="1587735311286" />
-    <state width="1874" height="261" key="GridCell.Tab.0.right/0.27.1920.1029@0.27.1920.1029" timestamp="1591278111628" />
+    <state width="1874" height="145" key="GridCell.Tab.0.right/0.27.1920.1029@0.27.1920.1029" timestamp="1591882026507" />
     <state width="1874" height="340" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1586035396773" />
     <state width="1874" height="335" key="GridCell.Tab.1.bottom" timestamp="1591086210436">
       <screen x="0" y="27" width="1920" height="1029" />
@@ -269,11 +288,11 @@
       <screen x="0" y="27" width="1920" height="1029" />
     </state>
     <state x="493" y="197" width="924" height="684" key="Maven.ArtifactSearchDialog/0.27.1920.1029@0.27.1920.1029" timestamp="1591270818409" />
-    <state x="449" y="184" width="1104" height="738" key="SettingsEditor" timestamp="1591271777116">
+    <state x="449" y="184" width="1104" height="738" key="SettingsEditor" timestamp="1591791144757">
       <screen x="0" y="27" width="1920" height="1029" />
     </state>
     <state x="449" y="184" width="1022" height="731" key="SettingsEditor/0.27.1920.1027@0.27.1920.1027" timestamp="1587534474995" />
-    <state x="449" y="184" width="1104" height="738" key="SettingsEditor/0.27.1920.1029@0.27.1920.1029" timestamp="1591271777116" />
+    <state x="449" y="184" width="1104" height="738" key="SettingsEditor/0.27.1920.1029@0.27.1920.1029" timestamp="1591791144757" />
     <state x="449" y="188" width="1022" height="737" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1585921935940" />
     <state x="650" y="137" width="620" height="804" key="find.popup" timestamp="1591180747954">
       <screen x="0" y="27" width="1920" height="1029" />
