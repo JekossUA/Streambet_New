@@ -20,17 +20,17 @@ public class RandomUsers {
     }
 
     public String setRandomEmail() {
-        String randomMail = getRandomSymbols() + "@yopmail.com";
-        return randomMail;
+        return getRandomSymbols() + "@yopmail.com";
     }
 
     public String setRandomFirstName() {
-        String randomName = faker.name().firstName();
-        return randomName;
+        return faker.name().firstName();
     }
 
     public String setRandomPhoneNum() {
-        String randomPhoneNumber = faker.phoneNumber().phoneNumber();
-        return randomPhoneNumber;
+        return faker.phoneNumber().phoneNumber();
+    }
+    public int setRandomWallet () {
+        return (int)(Math.random() * 4 + 1);
     }
 }

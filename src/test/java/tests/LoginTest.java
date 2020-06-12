@@ -12,9 +12,8 @@ public class LoginTest extends LoginPage implements Domain {
 
     @Test
     public void LoginTest_Positive() throws Exception  {
-        RandomUsers randomUsers = new RandomUsers();
         TestSettings testSettings = new TestSettings();
-        testSettings.runMaximizeWindow();
+            testSettings.runMaximizeWindow();
         try {
             testSettings.chromeDriver.get(LOGIN);
             testSettings.chromeWaiter.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("loginId")));
@@ -37,8 +36,9 @@ public class LoginTest extends LoginPage implements Domain {
     @Test
     public void LoginTest_Negative_EmptyLogin() throws Exception {
         TestSettings testSettings = new TestSettings();
-        testSettings.runMaximizeWindow();
+            testSettings.runMaximizeWindow();
         try {
+
             testSettings.chromeDriver.get(LOGIN);
             testSettings.chromeWaiter.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("loginId")));
 
@@ -55,7 +55,6 @@ public class LoginTest extends LoginPage implements Domain {
             testSettings.screenshotBuilder.createScreenshot("LoginTest_Negative_EmptyLogin", testSettings.chromeDriver);
             testSettings.chromeDriver.close();
         }
-
 
     }
     @Test
