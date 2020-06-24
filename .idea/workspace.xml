@@ -16,18 +16,21 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69d1e222-5815-4ea6-92e4-f4cf1bdece43" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/RegistrationPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LoginTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/RegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/RegistrationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/LoginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/LoginPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/Streambet_New.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/pages/RegistrationPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/RegistrationPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/LoginTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/LoginTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/tests/RegistrationTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/RegistrationTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +70,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../test_proj" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3045977" />
@@ -81,12 +84,12 @@
       <recent name="support" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RegistrationTest.RegistrationTest_ExistingEmail">
+  <component name="RunManager" selected="JUnit.LoginTest">
     <configuration name="LoginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Streambet_New" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="support.*" />
+          <option name="PATTERN" value="tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -97,7 +100,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegistrationTest.RegistrationTest_ExistingEmail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginTest.LoginTest_Positive" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Streambet_New" />
       <extension name="coverage">
         <pattern>
@@ -106,14 +109,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.RegistrationTest" />
-      <option name="METHOD_NAME" value="RegistrationTest_ExistingEmail" />
+      <option name="MAIN_CLASS_NAME" value="tests.LoginTest" />
+      <option name="METHOD_NAME" value="LoginTest_Positive" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegistrationTest.RegistrationTest_HugeLogin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RegistrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Streambet_New" />
       <extension name="coverage">
         <pattern>
@@ -123,13 +126,28 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.RegistrationTest" />
-      <option name="METHOD_NAME" value="RegistrationTest_HugeLogin" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegistrationTest.RegistrationTest_CheckboxMissed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Streambet_New" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.RegistrationTest" />
+      <option name="METHOD_NAME" value="RegistrationTest_CheckboxMissed" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegistrationTest.RegistrationTest_Positive" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RegistrationTest.RegistrationTest_WalletMissed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Streambet_New" />
       <extension name="coverage">
         <pattern>
@@ -139,23 +157,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.RegistrationTest" />
-      <option name="METHOD_NAME" value="RegistrationTest_Positive" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RegistrationTest.RegistrationTest_WrongLogin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Streambet_New" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.RegistrationTest" />
-      <option name="METHOD_NAME" value="RegistrationTest_WrongLogin" />
+      <option name="METHOD_NAME" value="RegistrationTest_WalletMissed" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -163,11 +165,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RegistrationTest.RegistrationTest_ExistingEmail" />
-        <item itemvalue="JUnit.RegistrationTest.RegistrationTest_HugeLogin" />
-        <item itemvalue="JUnit.RegistrationTest.RegistrationTest_WrongLogin" />
-        <item itemvalue="JUnit.RegistrationTest.RegistrationTest_Positive" />
         <item itemvalue="JUnit.LoginTest" />
+        <item itemvalue="JUnit.LoginTest.LoginTest_Positive" />
+        <item itemvalue="JUnit.RegistrationTest.RegistrationTest_WalletMissed" />
+        <item itemvalue="JUnit.RegistrationTest" />
+        <item itemvalue="JUnit.RegistrationTest.RegistrationTest_CheckboxMissed" />
       </list>
     </recent_temporary>
   </component>
@@ -189,7 +191,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -227,35 +241,39 @@
       <screen x="0" y="27" width="1920" height="1029" />
     </state>
     <state width="525" height="526" key="DebuggerActiveHint/0.27.1920.1029@0.27.1920.1029" timestamp="1590494552849" />
-    <state x="743" y="305" width="424" height="484" key="FileChooserDialogImpl" timestamp="1591882561285">
+    <state x="100" y="123" width="1720" height="833" key="DiffContextDialog" timestamp="1592815263310">
+      <screen x="0" y="27" width="1920" height="1029" />
+    </state>
+    <state x="100" y="123" width="1720" height="833" key="DiffContextDialog/0.27.1920.1029@0.27.1920.1029" timestamp="1592815263310" />
+    <state x="743" y="305" width="424" height="484" key="FileChooserDialogImpl" timestamp="1592820662149">
       <screen x="0" y="27" width="1920" height="1029" />
     </state>
     <state x="743" y="304" width="424" height="485" key="FileChooserDialogImpl/0.27.1920.1027@0.27.1920.1027" timestamp="1587735309746" />
-    <state x="743" y="305" width="424" height="484" key="FileChooserDialogImpl/0.27.1920.1029@0.27.1920.1029" timestamp="1591882561285" />
+    <state x="743" y="305" width="424" height="484" key="FileChooserDialogImpl/0.27.1920.1029@0.27.1920.1029" timestamp="1592820662149" />
     <state x="743" y="311" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1585921969045" />
-    <state width="1874" height="317" key="GridCell.Tab.0.bottom" timestamp="1591974311291">
+    <state width="1874" height="270" key="GridCell.Tab.0.bottom" timestamp="1592811339999">
       <screen x="0" y="27" width="1920" height="1029" />
     </state>
-    <state width="1874" height="420" key="GridCell.Tab.0.bottom/0.27.1920.1027@0.27.1920.1027" timestamp="1587735311286" />
-    <state width="1874" height="317" key="GridCell.Tab.0.bottom/0.27.1920.1029@0.27.1920.1029" timestamp="1591974311291" />
+    <state width="1874" height="270" key="GridCell.Tab.0.bottom/0.27.1920.1027@0.27.1920.1027" timestamp="1592756351104" />
+    <state width="1874" height="270" key="GridCell.Tab.0.bottom/0.27.1920.1029@0.27.1920.1029" timestamp="1592811339999" />
     <state width="1874" height="340" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1586035396773" />
-    <state width="1874" height="317" key="GridCell.Tab.0.center" timestamp="1591974311291">
+    <state width="1874" height="270" key="GridCell.Tab.0.center" timestamp="1592811339999">
       <screen x="0" y="27" width="1920" height="1029" />
     </state>
-    <state width="1874" height="420" key="GridCell.Tab.0.center/0.27.1920.1027@0.27.1920.1027" timestamp="1587735311286" />
-    <state width="1874" height="317" key="GridCell.Tab.0.center/0.27.1920.1029@0.27.1920.1029" timestamp="1591974311291" />
+    <state width="1874" height="270" key="GridCell.Tab.0.center/0.27.1920.1027@0.27.1920.1027" timestamp="1592756351103" />
+    <state width="1874" height="270" key="GridCell.Tab.0.center/0.27.1920.1029@0.27.1920.1029" timestamp="1592811339999" />
     <state width="1874" height="340" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1586035396772" />
-    <state width="1874" height="317" key="GridCell.Tab.0.left" timestamp="1591974311291">
+    <state width="1874" height="270" key="GridCell.Tab.0.left" timestamp="1592811339999">
       <screen x="0" y="27" width="1920" height="1029" />
     </state>
-    <state width="1874" height="420" key="GridCell.Tab.0.left/0.27.1920.1027@0.27.1920.1027" timestamp="1587735311285" />
-    <state width="1874" height="317" key="GridCell.Tab.0.left/0.27.1920.1029@0.27.1920.1029" timestamp="1591974311291" />
+    <state width="1874" height="270" key="GridCell.Tab.0.left/0.27.1920.1027@0.27.1920.1027" timestamp="1592756351103" />
+    <state width="1874" height="270" key="GridCell.Tab.0.left/0.27.1920.1029@0.27.1920.1029" timestamp="1592811339999" />
     <state width="1874" height="340" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1586035396772" />
-    <state width="1874" height="317" key="GridCell.Tab.0.right" timestamp="1591974311291">
+    <state width="1874" height="270" key="GridCell.Tab.0.right" timestamp="1592811339999">
       <screen x="0" y="27" width="1920" height="1029" />
     </state>
-    <state width="1874" height="420" key="GridCell.Tab.0.right/0.27.1920.1027@0.27.1920.1027" timestamp="1587735311286" />
-    <state width="1874" height="317" key="GridCell.Tab.0.right/0.27.1920.1029@0.27.1920.1029" timestamp="1591974311291" />
+    <state width="1874" height="270" key="GridCell.Tab.0.right/0.27.1920.1027@0.27.1920.1027" timestamp="1592756351104" />
+    <state width="1874" height="270" key="GridCell.Tab.0.right/0.27.1920.1029@0.27.1920.1029" timestamp="1592811339999" />
     <state width="1874" height="340" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1586035396773" />
     <state width="1874" height="335" key="GridCell.Tab.1.bottom" timestamp="1591968927823">
       <screen x="0" y="27" width="1920" height="1029" />
@@ -285,19 +303,23 @@
       <screen x="0" y="27" width="1920" height="1029" />
     </state>
     <state x="493" y="197" width="924" height="684" key="Maven.ArtifactSearchDialog/0.27.1920.1029@0.27.1920.1029" timestamp="1591270818409" />
-    <state x="449" y="184" width="1104" height="738" key="SettingsEditor" timestamp="1591791144757">
-      <screen x="0" y="27" width="1920" height="1029" />
+    <state x="449" y="184" width="1104" height="738" key="SettingsEditor" timestamp="1592756310873">
+      <screen x="0" y="27" width="1920" height="1027" />
     </state>
-    <state x="449" y="184" width="1022" height="731" key="SettingsEditor/0.27.1920.1027@0.27.1920.1027" timestamp="1587534474995" />
+    <state x="449" y="184" width="1022" height="731" key="SettingsEditor/0.27.1920.1027@0.27.1920.1027" timestamp="1592756310873" />
     <state x="449" y="184" width="1104" height="738" key="SettingsEditor/0.27.1920.1029@0.27.1920.1029" timestamp="1591791144757" />
     <state x="449" y="188" width="1022" height="737" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1585921935940" />
     <state x="650" y="137" width="620" height="804" key="find.popup" timestamp="1591180747954">
       <screen x="0" y="27" width="1920" height="1029" />
     </state>
     <state x="650" y="137" width="620" height="804" key="find.popup/0.27.1920.1029@0.27.1920.1029" timestamp="1591180747954" />
-    <state x="281" y="242" width="1347" height="594" key="new project wizard" timestamp="1591019069910">
+    <state x="281" y="242" width="1347" height="594" key="new project wizard" timestamp="1592820034093">
       <screen x="0" y="27" width="1920" height="1029" />
     </state>
-    <state x="281" y="242" width="1347" height="594" key="new project wizard/0.27.1920.1029@0.27.1920.1029" timestamp="1591019069910" />
+    <state x="281" y="242" width="1347" height="594" key="new project wizard/0.27.1920.1029@0.27.1920.1029" timestamp="1592820034093" />
+    <state x="623" y="250" width="672" height="678" key="search.everywhere.popup" timestamp="1592302335648">
+      <screen x="0" y="27" width="1920" height="1029" />
+    </state>
+    <state x="623" y="250" width="672" height="678" key="search.everywhere.popup/0.27.1920.1029@0.27.1920.1029" timestamp="1592302335648" />
   </component>
 </project>

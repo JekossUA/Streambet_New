@@ -1,6 +1,8 @@
 package tests;
 
 import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import pages.RegistrationPage;
 import support.*;
 
@@ -130,6 +132,21 @@ public class RegistrationTest extends RegistrationPage implements Domain {
             testSettings.chromeDriver.get(REGISTRATION);
             waitEmailInput(testSettings.chromeWaiter);
 
+            setUserLogin(testSettings.chromeDriver, randomUsers.setRandomFirstName());
+            setUserEmail(testSettings.chromeDriver, "evgqa1220daw");
+            String randomPass = randomUsers.setRandomPhoneNum();
+            setUserPassword(testSettings.chromeDriver, randomPass);
+            setRepeatUserPassword(testSettings.chromeDriver, randomPass);
+            getCheckbox(testSettings.chromeDriver).click();
+            setWallet(testSettings.chromeDriver, randomUsers.setRandomWallet());
+            getConfirmButton(testSettings.chromeDriver).click();
+            waitExistingEmailWarning(testSettings.chromeWaiter);
+
+            if (getExistingEmailWarning(testSettings.chromeDriver)) {
+                System.out.println("Test passed!");
+                testSettings.chromeDriver.close();
+            }
+
         }catch (Exception e) {
             testSettings.screenshotBuilder.createScreenshot("RegistrationTest_WrongEmail", testSettings.chromeDriver);
             testSettings.chromeDriver.close();
@@ -143,6 +160,21 @@ public class RegistrationTest extends RegistrationPage implements Domain {
         try {
             testSettings.chromeDriver.get(REGISTRATION);
             waitEmailInput(testSettings.chromeWaiter);
+
+            setUserLogin(testSettings.chromeDriver, randomUsers.setRandomFirstName());
+            setUserEmail(testSettings.chromeDriver, "");
+            String randomPass = randomUsers.setRandomPhoneNum();
+            setUserPassword(testSettings.chromeDriver, randomPass);
+            setRepeatUserPassword(testSettings.chromeDriver, randomPass);
+            getCheckbox(testSettings.chromeDriver).click();
+            setWallet(testSettings.chromeDriver, randomUsers.setRandomWallet());
+            getConfirmButton(testSettings.chromeDriver).click();
+            waitExistingEmailWarning(testSettings.chromeWaiter);
+
+            if (getExistingEmailWarning(testSettings.chromeDriver)) {
+                System.out.println("Test passed!");
+                testSettings.chromeDriver.close();
+            }
 
         }catch (Exception e) {
             testSettings.screenshotBuilder.createScreenshot("RegistrationTest_EmptyEmail", testSettings.chromeDriver);
@@ -158,6 +190,20 @@ public class RegistrationTest extends RegistrationPage implements Domain {
             testSettings.chromeDriver.get(REGISTRATION);
             waitEmailInput(testSettings.chromeWaiter);
 
+            setUserLogin(testSettings.chromeDriver, randomUsers.setRandomFirstName());
+            setUserEmail(testSettings.chromeDriver, randomUsers.setRandomEmail());
+            String randomPass = randomUsers.setRandomPhoneNum();
+            setUserPassword(testSettings.chromeDriver, "123456");
+            setRepeatUserPassword(testSettings.chromeDriver, randomPass);
+            getCheckbox(testSettings.chromeDriver).click();
+            setWallet(testSettings.chromeDriver, randomUsers.setRandomWallet());
+            getConfirmButton(testSettings.chromeDriver).click();
+
+            if(getPasswordWarning(testSettings.chromeDriver)) {
+                System.out.println("Test passed!");
+                testSettings.chromeDriver.close();
+            }
+
         }catch (Exception e) {
             testSettings.screenshotBuilder.createScreenshot("RegistrationTest_WrongPass", testSettings.chromeDriver);
             testSettings.chromeDriver.close();
@@ -171,6 +217,20 @@ public class RegistrationTest extends RegistrationPage implements Domain {
         try {
             testSettings.chromeDriver.get(REGISTRATION);
             waitEmailInput(testSettings.chromeWaiter);
+
+            setUserLogin(testSettings.chromeDriver, randomUsers.setRandomFirstName());
+            setUserEmail(testSettings.chromeDriver, randomUsers.setRandomEmail());
+            String randomPass = randomUsers.setRandomPhoneNum();
+            setUserPassword(testSettings.chromeDriver, "");
+            setRepeatUserPassword(testSettings.chromeDriver, randomPass);
+            getCheckbox(testSettings.chromeDriver).click();
+            setWallet(testSettings.chromeDriver, randomUsers.setRandomWallet());
+            getConfirmButton(testSettings.chromeDriver).click();
+
+            if(getPasswordWarning(testSettings.chromeDriver)) {
+                System.out.println("Test passed!");
+                testSettings.chromeDriver.close();
+            }
 
         }catch (Exception e) {
             testSettings.screenshotBuilder.createScreenshot("RegistrationTest_EmptyPass", testSettings.chromeDriver);
@@ -186,6 +246,20 @@ public class RegistrationTest extends RegistrationPage implements Domain {
             testSettings.chromeDriver.get(REGISTRATION);
             waitEmailInput(testSettings.chromeWaiter);
 
+            setUserLogin(testSettings.chromeDriver, randomUsers.setRandomFirstName());
+            setUserEmail(testSettings.chromeDriver, randomUsers.setRandomEmail());
+            String randomPass = randomUsers.setRandomPhoneNum();
+            setUserPassword(testSettings.chromeDriver, randomPass);
+            setRepeatUserPassword(testSettings.chromeDriver, "12312365464");
+            getCheckbox(testSettings.chromeDriver).click();
+            setWallet(testSettings.chromeDriver, randomUsers.setRandomWallet());
+            getConfirmButton(testSettings.chromeDriver).click();
+
+            if(getRepeatPasswordWarning(testSettings.chromeDriver)) {
+                System.out.println("Test passed!");
+                testSettings.chromeDriver.close();
+            }
+
         }catch (Exception e) {
             testSettings.screenshotBuilder.createScreenshot("RegistrationTest_WrongRepeatPass", testSettings.chromeDriver);
             testSettings.chromeDriver.close();
@@ -200,33 +274,70 @@ public class RegistrationTest extends RegistrationPage implements Domain {
             testSettings.chromeDriver.get(REGISTRATION);
             waitEmailInput(testSettings.chromeWaiter);
 
+            setUserLogin(testSettings.chromeDriver, randomUsers.setRandomFirstName());
+            setUserEmail(testSettings.chromeDriver, randomUsers.setRandomEmail());
+            String randomPass = randomUsers.setRandomPhoneNum();
+            setUserPassword(testSettings.chromeDriver, randomPass);
+            setRepeatUserPassword(testSettings.chromeDriver, "");
+            getCheckbox(testSettings.chromeDriver).click();
+            setWallet(testSettings.chromeDriver, randomUsers.setRandomWallet());
+            getConfirmButton(testSettings.chromeDriver).click();
+            waitRepeatPasswordWarning(testSettings.chromeWaiter);
+
+            if(getRepeatPasswordWarning(testSettings.chromeDriver)) {
+                System.out.println("Test passed!");
+                testSettings.chromeDriver.close();
+            }
+
         }catch (Exception e) {
             testSettings.screenshotBuilder.createScreenshot("RegistrationTest_EmptyRepeatPass", testSettings.chromeDriver);
             testSettings.chromeDriver.close();
         }
     }
 
-    @Test
-    public void RegistrationTest_CheckboxMissed () throws Exception{
-        TestSettings testSettings = new TestSettings();
-        testSettings.runMaximizeWindow();
-        try {
-            testSettings.chromeDriver.get(REGISTRATION);
-            waitEmailInput(testSettings.chromeWaiter);
-
-        }catch (Exception e) {
-            testSettings.screenshotBuilder.createScreenshot("RegistrationTest_CheckboxMissed", testSettings.chromeDriver);
-            testSettings.chromeDriver.close();
-        }
-    }
+//    @Test
+//    public void RegistrationTest_CheckboxMissed () throws Exception{
+//        TestSettings testSettings = new TestSettings();
+//        testSettings.runMaximizeWindow();
+//        try {
+//            testSettings.chromeDriver.get(REGISTRATION);
+//            waitEmailInput(testSettings.chromeWaiter);
+//
+//            setUserLogin(testSettings.chromeDriver, randomUsers.setRandomFirstName());
+//            setUserEmail(testSettings.chromeDriver, randomUsers.setRandomEmail());
+//            String randomPass = randomUsers.setRandomPhoneNum();
+//            setUserPassword(testSettings.chromeDriver, randomPass);
+//            setRepeatUserPassword(testSettings.chromeDriver, randomPass);
+//            getCheckbox(testSettings.chromeDriver).click();
+//            setWallet(testSettings.chromeDriver, randomUsers.setRandomWallet());
+//            getConfirmButton(testSettings.chromeDriver).click();
+//            waitSuccessPage(testSettings.chromeWaiter);
+//
+//        }catch (Exception e) {
+//            testSettings.screenshotBuilder.createScreenshot("RegistrationTest_CheckboxMissed", testSettings.chromeDriver);
+//            testSettings.chromeDriver.close();
+//        }
+//    }
 
     @Test
     public void RegistrationTest_WalletMissed ()throws Exception {
         TestSettings testSettings = new TestSettings();
         testSettings.runMaximizeWindow();
+        String undefined = "undefined";
         try {
             testSettings.chromeDriver.get(REGISTRATION);
             waitEmailInput(testSettings.chromeWaiter);
+
+            setUserLogin(testSettings.chromeDriver, randomUsers.setRandomFirstName());
+            setUserEmail(testSettings.chromeDriver, randomUsers.setRandomEmail());
+            String randomPass = randomUsers.setRandomPhoneNum();
+            setUserPassword(testSettings.chromeDriver, randomPass);
+            setRepeatUserPassword(testSettings.chromeDriver, randomPass);
+            getCheckbox(testSettings.chromeDriver).click();
+            getConfirmButton(testSettings.chromeDriver).click();
+            String some = testSettings.chromeDriver.findElement(By.id("selectId")).getCssValue(undefined);
+            System.out.println(some);
+
 
         }catch (Exception e) {
             testSettings.screenshotBuilder.createScreenshot("RegistrationTest_WalletMissed", testSettings.chromeDriver);

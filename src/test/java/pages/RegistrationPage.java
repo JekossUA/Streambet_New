@@ -47,13 +47,25 @@ public class RegistrationPage {
     public void waitExistingEmailWarning (WebDriverWait chromeWaiter) {
         chromeWaiter.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//*[@id=\"__next\"]/div/div/section/div/section/div[2]/div[2]/div[2]/div/div")));
     }
+    public void waitPasswordWarning (WebDriverWait chromeWaiter) {
+        chromeWaiter.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//*[@id=\"__next\"]/div/div/section/div/section/div[2]/div[2]/div[3]/div/div")));
+    }
+    public void waitRepeatPasswordWarning (WebDriverWait chromeWaiter) {
+        chromeWaiter.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//*[@id=\"__next\"]/div/div/section/div/section/div[2]/div[2]/div[4]/div/div")));
+    }
 
     //warnings
     public boolean getLoginWarning (WebDriver chromeDriver) {
         return chromeDriver.findElement(By.xpath("//*[@id=\"__next\"]/div/div/section/div/section/div[2]/div[2]/div[1]/div/div")).isDisplayed();
     }
-    public boolean getExistingEmailWarning(WebDriver chromedriver) {
-        return chromedriver.findElement(By.xpath("//*[@id=\"__next\"]/div/div/section/div/section/div[2]/div[2]/div[2]/div/div")).isDisplayed();
+    public boolean getExistingEmailWarning(WebDriver chromeDriver) {
+        return chromeDriver.findElement(By.xpath("//*[@id=\"__next\"]/div/div/section/div/section/div[2]/div[2]/div[2]/div/div")).isDisplayed();
+    }
+    public boolean getPasswordWarning (WebDriver chromeDriver) {
+        return chromeDriver.findElement(By.xpath("//*[@id=\"__next\"]/div/div/section/div/section/div[2]/div[2]/div[3]/div/div")).isDisplayed();
+    }
+    public boolean getRepeatPasswordWarning (WebDriver chromeDriver) {
+        return chromeDriver.findElement(By.xpath("//*[@id=\"__next\"]/div/div/section/div/section/div[2]/div[2]/div[4]/div/div")).isDisplayed();
     }
 
 }
