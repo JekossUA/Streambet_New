@@ -28,12 +28,15 @@ public class RegistrationTest extends RegistrationPage implements Domain {
             getConfirmButton(testSettings.chromeDriver).click();
             waitSuccessPage(testSettings.chromeWaiter);
 
-            testSettings.chromeDriver.close();
-            System.out.println("Registration passed!");
+            if(getSuccessPage(testSettings.chromeDriver)) {
+                System.out.println("Positive test passed!");
+                testSettings.chromeDriver.close();
+            }
 
         } catch (Exception e) {
             testSettings.screenshotBuilder.createScreenshot("RegistrationTest_Positive", testSettings.chromeDriver);
             testSettings.chromeDriver.close();
+            System.out.println(e);
         }
     }
     @Test
@@ -54,7 +57,7 @@ public class RegistrationTest extends RegistrationPage implements Domain {
             getConfirmButton(testSettings.chromeDriver).click();
 
             if (getLoginWarning(testSettings.chromeDriver)) {
-                System.out.println("Test passed!");
+                System.out.println("Wrong login passed!");
                 testSettings.chromeDriver.close();
             }
 
@@ -83,7 +86,7 @@ public class RegistrationTest extends RegistrationPage implements Domain {
             getConfirmButton(testSettings.chromeDriver).click();
 
             if (getLoginWarning(testSettings.chromeDriver)) {
-                System.out.println("Test passed!");
+                System.out.println("Huge login passed!");
                 testSettings.chromeDriver.close();
             }
 
@@ -113,7 +116,7 @@ public class RegistrationTest extends RegistrationPage implements Domain {
             waitExistingEmailWarning(testSettings.chromeWaiter);
 
             if (getExistingEmailWarning(testSettings.chromeDriver)) {
-                System.out.println("Test passed!");
+                System.out.println("Existing email passed!");
                 testSettings.chromeDriver.close();
             }
 
@@ -143,7 +146,7 @@ public class RegistrationTest extends RegistrationPage implements Domain {
             waitExistingEmailWarning(testSettings.chromeWaiter);
 
             if (getExistingEmailWarning(testSettings.chromeDriver)) {
-                System.out.println("Test passed!");
+                System.out.println("Wrong Email passed!");
                 testSettings.chromeDriver.close();
             }
 
@@ -172,7 +175,7 @@ public class RegistrationTest extends RegistrationPage implements Domain {
             waitExistingEmailWarning(testSettings.chromeWaiter);
 
             if (getExistingEmailWarning(testSettings.chromeDriver)) {
-                System.out.println("Test passed!");
+                System.out.println("Empty Email passed!");
                 testSettings.chromeDriver.close();
             }
 
@@ -200,7 +203,7 @@ public class RegistrationTest extends RegistrationPage implements Domain {
             getConfirmButton(testSettings.chromeDriver).click();
 
             if(getPasswordWarning(testSettings.chromeDriver)) {
-                System.out.println("Test passed!");
+                System.out.println("Wrong pass passed!");
                 testSettings.chromeDriver.close();
             }
 
@@ -228,7 +231,7 @@ public class RegistrationTest extends RegistrationPage implements Domain {
             getConfirmButton(testSettings.chromeDriver).click();
 
             if(getPasswordWarning(testSettings.chromeDriver)) {
-                System.out.println("Test passed!");
+                System.out.println("Empty pass passed!");
                 testSettings.chromeDriver.close();
             }
 
@@ -256,7 +259,7 @@ public class RegistrationTest extends RegistrationPage implements Domain {
             getConfirmButton(testSettings.chromeDriver).click();
 
             if(getRepeatPasswordWarning(testSettings.chromeDriver)) {
-                System.out.println("Test passed!");
+                System.out.println("Wrong repeat pass passed!");
                 testSettings.chromeDriver.close();
             }
 
@@ -285,7 +288,7 @@ public class RegistrationTest extends RegistrationPage implements Domain {
             waitRepeatPasswordWarning(testSettings.chromeWaiter);
 
             if(getRepeatPasswordWarning(testSettings.chromeDriver)) {
-                System.out.println("Test passed!");
+                System.out.println("Empty repeat pass passed!");
                 testSettings.chromeDriver.close();
             }
 
@@ -338,7 +341,6 @@ public class RegistrationTest extends RegistrationPage implements Domain {
             String some = testSettings.chromeDriver.findElement(By.id("selectId")).getCssValue(undefined);
             System.out.println(some);
 
-
         }catch (Exception e) {
             testSettings.screenshotBuilder.createScreenshot("RegistrationTest_WalletMissed", testSettings.chromeDriver);
             testSettings.chromeDriver.close();
@@ -352,6 +354,7 @@ public class RegistrationTest extends RegistrationPage implements Domain {
         try {
             testSettings.chromeDriver.get(REGISTRATION);
             waitEmailInput(testSettings.chromeWaiter);
+            getCheckbox(testSettings.chromeDriver).click();
 
         }catch (Exception e) {
             testSettings.screenshotBuilder.createScreenshot("RegistrationTest_AllFieldsMissed", testSettings.chromeDriver);

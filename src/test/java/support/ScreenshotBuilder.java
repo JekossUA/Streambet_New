@@ -11,10 +11,9 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class ScreenshotBuilder {
-    public void createScreenshot (String testName, ChromeDriver driver) throws IOException {
+    public void createScreenshot (String testName, ChromeDriver driver) {
         String timeStamp;
         String screenshotPath = "src/main/screenshots/";
-//        }
         try {
             Thread.sleep(120);
             timeStamp = new SimpleDateFormat("dd MM yyyy_HH mm").format(Calendar.getInstance().getTime());

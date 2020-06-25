@@ -67,5 +67,8 @@ public class RegistrationPage {
     public boolean getRepeatPasswordWarning (WebDriver chromeDriver) {
         return chromeDriver.findElement(By.xpath("//*[@id=\"__next\"]/div/div/section/div/section/div[2]/div[2]/div[4]/div/div")).isDisplayed();
     }
+    public boolean getSuccessPage (WebDriver chromeDriver) {
+        return chromeDriver.findElement(By.tagName("h5")).isDisplayed();
+    }
 
 }

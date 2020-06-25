@@ -23,13 +23,21 @@ public class LoginPage {
     public WebElement getWarningEmail (ChromeDriver chromeDriver) {
         return chromeDriver.findElement(By.xpath("//*[@id=\"__next\"]/div/div/section/div/section/div[2]/div[2]/div[1]/div/div"));
     }
+    public WebElement getWarningPassword (ChromeDriver chromeDriver) {
+        return chromeDriver.findElement(By.cssSelector("#__next > div > div > section > div > section > " +
+                "div.OverlayForms_overlay-form__3Wo8U > div.OverlayForms_overlay-form__wrapper__s9rus > div:nth-child(2) > div > div"));
+    }
 
     //waiters
     public void waitFooter(WebDriverWait chromeWaiter) {
         chromeWaiter.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.tagName("footer")));
     }
-    public void getWarningTextWaiter (WebDriverWait chromeWaiter) {
+    public void getWarningEmailWaiter(WebDriverWait chromeWaiter) {
          chromeWaiter.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//*[@id=\"__next\"]/div/div/" +
                 "section/div/section/div[2]/div[2]/div[1]/div/div")));
+    }
+    public void getWarningPasswordWaiter (WebDriverWait chromeWaiter) {
+        chromeWaiter.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.cssSelector("#__next > div > div > section >" +
+                " div > section > div.OverlayForms_overlay-form__3Wo8U > div.OverlayForms_overlay-form__wrapper__s9rus > div:nth-child(2) > div > div")));
     }
 }

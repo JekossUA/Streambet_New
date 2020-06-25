@@ -46,7 +46,7 @@ public class LoginTest extends LoginPage implements Domain {
             setLogin(testSettings.chromeDriver, "");
             setPassword(testSettings.chromeDriver, "12345678");
             getAuthorizationButton(testSettings.chromeDriver).click();
-            getWarningTextWaiter(testSettings.chromeWaiter);
+            getWarningEmailWaiter(testSettings.chromeWaiter);
             String warningText = getWarningEmail(testSettings.chromeDriver).getText();
             if (warningText !=null) {
                 System.out.println("Empty login passed");
@@ -70,13 +70,13 @@ public class LoginTest extends LoginPage implements Domain {
             setLogin(testSettings.chromeDriver, "evgqa1220@yopmail.com");
             setPassword(testSettings.chromeDriver, "");
             getAuthorizationButton(testSettings.chromeDriver).click();
-            testSettings.chromeWaiter.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.cssSelector("#__next > div > div > section" +
-                    " > div > section > div.OverlayForms_overlay-form__3Wo8U > div.OverlayForms_overlay-form__wrapper__s9rus > div:nth-child(2) > div > div")));
-            testSettings.chromeDriver.findElement(By.cssSelector("#__next > div > div > section > div > section > div.OverlayForms_overlay-form__3Wo8U " +
-                    "> div.OverlayForms_overlay-form__wrapper__s9rus > div:nth-child(2) > div > div"));
+            getWarningPasswordWaiter(testSettings.chromeWaiter);
+            String waringText = getWarningPassword(testSettings.chromeDriver).getText();
 
-            testSettings.chromeDriver.close();
-            System.out.println("Empty password passed");
+            if (waringText !=null) {
+                System.out.println("Empty password passed");
+                testSettings.chromeDriver.close();
+            }
 
         } catch (Exception e){
             testSettings.screenshotBuilder.createScreenshot("LoginTest_Negative_EmptyPassword", testSettings.chromeDriver);
@@ -91,16 +91,16 @@ public class LoginTest extends LoginPage implements Domain {
         try {
             testSettings.chromeDriver.get(LOGIN);
             testSettings.chromeWaiter.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("loginId")));
-
             getAuthorizationButton(testSettings.chromeDriver).click();
-            testSettings.chromeWaiter.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.cssSelector("#__next > div > div > section > " +
-                    "div > section > div.OverlayForms_overlay-form__3Wo8U " +
-                    "> div.OverlayForms_overlay-form__wrapper__s9rus > div:nth-child(1) > div > div")));
-            testSettings.chromeDriver.findElement(By.cssSelector("#__next > div > div > section > div > section > div.OverlayForms_overlay-form__3Wo8U " +
-                    "> div.OverlayForms_overlay-form__wrapper__s9rus > div:nth-child(1) > div > div"));
+            getWarningEmailWaiter(testSettings.chromeWaiter);
+            getWarningPasswordWaiter(testSettings.chromeWaiter);
+            String emailWarningText = getWarningEmail(testSettings.chromeDriver).getText();
+            String passwordWarningText = getWarningPassword(testSettings.chromeDriver).getText();
 
-            testSettings.chromeDriver.close();
-            System.out.println("Empty fields passed");
+            if(emailWarningText !=null && passwordWarningText !=null) {
+                System.out.println("Empty fields passed");
+                testSettings.chromeDriver.close();
+            }
         }catch (Exception e){
             testSettings.screenshotBuilder.createScreenshot("LoginTest_Negative_EmptyFields", testSettings.chromeDriver);
             System.out.println(e);
@@ -120,14 +120,12 @@ public class LoginTest extends LoginPage implements Domain {
             setLogin(testSettings.chromeDriver, "evgqa12dqwqdq20@yopmail.com");
             setPassword(testSettings.chromeDriver, "12345678");
             getAuthorizationButton(testSettings.chromeDriver).click();
-            testSettings.chromeWaiter.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.cssSelector("#__next > div > div > section > " +
-                    "div > section > div.OverlayForms_overlay-form__3Wo8U " +
-                    "> div.OverlayForms_overlay-form__wrapper__s9rus > div:nth-child(1) > div > div")));
-            testSettings.chromeDriver.findElement(By.cssSelector("#__next > div > div > section > div > section > div.OverlayForms_overlay-form__3Wo8U " +
-                    "> div.OverlayForms_overlay-form__wrapper__s9rus > div:nth-child(1) > div > div"));
-
-            testSettings.chromeDriver.close();
-            System.out.println("Wrong login passed");
+            getWarningEmailWaiter(testSettings.chromeWaiter);
+            String warningText = getWarningEmail(testSettings.chromeDriver).getText();
+            if (warningText !=null) {
+                System.out.println("Wrong login passed");
+                testSettings.chromeDriver.close();
+            }
         }catch (Exception e){
             testSettings.screenshotBuilder.createScreenshot("LoginTest_Negative_WrongLogin", testSettings.chromeDriver);
             System.out.println(e);
@@ -146,14 +144,13 @@ public class LoginTest extends LoginPage implements Domain {
             setLogin(testSettings.chromeDriver, "evgqa1220@yopmail.com");
             setPassword(testSettings.chromeDriver, "123456efw78");
             getAuthorizationButton(testSettings.chromeDriver).click();
-            testSettings.chromeWaiter.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.cssSelector("#__next > div > div > section > " +
-                    "div > section > div.OverlayForms_overlay-form__3Wo8U " +
-                    "> div.OverlayForms_overlay-form__wrapper__s9rus > div:nth-child(1) > div > div")));
-            testSettings.chromeDriver.findElement(By.cssSelector("#__next > div > div > section > div > section > div.OverlayForms_overlay-form__3Wo8U " +
-                    "> div.OverlayForms_overlay-form__wrapper__s9rus > div:nth-child(1) > div > div"));
+            getWarningPasswordWaiter(testSettings.chromeWaiter);
+            String waringText = getWarningPassword(testSettings.chromeDriver).getText();
 
-            testSettings.chromeDriver.close();
-            System.out.println("Wrong password passed");
+            if (waringText !=null) {
+                System.out.println("Wrong password passed");
+                testSettings.chromeDriver.close();
+            }
         } catch (Exception e){
             testSettings.screenshotBuilder.createScreenshot("LoginTest_Negative_WrongPassword", testSettings.chromeDriver);
             System.out.println(e);
