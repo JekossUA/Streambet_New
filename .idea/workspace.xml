@@ -26,12 +26,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69d1e222-5815-4ea6-92e4-f4cf1bdece43" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/MainPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/MainPageTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/MainPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/support/Domain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/support/Domain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/RegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/RegistrationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/RegistrationTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/RegistrationTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/MainPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/MainPageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/MainPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/MainPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/support/Domain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/support/Domain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/MainPageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/MainPageTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,8 +86,8 @@
       <recent name="support" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MainPageTest.MainPage_Positive">
-    <configuration name="LoginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.MainPageTest.MainPage_GameFilters">
+    <configuration name="MainPageTest.MainPage_GameFilters" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Streambet_New" />
       <extension name="coverage">
         <pattern>
@@ -94,13 +96,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.LoginTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="tests.MainPageTest" />
+      <option name="METHOD_NAME" value="MainPage_GameFilters" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginTest.LoginTest_Positive" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MainPageTest.MainPage_NavButtons_Sport" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Streambet_New" />
       <extension name="coverage">
         <pattern>
@@ -109,8 +112,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.LoginTest" />
-      <option name="METHOD_NAME" value="LoginTest_Positive" />
+      <option name="MAIN_CLASS_NAME" value="tests.MainPageTest" />
+      <option name="METHOD_NAME" value="MainPage_NavButtons_Sport" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainPageTest.MainPage_NavButtons_Streams" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Streambet_New" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.MainPageTest" />
+      <option name="METHOD_NAME" value="MainPage_NavButtons_Streams" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -127,22 +146,6 @@
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.MainPageTest" />
       <option name="METHOD_NAME" value="MainPage_Positive" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RegistrationTest.RegistrationTest_Positive" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Streambet_New" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.RegistrationTest" />
-      <option name="METHOD_NAME" value="RegistrationTest_Positive" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -166,11 +169,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MainPageTest.MainPage_GameFilters" />
+        <item itemvalue="JUnit.MainPageTest.MainPage_NavButtons_Sport" />
+        <item itemvalue="JUnit.MainPageTest.MainPage_NavButtons_Streams" />
         <item itemvalue="JUnit.MainPageTest.MainPage_Positive" />
         <item itemvalue="JUnit.RegistrationTest.RegistrationTest_WalletMissed" />
-        <item itemvalue="JUnit.LoginTest" />
-        <item itemvalue="JUnit.LoginTest.LoginTest_Positive" />
-        <item itemvalue="JUnit.RegistrationTest.RegistrationTest_Positive" />
       </list>
     </recent_temporary>
   </component>
@@ -252,49 +255,49 @@
     <state x="743" y="304" width="424" height="485" key="FileChooserDialogImpl/0.27.1920.1027@0.27.1920.1027" timestamp="1587735309746" />
     <state x="743" y="305" width="424" height="484" key="FileChooserDialogImpl/0.27.1920.1029@0.27.1920.1029" timestamp="1593182699795" />
     <state x="743" y="311" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1585921969045" />
-    <state width="1874" height="184" key="GridCell.Tab.0.bottom" timestamp="1593176902620">
+    <state width="1874" height="131" key="GridCell.Tab.0.bottom" timestamp="1593531016860">
       <screen x="0" y="27" width="1920" height="1029" />
     </state>
     <state width="1874" height="270" key="GridCell.Tab.0.bottom/0.27.1920.1027@0.27.1920.1027" timestamp="1592756351104" />
-    <state width="1874" height="184" key="GridCell.Tab.0.bottom/0.27.1920.1029@0.27.1920.1029" timestamp="1593176902620" />
+    <state width="1874" height="131" key="GridCell.Tab.0.bottom/0.27.1920.1029@0.27.1920.1029" timestamp="1593531016860" />
     <state width="1874" height="340" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1586035396773" />
-    <state width="1874" height="184" key="GridCell.Tab.0.center" timestamp="1593176902620">
+    <state width="1874" height="131" key="GridCell.Tab.0.center" timestamp="1593531016860">
       <screen x="0" y="27" width="1920" height="1029" />
     </state>
     <state width="1874" height="270" key="GridCell.Tab.0.center/0.27.1920.1027@0.27.1920.1027" timestamp="1592756351103" />
-    <state width="1874" height="184" key="GridCell.Tab.0.center/0.27.1920.1029@0.27.1920.1029" timestamp="1593176902620" />
+    <state width="1874" height="131" key="GridCell.Tab.0.center/0.27.1920.1029@0.27.1920.1029" timestamp="1593531016860" />
     <state width="1874" height="340" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1586035396772" />
-    <state width="1874" height="184" key="GridCell.Tab.0.left" timestamp="1593176902620">
+    <state width="1874" height="131" key="GridCell.Tab.0.left" timestamp="1593531016860">
       <screen x="0" y="27" width="1920" height="1029" />
     </state>
     <state width="1874" height="270" key="GridCell.Tab.0.left/0.27.1920.1027@0.27.1920.1027" timestamp="1592756351103" />
-    <state width="1874" height="184" key="GridCell.Tab.0.left/0.27.1920.1029@0.27.1920.1029" timestamp="1593176902620" />
+    <state width="1874" height="131" key="GridCell.Tab.0.left/0.27.1920.1029@0.27.1920.1029" timestamp="1593531016860" />
     <state width="1874" height="340" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1586035396772" />
-    <state width="1874" height="184" key="GridCell.Tab.0.right" timestamp="1593176902620">
+    <state width="1874" height="131" key="GridCell.Tab.0.right" timestamp="1593531016860">
       <screen x="0" y="27" width="1920" height="1029" />
     </state>
     <state width="1874" height="270" key="GridCell.Tab.0.right/0.27.1920.1027@0.27.1920.1027" timestamp="1592756351104" />
-    <state width="1874" height="184" key="GridCell.Tab.0.right/0.27.1920.1029@0.27.1920.1029" timestamp="1593176902620" />
+    <state width="1874" height="131" key="GridCell.Tab.0.right/0.27.1920.1029@0.27.1920.1029" timestamp="1593531016860" />
     <state width="1874" height="340" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1586035396773" />
-    <state width="1874" height="335" key="GridCell.Tab.1.bottom" timestamp="1593095114902">
+    <state width="1874" height="335" key="GridCell.Tab.1.bottom" timestamp="1593529223113">
       <screen x="0" y="27" width="1920" height="1029" />
     </state>
-    <state width="1874" height="335" key="GridCell.Tab.1.bottom/0.27.1920.1029@0.27.1920.1029" timestamp="1593095114902" />
+    <state width="1874" height="335" key="GridCell.Tab.1.bottom/0.27.1920.1029@0.27.1920.1029" timestamp="1593529223113" />
     <state width="1874" height="340" key="GridCell.Tab.1.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1586035396773" />
-    <state width="1874" height="335" key="GridCell.Tab.1.center" timestamp="1593095114901">
+    <state width="1874" height="335" key="GridCell.Tab.1.center" timestamp="1593529223113">
       <screen x="0" y="27" width="1920" height="1029" />
     </state>
-    <state width="1874" height="335" key="GridCell.Tab.1.center/0.27.1920.1029@0.27.1920.1029" timestamp="1593095114901" />
+    <state width="1874" height="335" key="GridCell.Tab.1.center/0.27.1920.1029@0.27.1920.1029" timestamp="1593529223113" />
     <state width="1874" height="340" key="GridCell.Tab.1.center/0.27.1920.1053@0.27.1920.1053" timestamp="1586035396773" />
-    <state width="1874" height="335" key="GridCell.Tab.1.left" timestamp="1593095114901">
+    <state width="1874" height="335" key="GridCell.Tab.1.left" timestamp="1593529223113">
       <screen x="0" y="27" width="1920" height="1029" />
     </state>
-    <state width="1874" height="335" key="GridCell.Tab.1.left/0.27.1920.1029@0.27.1920.1029" timestamp="1593095114901" />
+    <state width="1874" height="335" key="GridCell.Tab.1.left/0.27.1920.1029@0.27.1920.1029" timestamp="1593529223113" />
     <state width="1874" height="340" key="GridCell.Tab.1.left/0.27.1920.1053@0.27.1920.1053" timestamp="1586035396773" />
-    <state width="1874" height="335" key="GridCell.Tab.1.right" timestamp="1593095114901">
+    <state width="1874" height="335" key="GridCell.Tab.1.right" timestamp="1593529223113">
       <screen x="0" y="27" width="1920" height="1029" />
     </state>
-    <state width="1874" height="335" key="GridCell.Tab.1.right/0.27.1920.1029@0.27.1920.1029" timestamp="1593095114901" />
+    <state width="1874" height="335" key="GridCell.Tab.1.right/0.27.1920.1029@0.27.1920.1029" timestamp="1593529223113" />
     <state width="1874" height="340" key="GridCell.Tab.1.right/0.27.1920.1053@0.27.1920.1053" timestamp="1586035396773" />
     <state x="543" y="285" width="824" height="508" key="IDE.errors.dialog" timestamp="1589977232254">
       <screen x="0" y="27" width="1920" height="1029" />
@@ -304,11 +307,11 @@
       <screen x="0" y="27" width="1920" height="1029" />
     </state>
     <state x="493" y="197" width="924" height="684" key="Maven.ArtifactSearchDialog/0.27.1920.1029@0.27.1920.1029" timestamp="1591270818409" />
-    <state x="449" y="184" width="1104" height="738" key="SettingsEditor" timestamp="1593087340931">
+    <state x="449" y="184" width="1104" height="738" key="SettingsEditor" timestamp="1593530651616">
       <screen x="0" y="27" width="1920" height="1029" />
     </state>
     <state x="449" y="184" width="1022" height="731" key="SettingsEditor/0.27.1920.1027@0.27.1920.1027" timestamp="1592756310873" />
-    <state x="449" y="184" width="1104" height="738" key="SettingsEditor/0.27.1920.1029@0.27.1920.1029" timestamp="1593087340931" />
+    <state x="449" y="184" width="1104" height="738" key="SettingsEditor/0.27.1920.1029@0.27.1920.1029" timestamp="1593530651616" />
     <state x="449" y="188" width="1022" height="737" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1585921935940" />
     <state x="650" y="137" width="620" height="804" key="find.popup" timestamp="1591180747954">
       <screen x="0" y="27" width="1920" height="1029" />
