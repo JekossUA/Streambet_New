@@ -341,6 +341,11 @@ public class RegistrationTest extends RegistrationPage implements Domain {
             String some = testSettings.chromeDriver.findElement(By.id("selectId")).getCssValue(undefined);
             System.out.println(some);
 
+            if (some != null) {
+                testSettings.chromeDriver.close();
+                System.out.println("RegistrationTest_WalletMissed passed!");
+            }
+
         }catch (Exception e) {
             testSettings.screenshotBuilder.createScreenshot("RegistrationTest_WalletMissed", testSettings.chromeDriver);
             testSettings.chromeDriver.close();
@@ -355,6 +360,13 @@ public class RegistrationTest extends RegistrationPage implements Domain {
             testSettings.chromeDriver.get(REGISTRATION);
             waitEmailInput(testSettings.chromeWaiter);
             getCheckbox(testSettings.chromeDriver).click();
+            if (       getExistingEmailWarning(testSettings.chromeDriver)
+                    && getPasswordWarning(testSettings.chromeDriver)
+                    && getRepeatPasswordWarning(testSettings.chromeDriver))
+            {
+                testSettings.chromeDriver.close();
+                System.out.println("RegistrationTest_AllFieldsMissed passed!");
+            }
 
         }catch (Exception e) {
             testSettings.screenshotBuilder.createScreenshot("RegistrationTest_AllFieldsMissed", testSettings.chromeDriver);
