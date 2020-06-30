@@ -78,6 +78,7 @@ public class MainPageTest extends MainPage implements Domain {
             waitElement(testSettings.chromeWaiter, navigationButtons);
             getElementsContainer(testSettings.chromeDriver, navigationButtons, 1).click();
             waitElement(testSettings.chromeWaiter, streamPage);
+            waitUrl(testSettings.chromeWaiter, STREAMS);
             String currentUrl = testSettings.chromeDriver.getCurrentUrl();
             if(currentUrl.equals(STREAMS)) {
                 System.out.println("MainPage_NavButtons_Streams passed");
@@ -103,6 +104,7 @@ public class MainPageTest extends MainPage implements Domain {
             waitElement(testSettings.chromeWaiter, navigationButtons);
             getElementsContainer(testSettings.chromeDriver, navigationButtons, 2).click();
             waitElement(testSettings.chromeWaiter, sportPageSlider);
+            waitUrl(testSettings.chromeWaiter, SPORT);
             String currentUrl = testSettings.chromeDriver.getCurrentUrl();
             if(currentUrl.equals(SPORT)) {
                 System.out.println("MainPage_NavButtons_Sport passed");
@@ -128,6 +130,7 @@ public class MainPageTest extends MainPage implements Domain {
             waitElement(testSettings.chromeWaiter, navigationButtons);
             getElementsContainer(testSettings.chromeDriver, navigationButtons, 3).click();
             waitElement(testSettings.chromeWaiter, slotsPage);
+            waitUrl(testSettings.chromeWaiter, SLOTS);
             String currentUrl = testSettings.chromeDriver.getCurrentUrl();
             if(currentUrl.equals(SLOTS)) {
                 System.out.println("MainPage_NavButtons_Slot passed");

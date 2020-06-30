@@ -16,7 +16,7 @@ public class MainPage {
     public String sideBar = "//*[@id=\"__next\"]/div/div/div/div/div[2]/div[2]";
     public String streamPage = "//*[@id=\"__next\"]/div/div";
     public String sportPageSlider = "//*[@id=\"__next\"]/div/div/div/div/div[1]/div[2]/div/div/div/div/div/div/div[1]";
-    public String slotsPage = "//*[@id=\"__next\"]/div/div/div/div/div/div[2]/div";
+    public String slotsPage = "//*[@id=\"__next\"]/div/div/div/div/div/div[2]";
     public String newsPage = "//*[@id=\"__next\"]/div/div";
 
     //main page element
@@ -30,6 +30,9 @@ public class MainPage {
     //waiters
     public void waitElement (WebDriverWait wait, String element) {
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath(element)));
+    }
+    public void waitUrl (WebDriverWait wait, String url) {
+        wait.until(ExpectedConditions.urlToBe(url));
     }
 
 }
