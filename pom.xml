@@ -31,17 +31,10 @@
             <version>1.5.4</version>
         </dependency>
         <dependency>
-            <groupId>com.mashape.unirest</groupId>
-            <artifactId>unirest-java</artifactId>
-            <version>1.4.9</version>
+            <groupId>com.vimalselvam</groupId>
+            <artifactId>test-graphql-java</artifactId>
+            <version>1.0.0</version>
         </dependency>
-        <dependency>
-            <groupId>org.jtwig</groupId>
-            <artifactId>jtwig-core</artifactId>
-            <version>5.87.0.RELEASE</version>
-            <scope>runtime</scope>
-        </dependency>
-
 
     </dependencies>
 

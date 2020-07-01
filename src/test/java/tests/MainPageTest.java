@@ -1,6 +1,7 @@
 package tests;
 
 import org.junit.Test;
+import org.openqa.selenium.By;
 import pages.MainPage;
 import support.Domain;
 import support.TestSettings;
@@ -170,7 +171,116 @@ public class MainPageTest extends MainPage implements Domain {
         } catch (Exception e) {
             System.out.println(e);
             testSettings.screenshotBuilder.createScreenshot("MainPage_GameFilters", testSettings.chromeDriver);
+            testSettings.chromeDriver.close();
         }
+    }
+
+    @Test
+    public void MainPage_BetLineFilters () {
+        TestSettings testSettings = new TestSettings();
+        testSettings.runMaximizeWindow();
+        try {
+            testSettings.chromeDriver.get(MAINPAGE);
+            waitElement(testSettings.chromeWaiter, betLineContainer);
+            getElement(testSettings.chromeDriver, liveMatchesFilter).click();
+            waitElement(testSettings.chromeWaiter, betLineContainer);
+            if (getElement(testSettings.chromeDriver, betLineContainer).isDisplayed()) {
+                System.out.println("Live matches passed");
+            } else {
+                testSettings.screenshotBuilder.createScreenshot("Live matches", testSettings.chromeDriver);
+            }
+            getElement(testSettings.chromeDriver, allMatchesFilter).click();
+            waitElement(testSettings.chromeWaiter, betLineContainer);
+            if (getElement(testSettings.chromeDriver, betLineContainer).isDisplayed()) {
+                System.out.println("allMatchesFilter passed");
+            } else {
+                testSettings.screenshotBuilder.createScreenshot("allMatchesFilter", testSettings.chromeDriver);
+            }
+            getElement(testSettings.chromeDriver, eventsFilter).click();
+            waitElement(testSettings.chromeWaiter, betLineContainer);
+            if (getElement(testSettings.chromeDriver, betLineContainer).isDisplayed()) {
+                System.out.println("eventsFilter passed");
+            } else {
+                testSettings.screenshotBuilder.createScreenshot("eventsFilter", testSettings.chromeDriver);
+            }
+            getElement(testSettings.chromeDriver, daysFilter).click();
+            waitElement(testSettings.chromeWaiter, betLineContainer);
+            if (getElement(testSettings.chromeDriver, betLineContainer).isDisplayed()) {
+                System.out.println("daysFilter passed");
+            } else {
+                testSettings.screenshotBuilder.createScreenshot("daysFilter", testSettings.chromeDriver);
+            }
+            testSettings.chromeDriver.close();
+        } catch (Exception e) {
+            System.out.println(e);
+            testSettings.screenshotBuilder.createScreenshot("MainPage_BetLineFilters", testSettings.chromeDriver);
+        }
+    }
+
+    @Test
+    public void MainPage_LiveMatches_1 () {
+        TestSettings testSettings = new TestSettings();
+        testSettings.runMaximizeWindow();
+        try {
+            testSettings.chromeDriver.get(MAINPAGE);
+            waitElement(testSettings.chromeWaiter, firstLiveStream);
+            getElement(testSettings.chromeDriver, watchButton).click();
+            waitElement(testSettings.chromeWaiter, iframe);
+            if(getElement(testSettings.chromeDriver, iframe).isDisplayed()) {
+                System.out.println("iframe displayed");
+            } else {
+                System.out.println("iframe did not dispalyed");
+                testSettings.screenshotBuilder.createScreenshot("iframe", testSettings.chromeDriver);
+                testSettings.chromeDriver.close();
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+            testSettings.screenshotBuilder.createScreenshot("MainPage_LiveMatches_1", testSettings.chromeDriver);
+            testSettings.chromeDriver.close();
+        }
+    }
+
+    @Test
+    public void MainPage_LiveMatches_2 () {
+        TestSettings testSettings = new TestSettings();
+        testSettings.runMaximizeWindow();
+        try{
+            testSettings.chromeDriver.get(MAINPAGE);
+            waitElement(testSettings.chromeWaiter, firstLiveStream);
+            getElement(testSettings.chromeDriver, liveSideButton).click();
+            waitElement(testSettings.chromeWaiter, iframe);
+            if(getElement(testSettings.chromeDriver, iframe).isDisplayed()) {
+                System.out.println("iframe displayed");
+                testSettings.chromeDriver.close();
+            } else {
+                System.out.println("iframe did not dispalyed");
+                testSettings.screenshotBuilder.createScreenshot("iframe", testSettings.chromeDriver);
+                testSettings.chromeDriver.close();
+            }
+        }catch (Exception e) {
+            System.out.println(e);
+            testSettings.screenshotBuilder.createScreenshot("MainPage_LiveMatches_1", testSettings.chromeDriver);
+            testSettings.chromeDriver.close();
+        }
+    }
+
+    @Test // finish test here
+    public void MainPage_OpenBetLine () {
+        TestSettings testSettings = new TestSettings();
+        testSettings.runMaximizeWindow();
+        try {
+            testSettings.chromeDriver.get(MAINPAGE);
+            waitElement(testSettings.chromeWaiter, betLineSideButton);
+            getElement(testSettings.chromeDriver, betLineSideButton).click();
+
+            testSettings.chromeDriver.close();
+
+        } catch (Exception e) {
+            System.out.println(e);
+            testSettings.screenshotBuilder.createScreenshot("MainPage_OpenBetLine", testSettings.chromeDriver);
+            testSettings.chromeDriver.close();
+        }
+
     }
 }
 
