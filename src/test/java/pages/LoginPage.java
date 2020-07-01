@@ -8,6 +8,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LoginPage {
 
+    String email = "";
+    String password = "";
+    String confirmButton = "";
+    String emailWarning = "";
+
     //authorization fields
     public void setLogin(ChromeDriver chromeDriver, String loginText) {
         chromeDriver.findElement(By.id("loginId")).sendKeys(loginText);
