@@ -1,6 +1,7 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -29,7 +30,7 @@ public class RegistrationPage {
     public void setElementById (ChromeDriver chromeDriver, String fieldId , String inputValue) {
         chromeDriver.findElement(By.id(fieldId)).sendKeys(inputValue);
     }
-    public WebElement getElement (ChromeDriver chromeDriver, String element) {
+    public WebElement getElementXpath(ChromeDriver chromeDriver, String element) {
         return chromeDriver.findElement(By.xpath(element));
     }
 
@@ -47,8 +48,14 @@ public class RegistrationPage {
     public void waitElementXpath (WebDriverWait chromeWaiter, String elementXpath) {
         chromeWaiter.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(elementXpath)));
     }
-    public void waitElementClickableXpath (WebDriverWait chromeWaiter, String elementXpath) {
-        chromeWaiter.until(ExpectedConditions.elementToBeClickable(By.xpath(elementXpath)));
+
+    public boolean isClickable (WebDriverWait chromeWaiter, String elementXpath) {
+        try {
+            chromeWaiter.until(ExpectedConditions.elementToBeClickable(By.xpath(elementXpath)));
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
     }
 
 }

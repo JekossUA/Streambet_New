@@ -31,15 +31,15 @@ public class MainPage {
     public String newsPage = "//*[@id=\"__next\"]/div/div";
 
     //main page element
-    public WebElement getElement (WebDriver driver, String element) {
+    public WebElement getElementXpath(WebDriver driver, String element) {
         return driver.findElement(By.xpath(element));
     }
-    public WebElement getElementsContainer (WebDriver driver, String elementContainer, int item) {
+    public WebElement getElementsContainerXpath(WebDriver driver, String elementContainer, int item) {
         return driver.findElements(By.xpath(elementContainer)).get(item);
     }
 
     //waiters
-    public void waitElement (WebDriverWait wait, String element) {
+    public void waitElementXpath(WebDriverWait wait, String element) {
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(element)));
     }
     public void waitUrl (WebDriverWait wait, String url) {

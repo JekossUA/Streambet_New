@@ -1,5 +1,6 @@
 package support;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -15,5 +16,12 @@ public class TestSettings {
 
     public void runMaximizeWindow () {
         chromeDriver.manage().window().maximize();
+    }
+
+    public void runErrorCatch (WebDriver driver, String testName, Exception exception) {
+        screenshotBuilder.createScreenshot(testName, chromeDriver);
+        System.out.println(exception);
+        driver.close();
+        assert false;
     }
 }

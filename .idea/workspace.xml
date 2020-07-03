@@ -26,14 +26,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69d1e222-5815-4ea6-92e4-f4cf1bdece43" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/screenshots/RegistrationTest_EmptyRepeatPass - 03 07 2020_12 24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/screenshots/RegistrationTest_CheckboxMissed - 03 07 2020_15 40.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/TestTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/screenshots/RegistrationTest_AllFieldsMissed - 03 07 2020_12 53.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/screenshots/RegistrationTest_EmptyRepeatPass - 03 07 2020_12 24.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/MainPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/RegistrationPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/support/TestSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/support/TestSettings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/MainPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/MainPageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/RecoveryPass.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/RegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/RegistrationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/pages/LoginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/LoginPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/MainPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/MainPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/pages/RegistrationPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/RegistrationPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/support/TestSettings.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/support/TestSettings.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/tests/LoginTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/LoginTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/tests/MainPageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/MainPageTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/tests/RegistrationTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/RegistrationTest.class" afterDir="false" />
@@ -89,8 +98,8 @@
       <recent name="support" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RegistrationTest.RegistrationTest_AllFieldsMissed">
-    <configuration name="RegistrationTest.RegistrationTest_AllFieldsMissed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.RegistrationTest.RegistrationTest_CheckboxMissed">
+    <configuration name="LoginTest.LoginTest_Positive" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Streambet_New" />
       <extension name="coverage">
         <pattern>
@@ -99,14 +108,29 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.RegistrationTest" />
-      <option name="METHOD_NAME" value="RegistrationTest_AllFieldsMissed" />
+      <option name="MAIN_CLASS_NAME" value="tests.LoginTest" />
+      <option name="METHOD_NAME" value="LoginTest_Positive" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegistrationTest.RegistrationTest_EmptyPass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MainPageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Streambet_New" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.MainPageTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegistrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Streambet_New" />
       <extension name="coverage">
         <pattern>
@@ -116,13 +140,28 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.RegistrationTest" />
-      <option name="METHOD_NAME" value="RegistrationTest_EmptyPass" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegistrationTest.RegistrationTest_CheckboxMissed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Streambet_New" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.RegistrationTest" />
+      <option name="METHOD_NAME" value="RegistrationTest_CheckboxMissed" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegistrationTest.RegistrationTest_EmptyRepeatPass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestTest.testTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Streambet_New" />
       <extension name="coverage">
         <pattern>
@@ -131,40 +170,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.RegistrationTest" />
-      <option name="METHOD_NAME" value="RegistrationTest_EmptyRepeatPass" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RegistrationTest.RegistrationTest_WrongPass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Streambet_New" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.RegistrationTest" />
-      <option name="METHOD_NAME" value="RegistrationTest_WrongPass" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RegistrationTest.RegistrationTest_WrongRepeatPass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Streambet_New" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.RegistrationTest" />
-      <option name="METHOD_NAME" value="RegistrationTest_WrongRepeatPass" />
+      <option name="MAIN_CLASS_NAME" value="tests.TestTest" />
+      <option name="METHOD_NAME" value="testTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -172,11 +179,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RegistrationTest.RegistrationTest_AllFieldsMissed" />
-        <item itemvalue="JUnit.RegistrationTest.RegistrationTest_EmptyRepeatPass" />
-        <item itemvalue="JUnit.RegistrationTest.RegistrationTest_WrongRepeatPass" />
-        <item itemvalue="JUnit.RegistrationTest.RegistrationTest_EmptyPass" />
-        <item itemvalue="JUnit.RegistrationTest.RegistrationTest_WrongPass" />
+        <item itemvalue="JUnit.RegistrationTest.RegistrationTest_CheckboxMissed" />
+        <item itemvalue="JUnit.RegistrationTest" />
+        <item itemvalue="JUnit.MainPageTest" />
+        <item itemvalue="JUnit.LoginTest.LoginTest_Positive" />
+        <item itemvalue="JUnit.TestTest.testTest" />
       </list>
     </recent_temporary>
   </component>
@@ -232,6 +239,10 @@
       <screen x="0" y="27" width="1920" height="1029" />
     </state>
     <state x="693" y="297" width="524" height="484" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.27.1920.1029@0.27.1920.1029" timestamp="1591958372425" />
+    <state x="768" y="261" width="374" height="592" key="#com.intellij.ide.util.MemberChooser" timestamp="1593777906560">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="768" y="261" width="374" height="592" key="#com.intellij.ide.util.MemberChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1593777906560" />
     <state x="717" y="432" width="486" height="222" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1591883527598">
       <screen x="0" y="27" width="1920" height="1029" />
     </state>
@@ -258,30 +269,30 @@
     <state x="743" y="304" width="424" height="485" key="FileChooserDialogImpl/0.27.1920.1027@0.27.1920.1027" timestamp="1587735309746" />
     <state x="743" y="305" width="424" height="484" key="FileChooserDialogImpl/0.27.1920.1029@0.27.1920.1029" timestamp="1593182699795" />
     <state x="743" y="311" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1585921969045" />
-    <state width="1874" height="2" key="GridCell.Tab.0.bottom" timestamp="1593768240046">
+    <state width="1874" height="252" key="GridCell.Tab.0.bottom" timestamp="1593780048933">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1874" height="270" key="GridCell.Tab.0.bottom/0.27.1920.1027@0.27.1920.1027" timestamp="1592756351104" />
     <state width="1874" height="335" key="GridCell.Tab.0.bottom/0.27.1920.1029@0.27.1920.1029" timestamp="1593532944238" />
-    <state width="1874" height="2" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1593768240046" />
-    <state width="1874" height="2" key="GridCell.Tab.0.center" timestamp="1593768240045">
+    <state width="1874" height="252" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1593780048933" />
+    <state width="1874" height="252" key="GridCell.Tab.0.center" timestamp="1593780048933">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1874" height="270" key="GridCell.Tab.0.center/0.27.1920.1027@0.27.1920.1027" timestamp="1592756351103" />
     <state width="1874" height="335" key="GridCell.Tab.0.center/0.27.1920.1029@0.27.1920.1029" timestamp="1593532944238" />
-    <state width="1874" height="2" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1593768240045" />
-    <state width="1874" height="2" key="GridCell.Tab.0.left" timestamp="1593768240045">
+    <state width="1874" height="252" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1593780048933" />
+    <state width="1874" height="252" key="GridCell.Tab.0.left" timestamp="1593780048932">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1874" height="270" key="GridCell.Tab.0.left/0.27.1920.1027@0.27.1920.1027" timestamp="1592756351103" />
     <state width="1874" height="335" key="GridCell.Tab.0.left/0.27.1920.1029@0.27.1920.1029" timestamp="1593532944237" />
-    <state width="1874" height="2" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1593768240045" />
-    <state width="1874" height="2" key="GridCell.Tab.0.right" timestamp="1593768240046">
+    <state width="1874" height="252" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1593780048932" />
+    <state width="1874" height="252" key="GridCell.Tab.0.right" timestamp="1593780048933">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1874" height="270" key="GridCell.Tab.0.right/0.27.1920.1027@0.27.1920.1027" timestamp="1592756351104" />
     <state width="1874" height="335" key="GridCell.Tab.0.right/0.27.1920.1029@0.27.1920.1029" timestamp="1593532944238" />
-    <state width="1874" height="2" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1593768240046" />
+    <state width="1874" height="252" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1593780048933" />
     <state width="1874" height="61" key="GridCell.Tab.1.bottom" timestamp="1593766634862">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>

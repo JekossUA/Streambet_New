@@ -15,44 +15,43 @@ public class LoginTest extends LoginPage implements Domain {
         testSettings.runMaximizeWindow();
         try {
             testSettings.chromeDriver.get(LOGIN);
-            waitElement(testSettings.chromeWaiter, emailId);
-
+            waitElementXpath(testSettings.chromeWaiter, confirmButton);
             setElementById(testSettings.chromeDriver, emailId, "evgqa1220@yopmail.com");
             setElementById(testSettings.chromeDriver, passwordId, "12345678");
-            getElement(testSettings.chromeDriver, confirmButton).click();
-            waitElement(testSettings.chromeWaiter, footer);
+            getElementXpath(testSettings.chromeDriver, confirmButton).click();
+            waitElementXpath(testSettings.chromeWaiter, footer);
             String token = testSettings.chromeDriver.getLocalStorage().getItem("token");
             if (token != null) {
-                System.out.println("Login passed");
+                System.out.println("LoginTest_Positive passed");
                 System.out.println(token);
-                testSettings.chromeDriver.close();
+            } else  {
+                System.out.println("LoginTest_Positive failed");
+                testSettings.screenshotBuilder.createScreenshot("LoginTest_Positive", testSettings.chromeDriver);
             }
-        } catch (Exception e){
-            testSettings.screenshotBuilder.createScreenshot("LoginTest_Positive", testSettings.chromeDriver);
-            System.out.println(e);
             testSettings.chromeDriver.close();
+        } catch (Exception e){
+            testSettings.runErrorCatch(testSettings.chromeDriver, "LoginTest_Positive", e);
         }
     }
-
     @Test
     public void LoginTest_Negative_EmptyLogin() throws Exception {
         TestSettings testSettings = new TestSettings();
         testSettings.runMaximizeWindow();
         try {
             testSettings.chromeDriver.get(LOGIN);
-            waitElement(testSettings.chromeWaiter, emailId);
-
+            waitElementXpath(testSettings.chromeWaiter, emailId);
             setElementById(testSettings.chromeDriver, passwordId, "12345678");
-            getElement(testSettings.chromeDriver, confirmButton).click();
-            waitElement(testSettings.chromeWaiter, emailWarning);
-            if (getElement(testSettings.chromeDriver, emailWarning).isDisplayed()) {
-                System.out.println("Empty login passed");
-                testSettings.chromeDriver.close();
+            getElementXpath(testSettings.chromeDriver, confirmButton).click();
+            waitElementXpath(testSettings.chromeWaiter, emailWarning);
+            if (getElementXpath(testSettings.chromeDriver, emailWarning).isDisplayed()) {
+                System.out.println("LoginTest_Negative_EmptyLogin passed");
+            } else  {
+                System.out.println("LoginTest_Negative_EmptyLogin failed");
+                testSettings.screenshotBuilder.createScreenshot("LoginTest_Negative_EmptyLogin", testSettings.chromeDriver);
             }
-        }catch (Exception e){
-            testSettings.screenshotBuilder.createScreenshot("LoginTest_Negative_EmptyLogin", testSettings.chromeDriver);
-            System.out.println(e);
             testSettings.chromeDriver.close();
+        }catch (Exception e){
+            testSettings.runErrorCatch(testSettings.chromeDriver, "LoginTest_Negative_EmptyLogin", e);
         }
 
     }
@@ -62,20 +61,19 @@ public class LoginTest extends LoginPage implements Domain {
         testSettings.runMaximizeWindow();
         try {
             testSettings.chromeDriver.get(LOGIN);
-            waitElement(testSettings.chromeWaiter, passwordId);
-
+            waitElementXpath(testSettings.chromeWaiter, passwordId);
             setElementById(testSettings.chromeDriver, emailId, "evgqa1220@yopmail.com");
-            getElement(testSettings.chromeDriver, confirmButton).click();
-            waitElement(testSettings.chromeWaiter, passwordWarning);
-            if (getElement(testSettings.chromeDriver, passwordWarning).isDisplayed()) {
-                System.out.println("Empty password passed");
-                testSettings.chromeDriver.close();
+            getElementXpath(testSettings.chromeDriver, confirmButton).click();
+            waitElementXpath(testSettings.chromeWaiter, passwordWarning);
+            if (getElementXpath(testSettings.chromeDriver, passwordWarning).isDisplayed()) {
+                System.out.println("LoginTest_Negative_EmptyPassword passed");
+            } else  {
+                System.out.println("LoginTest_Negative_EmptyPassword failed");
+                testSettings.screenshotBuilder.createScreenshot("LoginTest_Negative_EmptyPassword", testSettings.chromeDriver);
             }
-
-        } catch (Exception e){
-            testSettings.screenshotBuilder.createScreenshot("LoginTest_Negative_EmptyPassword", testSettings.chromeDriver);
-            System.out.println(e);
             testSettings.chromeDriver.close();
+        } catch (Exception e){
+            testSettings.runErrorCatch(testSettings.chromeDriver, "LoginTest_Negative_EmptyPassword", e);
         }
     }
     @Test
@@ -84,22 +82,22 @@ public class LoginTest extends LoginPage implements Domain {
         testSettings.runMaximizeWindow();
         try {
             testSettings.chromeDriver.get(LOGIN);
-            waitElement(testSettings.chromeWaiter, passwordId);
-
-            getElement(testSettings.chromeDriver, confirmButton).click();
-            waitElement(testSettings.chromeWaiter, emailWarning);
-            waitElement(testSettings.chromeWaiter, passwordWarning);
+            waitElementXpath(testSettings.chromeWaiter, passwordId);
+            getElementXpath(testSettings.chromeDriver, confirmButton).click();
+            waitElementXpath(testSettings.chromeWaiter, emailWarning);
+            waitElementXpath(testSettings.chromeWaiter, passwordWarning);
             if
-            (       getElement(testSettings.chromeDriver, emailWarning).isDisplayed() &&
-                    getElement(testSettings.chromeDriver, passwordWarning).isDisplayed())
+            (       getElementXpath(testSettings.chromeDriver, emailWarning).isDisplayed() &&
+                    getElementXpath(testSettings.chromeDriver, passwordWarning).isDisplayed())
             {
-                System.out.println("Empty fields passed");
-                testSettings.chromeDriver.close();
+                System.out.println("LoginTest_Negative_EmptyFields passed");
+            } else  {
+                System.out.println("LoginTest_Negative_EmptyFields failed");
+                testSettings.screenshotBuilder.createScreenshot("LoginTest_Negative_EmptyFields", testSettings.chromeDriver);
             }
-        }catch (Exception e){
-            testSettings.screenshotBuilder.createScreenshot("LoginTest_Negative_EmptyFields", testSettings.chromeDriver);
-            System.out.println(e);
             testSettings.chromeDriver.close();
+        }catch (Exception e){
+            testSettings.runErrorCatch(testSettings.chromeDriver, "LoginTest_Negative_EmptyFields", e);
         }
     }
     @Test
@@ -108,20 +106,20 @@ public class LoginTest extends LoginPage implements Domain {
         testSettings.runMaximizeWindow();
         try {
             testSettings.chromeDriver.get(LOGIN);
-            waitElement(testSettings.chromeWaiter, emailId);
-
+            waitElementXpath(testSettings.chromeWaiter, emailId);
             setElementById(testSettings.chromeDriver, emailId, "evgaddadaqa1220@yopmail.com");
             setElementById(testSettings.chromeDriver, passwordId, "12345678");
-            getElement(testSettings.chromeDriver, confirmButton).click();
-            waitElement(testSettings.chromeWaiter, emailWarning);
-            if (getElement(testSettings.chromeDriver, emailWarning).isDisplayed()) {
-                System.out.println("Wrong login passed");
-                testSettings.chromeDriver.close();
+            getElementXpath(testSettings.chromeDriver, confirmButton).click();
+            waitElementXpath(testSettings.chromeWaiter, emailWarning);
+            if (getElementXpath(testSettings.chromeDriver, emailWarning).isDisplayed()) {
+                System.out.println("LoginTest_Negative_WrongLogin passed");
+            } else  {
+                System.out.println("LoginTest_Negative_WrongLogin failed");
+                testSettings.screenshotBuilder.createScreenshot("LoginTest_Negative_WrongLogin", testSettings.chromeDriver);
             }
-        }catch (Exception e){
-            testSettings.screenshotBuilder.createScreenshot("LoginTest_Negative_WrongLogin", testSettings.chromeDriver);
-            System.out.println(e);
             testSettings.chromeDriver.close();
+        }catch (Exception e){
+            testSettings.runErrorCatch(testSettings.chromeDriver, "LoginTest_Negative_WrongLogin", e);
         }
     }
     @Test
@@ -130,20 +128,20 @@ public class LoginTest extends LoginPage implements Domain {
         testSettings.runMaximizeWindow();
         try{
             testSettings.chromeDriver.get(LOGIN);
-            waitElement(testSettings.chromeWaiter, passwordId);
-
+            waitElementXpath(testSettings.chromeWaiter, passwordId);
             setElementById(testSettings.chromeDriver, emailId, "evgqa1220@yopmail.com");
             setElementById(testSettings.chromeDriver, passwordId, "123446445678");
-            getElement(testSettings.chromeDriver, confirmButton).click();
-            waitElement(testSettings.chromeWaiter, passwordWarning);
-            if (getElement(testSettings.chromeDriver, passwordWarning).isDisplayed()) {
-                System.out.println("Wrong password passed");
-                testSettings.chromeDriver.close();
+            getElementXpath(testSettings.chromeDriver, confirmButton).click();
+            waitElementXpath(testSettings.chromeWaiter, passwordWarning);
+            if (getElementXpath(testSettings.chromeDriver, passwordWarning).isDisplayed()) {
+                System.out.println("LoginTest_Negative_WrongPassword passed");
+            } else  {
+                System.out.println("LoginTest_Negative_WrongPassword failed");
+                testSettings.screenshotBuilder.createScreenshot("LoginTest_Negative_WrongPassword", testSettings.chromeDriver);
             }
-        } catch (Exception e){
-            testSettings.screenshotBuilder.createScreenshot("LoginTest_Negative_WrongPassword", testSettings.chromeDriver);
-            System.out.println(e);
             testSettings.chromeDriver.close();
+        } catch (Exception e){
+            testSettings.runErrorCatch(testSettings.chromeDriver, "LoginTest_Negative_WrongPassword", e);
         }
     }
 }

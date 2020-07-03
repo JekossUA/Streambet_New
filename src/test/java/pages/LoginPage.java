@@ -20,12 +20,12 @@ public class LoginPage {
     public void setElementById (ChromeDriver chromeDriver, String fieldId , String inputValue) {
         chromeDriver.findElement(By.id(fieldId)).sendKeys(inputValue);
     }
-    public WebElement getElement(ChromeDriver chromeDriver, String elementName) {
+    public WebElement getElementXpath(ChromeDriver chromeDriver, String elementName) {
         return chromeDriver.findElement(By.xpath(elementName));
     }
 
     //waiter
-    public void waitElement (WebDriverWait chromeWaiter, String elementName)  {
+    public void waitElementXpath(WebDriverWait chromeWaiter, String elementName)  {
         chromeWaiter.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(elementName)));
     }
 }
