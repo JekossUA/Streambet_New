@@ -1,8 +1,6 @@
 package tests;
 
 import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import pages.RegistrationPage;
 import support.*;
 
@@ -16,19 +14,19 @@ public class RegistrationTest extends RegistrationPage implements Domain {
         testSettings.runMaximizeWindow();
         try {
             testSettings.chromeDriver.get(REGISTRATION);
-            waitEmailInput(testSettings.chromeWaiter);
+            waitElementId(testSettings.chromeWaiter, loginId);
 
-            setUserLogin(testSettings.chromeDriver, randomUsers.setRandomFirstName());
-            setUserEmail(testSettings.chromeDriver, randomUsers.setRandomEmail());
+            setElementById(testSettings.chromeDriver, loginId, randomUsers.setRandomFirstName());
+            setElementById(testSettings.chromeDriver, emailId, randomUsers.setRandomEmail());
             String randomPass = randomUsers.setRandomPhoneNum();
-            setUserPassword(testSettings.chromeDriver, randomPass);
-            setRepeatUserPassword(testSettings.chromeDriver, randomPass);
-            getCheckbox(testSettings.chromeDriver).click();
-            setWallet(testSettings.chromeDriver, randomUsers.setRandomWallet());
-            getConfirmButton(testSettings.chromeDriver).click();
-            waitSuccessPage(testSettings.chromeWaiter);
+            setElementById(testSettings.chromeDriver, passwordId, randomPass);
+            setElementById(testSettings.chromeDriver, repeatPasswordId, randomPass);
+            getElement(testSettings.chromeDriver, checkbox).click();
+            setElementDropdown(testSettings.chromeDriver, walletDropdownId, walletNumberTag, 2);
+            getElement(testSettings.chromeDriver, confirmButton).click();
+            waitElementXpath(testSettings.chromeWaiter, betLineContainer);
 
-            if(getSuccessPage(testSettings.chromeDriver)) {
+            if(getElement(testSettings.chromeDriver, betLineContainer).isDisplayed()) {
                 System.out.println("Positive test passed!");
                 testSettings.chromeDriver.close();
             }
@@ -39,25 +37,26 @@ public class RegistrationTest extends RegistrationPage implements Domain {
             System.out.println(e);
         }
     }
-    @Test
+    @Test //less then 3 symbols
     public void RegistrationTest_WrongLogin ()throws Exception {
         TestSettings testSettings = new TestSettings();
         testSettings.runMaximizeWindow();
         try {
             testSettings.chromeDriver.get(REGISTRATION);
-            waitEmailInput(testSettings.chromeWaiter);
+            waitElementId(testSettings.chromeWaiter, loginId);
 
-            setUserLogin(testSettings.chromeDriver, "fF");
-            setUserEmail(testSettings.chromeDriver, randomUsers.setRandomEmail());
+            setElementById(testSettings.chromeDriver, loginId, "q");
+            setElementById(testSettings.chromeDriver, emailId, randomUsers.setRandomEmail());
             String randomPass = randomUsers.setRandomPhoneNum();
-            setUserPassword(testSettings.chromeDriver, randomPass);
-            setRepeatUserPassword(testSettings.chromeDriver, randomPass);
-            getCheckbox(testSettings.chromeDriver).click();
-            setWallet(testSettings.chromeDriver, randomUsers.setRandomWallet());
-            getConfirmButton(testSettings.chromeDriver).click();
+            setElementById(testSettings.chromeDriver, passwordId, randomPass);
+            setElementById(testSettings.chromeDriver, repeatPasswordId, randomPass);
+            getElement(testSettings.chromeDriver, checkbox).click();
+            setElementDropdown(testSettings.chromeDriver, walletDropdownId, walletNumberTag, 2);
+            getElement(testSettings.chromeDriver, confirmButton).click();
+            waitElementXpath(testSettings.chromeWaiter, loginWarning);
 
-            if (getLoginWarning(testSettings.chromeDriver)) {
-                System.out.println("Wrong login passed!");
+            if(getElement(testSettings.chromeDriver, loginWarning).isDisplayed()) {
+                System.out.println("RegistrationTest_WrongLogin passed!");
                 testSettings.chromeDriver.close();
             }
 
@@ -74,19 +73,20 @@ public class RegistrationTest extends RegistrationPage implements Domain {
         testSettings.runMaximizeWindow();
         try {
             testSettings.chromeDriver.get(REGISTRATION);
-            waitEmailInput(testSettings.chromeWaiter);
+            waitElementId(testSettings.chromeWaiter, loginId);
 
-            setUserLogin(testSettings.chromeDriver, randomUsers.setRandomFirstName() + "wrfsawdsd" );
-            setUserEmail(testSettings.chromeDriver, randomUsers.setRandomEmail());
+            setElementById(testSettings.chromeDriver, loginId, "qfjgitosngsd");
+            setElementById(testSettings.chromeDriver, emailId, randomUsers.setRandomEmail());
             String randomPass = randomUsers.setRandomPhoneNum();
-            setUserPassword(testSettings.chromeDriver, randomPass);
-            setRepeatUserPassword(testSettings.chromeDriver, randomPass);
-            getCheckbox(testSettings.chromeDriver).click();
-            setWallet(testSettings.chromeDriver, randomUsers.setRandomWallet());
-            getConfirmButton(testSettings.chromeDriver).click();
+            setElementById(testSettings.chromeDriver, passwordId, randomPass);
+            setElementById(testSettings.chromeDriver, repeatPasswordId, randomPass);
+            getElement(testSettings.chromeDriver, checkbox).click();
+            setElementDropdown(testSettings.chromeDriver, walletDropdownId, walletNumberTag, 2);
+            getElement(testSettings.chromeDriver, confirmButton).click();
+            waitElementXpath(testSettings.chromeWaiter, loginWarning);
 
-            if (getLoginWarning(testSettings.chromeDriver)) {
-                System.out.println("Huge login passed!");
+            if(getElement(testSettings.chromeDriver, loginWarning).isDisplayed()) {
+                System.out.println("RegistrationTest_HugeLogin passed!");
                 testSettings.chromeDriver.close();
             }
 
@@ -103,20 +103,20 @@ public class RegistrationTest extends RegistrationPage implements Domain {
         testSettings.runMaximizeWindow();
         try {
             testSettings.chromeDriver.get(REGISTRATION);
-            waitEmailInput(testSettings.chromeWaiter);
+            waitElementId(testSettings.chromeWaiter, loginId);
 
-            setUserLogin(testSettings.chromeDriver, randomUsers.setRandomFirstName());
-            setUserEmail(testSettings.chromeDriver, "evgqa1220@yopmail.com");
+            setElementById(testSettings.chromeDriver, loginId, randomUsers.setRandomFirstName());
+            setElementById(testSettings.chromeDriver, emailId, "evgqa1220@yopmail.com");
             String randomPass = randomUsers.setRandomPhoneNum();
-            setUserPassword(testSettings.chromeDriver, randomPass);
-            setRepeatUserPassword(testSettings.chromeDriver, randomPass);
-            getCheckbox(testSettings.chromeDriver).click();
-            setWallet(testSettings.chromeDriver, randomUsers.setRandomWallet());
-            getConfirmButton(testSettings.chromeDriver).click();
-            waitExistingEmailWarning(testSettings.chromeWaiter);
+            setElementById(testSettings.chromeDriver, passwordId, randomPass);
+            setElementById(testSettings.chromeDriver, repeatPasswordId, randomPass);
+            getElement(testSettings.chromeDriver, checkbox).click();
+            setElementDropdown(testSettings.chromeDriver, walletDropdownId, walletNumberTag, 2);
+            getElement(testSettings.chromeDriver, confirmButton).click();
+            waitElementXpath(testSettings.chromeWaiter, emailWarning);
 
-            if (getExistingEmailWarning(testSettings.chromeDriver)) {
-                System.out.println("Existing email passed!");
+            if(getElement(testSettings.chromeDriver, emailWarning).isDisplayed()) {
+                System.out.println("RegistrationTest_ExistingEmail passed!");
                 testSettings.chromeDriver.close();
             }
 
@@ -133,20 +133,20 @@ public class RegistrationTest extends RegistrationPage implements Domain {
         testSettings.runMaximizeWindow();
         try {
             testSettings.chromeDriver.get(REGISTRATION);
-            waitEmailInput(testSettings.chromeWaiter);
+            waitElementId(testSettings.chromeWaiter, loginId);
 
-            setUserLogin(testSettings.chromeDriver, randomUsers.setRandomFirstName());
-            setUserEmail(testSettings.chromeDriver, "evgqa1220daw");
+            setElementById(testSettings.chromeDriver, loginId, randomUsers.setRandomFirstName());
+            setElementById(testSettings.chromeDriver, emailId, "sdwd@d");
             String randomPass = randomUsers.setRandomPhoneNum();
-            setUserPassword(testSettings.chromeDriver, randomPass);
-            setRepeatUserPassword(testSettings.chromeDriver, randomPass);
-            getCheckbox(testSettings.chromeDriver).click();
-            setWallet(testSettings.chromeDriver, randomUsers.setRandomWallet());
-            getConfirmButton(testSettings.chromeDriver).click();
-            waitExistingEmailWarning(testSettings.chromeWaiter);
+            setElementById(testSettings.chromeDriver, passwordId, randomPass);
+            setElementById(testSettings.chromeDriver, repeatPasswordId, randomPass);
+            getElement(testSettings.chromeDriver, checkbox).click();
+            setElementDropdown(testSettings.chromeDriver, walletDropdownId, walletNumberTag, 2);
+            getElement(testSettings.chromeDriver, confirmButton).click();
+            waitElementXpath(testSettings.chromeWaiter, emailWarning);
 
-            if (getExistingEmailWarning(testSettings.chromeDriver)) {
-                System.out.println("Wrong Email passed!");
+            if(getElement(testSettings.chromeDriver, emailWarning).isDisplayed()) {
+                System.out.println("RegistrationTest_WrongEmail passed!");
                 testSettings.chromeDriver.close();
             }
 
@@ -162,20 +162,19 @@ public class RegistrationTest extends RegistrationPage implements Domain {
         testSettings.runMaximizeWindow();
         try {
             testSettings.chromeDriver.get(REGISTRATION);
-            waitEmailInput(testSettings.chromeWaiter);
+            waitElementId(testSettings.chromeWaiter, loginId);
 
-            setUserLogin(testSettings.chromeDriver, randomUsers.setRandomFirstName());
-            setUserEmail(testSettings.chromeDriver, "");
+            setElementById(testSettings.chromeDriver, loginId, randomUsers.setRandomFirstName());
             String randomPass = randomUsers.setRandomPhoneNum();
-            setUserPassword(testSettings.chromeDriver, randomPass);
-            setRepeatUserPassword(testSettings.chromeDriver, randomPass);
-            getCheckbox(testSettings.chromeDriver).click();
-            setWallet(testSettings.chromeDriver, randomUsers.setRandomWallet());
-            getConfirmButton(testSettings.chromeDriver).click();
-            waitExistingEmailWarning(testSettings.chromeWaiter);
+            setElementById(testSettings.chromeDriver, passwordId, randomPass);
+            setElementById(testSettings.chromeDriver, repeatPasswordId, randomPass);
+            getElement(testSettings.chromeDriver, checkbox).click();
+            setElementDropdown(testSettings.chromeDriver, walletDropdownId, walletNumberTag, 2);
+            getElement(testSettings.chromeDriver, confirmButton).click();
+            waitElementXpath(testSettings.chromeWaiter, emailWarning);
 
-            if (getExistingEmailWarning(testSettings.chromeDriver)) {
-                System.out.println("Empty Email passed!");
+            if(getElement(testSettings.chromeDriver, emailWarning).isDisplayed()) {
+                System.out.println("RegistrationTest_WrongEmail passed!");
                 testSettings.chromeDriver.close();
             }
 
@@ -191,19 +190,20 @@ public class RegistrationTest extends RegistrationPage implements Domain {
         testSettings.runMaximizeWindow();
         try {
             testSettings.chromeDriver.get(REGISTRATION);
-            waitEmailInput(testSettings.chromeWaiter);
+            waitElementId(testSettings.chromeWaiter, loginId);
 
-            setUserLogin(testSettings.chromeDriver, randomUsers.setRandomFirstName());
-            setUserEmail(testSettings.chromeDriver, randomUsers.setRandomEmail());
-            String randomPass = randomUsers.setRandomPhoneNum();
-            setUserPassword(testSettings.chromeDriver, "123456");
-            setRepeatUserPassword(testSettings.chromeDriver, randomPass);
-            getCheckbox(testSettings.chromeDriver).click();
-            setWallet(testSettings.chromeDriver, randomUsers.setRandomWallet());
-            getConfirmButton(testSettings.chromeDriver).click();
+            setElementById(testSettings.chromeDriver, loginId, randomUsers.setRandomFirstName());
+            setElementById(testSettings.chromeDriver, emailId, randomUsers.setRandomEmail());
+            String randomPass = "1234sa";
+            setElementById(testSettings.chromeDriver, passwordId, randomPass);
+            setElementById(testSettings.chromeDriver, repeatPasswordId, randomPass);
+            getElement(testSettings.chromeDriver, checkbox).click();
+            setElementDropdown(testSettings.chromeDriver, walletDropdownId, walletNumberTag, 2);
+            getElement(testSettings.chromeDriver, confirmButton).click();
+            waitElementXpath(testSettings.chromeWaiter, passwordWarning);
 
-            if(getPasswordWarning(testSettings.chromeDriver)) {
-                System.out.println("Wrong pass passed!");
+            if(getElement(testSettings.chromeDriver, passwordWarning).isDisplayed()) {
+                System.out.println("RegistrationTest_WrongPass passed!");
                 testSettings.chromeDriver.close();
             }
 
@@ -219,19 +219,20 @@ public class RegistrationTest extends RegistrationPage implements Domain {
         testSettings.runMaximizeWindow();
         try {
             testSettings.chromeDriver.get(REGISTRATION);
-            waitEmailInput(testSettings.chromeWaiter);
+            waitElementId(testSettings.chromeWaiter, loginId);
 
-            setUserLogin(testSettings.chromeDriver, randomUsers.setRandomFirstName());
-            setUserEmail(testSettings.chromeDriver, randomUsers.setRandomEmail());
+            setElementById(testSettings.chromeDriver, loginId, randomUsers.setRandomFirstName());
+            setElementById(testSettings.chromeDriver, emailId, randomUsers.setRandomEmail());
             String randomPass = randomUsers.setRandomPhoneNum();
-            setUserPassword(testSettings.chromeDriver, "");
-            setRepeatUserPassword(testSettings.chromeDriver, randomPass);
-            getCheckbox(testSettings.chromeDriver).click();
-            setWallet(testSettings.chromeDriver, randomUsers.setRandomWallet());
-            getConfirmButton(testSettings.chromeDriver).click();
+            setElementById(testSettings.chromeDriver, passwordId, "");
+            setElementById(testSettings.chromeDriver, repeatPasswordId, randomPass);
+            getElement(testSettings.chromeDriver, checkbox).click();
+            setElementDropdown(testSettings.chromeDriver, walletDropdownId, walletNumberTag, 2);
+            getElement(testSettings.chromeDriver, confirmButton).click();
+            waitElementXpath(testSettings.chromeWaiter, passwordWarning);
 
-            if(getPasswordWarning(testSettings.chromeDriver)) {
-                System.out.println("Empty pass passed!");
+            if(getElement(testSettings.chromeDriver, passwordWarning).isDisplayed()) {
+                System.out.println("RegistrationTest_WrongPass passed!");
                 testSettings.chromeDriver.close();
             }
 
@@ -247,19 +248,20 @@ public class RegistrationTest extends RegistrationPage implements Domain {
         testSettings.runMaximizeWindow();
         try {
             testSettings.chromeDriver.get(REGISTRATION);
-            waitEmailInput(testSettings.chromeWaiter);
+            waitElementId(testSettings.chromeWaiter, loginId);
 
-            setUserLogin(testSettings.chromeDriver, randomUsers.setRandomFirstName());
-            setUserEmail(testSettings.chromeDriver, randomUsers.setRandomEmail());
+            setElementById(testSettings.chromeDriver, loginId, randomUsers.setRandomFirstName());
+            setElementById(testSettings.chromeDriver, emailId, randomUsers.setRandomEmail());
             String randomPass = randomUsers.setRandomPhoneNum();
-            setUserPassword(testSettings.chromeDriver, randomPass);
-            setRepeatUserPassword(testSettings.chromeDriver, "12312365464");
-            getCheckbox(testSettings.chromeDriver).click();
-            setWallet(testSettings.chromeDriver, randomUsers.setRandomWallet());
-            getConfirmButton(testSettings.chromeDriver).click();
+            setElementById(testSettings.chromeDriver, passwordId, randomPass);
+            setElementById(testSettings.chromeDriver, repeatPasswordId, "123123");
+            getElement(testSettings.chromeDriver, checkbox).click();
+            setElementDropdown(testSettings.chromeDriver, walletDropdownId, walletNumberTag, 2);
+            getElement(testSettings.chromeDriver, confirmButton).click();
+            waitElementXpath(testSettings.chromeWaiter, repeatPasswordWarning);
 
-            if(getRepeatPasswordWarning(testSettings.chromeDriver)) {
-                System.out.println("Wrong repeat pass passed!");
+            if(getElement(testSettings.chromeDriver, repeatPasswordWarning).isDisplayed()) {
+                System.out.println("RegistrationTest_WrongRepeatPass passed!");
                 testSettings.chromeDriver.close();
             }
 
@@ -275,20 +277,20 @@ public class RegistrationTest extends RegistrationPage implements Domain {
         testSettings.runMaximizeWindow();
         try {
             testSettings.chromeDriver.get(REGISTRATION);
-            waitEmailInput(testSettings.chromeWaiter);
+            waitElementId(testSettings.chromeWaiter, loginId);
 
-            setUserLogin(testSettings.chromeDriver, randomUsers.setRandomFirstName());
-            setUserEmail(testSettings.chromeDriver, randomUsers.setRandomEmail());
+            setElementById(testSettings.chromeDriver, loginId, randomUsers.setRandomFirstName());
+            setElementById(testSettings.chromeDriver, emailId, randomUsers.setRandomEmail());
             String randomPass = randomUsers.setRandomPhoneNum();
-            setUserPassword(testSettings.chromeDriver, randomPass);
-            setRepeatUserPassword(testSettings.chromeDriver, "");
-            getCheckbox(testSettings.chromeDriver).click();
-            setWallet(testSettings.chromeDriver, randomUsers.setRandomWallet());
-            getConfirmButton(testSettings.chromeDriver).click();
-            waitRepeatPasswordWarning(testSettings.chromeWaiter);
+            setElementById(testSettings.chromeDriver, passwordId, randomPass);
+            setElementById(testSettings.chromeDriver, repeatPasswordId, "");
+            getElement(testSettings.chromeDriver, checkbox).click();
+            setElementDropdown(testSettings.chromeDriver, walletDropdownId, walletNumberTag, 2);
+            getElement(testSettings.chromeDriver, confirmButton).click();
+            waitElementXpath(testSettings.chromeWaiter, repeatPasswordWarning);
 
-            if(getRepeatPasswordWarning(testSettings.chromeDriver)) {
-                System.out.println("Empty repeat pass passed!");
+            if(getElement(testSettings.chromeDriver, repeatPasswordWarning).isDisplayed()) {
+                System.out.println("RegistrationTest_EmptyRepeatPass passed!");
                 testSettings.chromeDriver.close();
             }
 
@@ -304,6 +306,36 @@ public class RegistrationTest extends RegistrationPage implements Domain {
 //        testSettings.runMaximizeWindow();
 //        try {
 //            testSettings.chromeDriver.get(REGISTRATION);
+//            waitElementId(testSettings.chromeWaiter, loginId);
+//
+//            setElementById(testSettings.chromeDriver, loginId, randomUsers.setRandomFirstName());
+//            setElementById(testSettings.chromeDriver, emailId, randomUsers.setRandomEmail());
+//            String randomPass = randomUsers.setRandomPhoneNum();
+//            setElementById(testSettings.chromeDriver, passwordId, randomPass);
+//            setElementById(testSettings.chromeDriver, repeatPasswordId, randomPass);
+////            getElement(testSettings.chromeDriver, checkbox).click();
+//            setElementDropdown(testSettings.chromeDriver, walletDropdownId, walletNumberTag, 2);
+////            getElement(testSettings.chromeDriver, confirmButton).click();
+////            waitElementXpath(testSettings.chromeWaiter, repeatPasswordWarning);
+//
+//            if(waitElementClickableXpath(testSettings.chromeWaiter, checkbox) == false) {
+//                System.out.println("RegistrationTest_CheckboxMissed passed!");
+//                testSettings.chromeDriver.close();
+//            }
+//
+//        }catch (Exception e) {
+//            testSettings.screenshotBuilder.createScreenshot("RegistrationTest_CheckboxMissed", testSettings.chromeDriver);
+//            testSettings.chromeDriver.close();
+//        }
+//    }
+
+//    @Test
+//    public void RegistrationTest_WalletMissed ()throws Exception {
+//        TestSettings testSettings = new TestSettings();
+//        testSettings.runMaximizeWindow();
+//        String undefined = "undefined";
+//        try {
+//            testSettings.chromeDriver.get(REGISTRATION);
 //            waitEmailInput(testSettings.chromeWaiter);
 //
 //            setUserLogin(testSettings.chromeDriver, randomUsers.setRandomFirstName());
@@ -312,45 +344,20 @@ public class RegistrationTest extends RegistrationPage implements Domain {
 //            setUserPassword(testSettings.chromeDriver, randomPass);
 //            setRepeatUserPassword(testSettings.chromeDriver, randomPass);
 //            getCheckbox(testSettings.chromeDriver).click();
-//            setWallet(testSettings.chromeDriver, randomUsers.setRandomWallet());
 //            getConfirmButton(testSettings.chromeDriver).click();
-//            waitSuccessPage(testSettings.chromeWaiter);
+//            String some = testSettings.chromeDriver.findElement(By.id("selectId")).getCssValue(undefined);
+//            System.out.println(some);
+//
+//            if (some != null) {
+//                testSettings.chromeDriver.close();
+//                System.out.println("RegistrationTest_WalletMissed passed!");
+//            }
 //
 //        }catch (Exception e) {
-//            testSettings.screenshotBuilder.createScreenshot("RegistrationTest_CheckboxMissed", testSettings.chromeDriver);
+//            testSettings.screenshotBuilder.createScreenshot("RegistrationTest_WalletMissed", testSettings.chromeDriver);
 //            testSettings.chromeDriver.close();
 //        }
 //    }
-
-    @Test
-    public void RegistrationTest_WalletMissed ()throws Exception {
-        TestSettings testSettings = new TestSettings();
-        testSettings.runMaximizeWindow();
-        String undefined = "undefined";
-        try {
-            testSettings.chromeDriver.get(REGISTRATION);
-            waitEmailInput(testSettings.chromeWaiter);
-
-            setUserLogin(testSettings.chromeDriver, randomUsers.setRandomFirstName());
-            setUserEmail(testSettings.chromeDriver, randomUsers.setRandomEmail());
-            String randomPass = randomUsers.setRandomPhoneNum();
-            setUserPassword(testSettings.chromeDriver, randomPass);
-            setRepeatUserPassword(testSettings.chromeDriver, randomPass);
-            getCheckbox(testSettings.chromeDriver).click();
-            getConfirmButton(testSettings.chromeDriver).click();
-            String some = testSettings.chromeDriver.findElement(By.id("selectId")).getCssValue(undefined);
-            System.out.println(some);
-
-            if (some != null) {
-                testSettings.chromeDriver.close();
-                System.out.println("RegistrationTest_WalletMissed passed!");
-            }
-
-        }catch (Exception e) {
-            testSettings.screenshotBuilder.createScreenshot("RegistrationTest_WalletMissed", testSettings.chromeDriver);
-            testSettings.chromeDriver.close();
-        }
-    }
 
     @Test//when checkbox selected
     public void RegistrationTest_AllFieldsMissed ()throws Exception {
@@ -358,14 +365,19 @@ public class RegistrationTest extends RegistrationPage implements Domain {
         testSettings.runMaximizeWindow();
         try {
             testSettings.chromeDriver.get(REGISTRATION);
-            waitEmailInput(testSettings.chromeWaiter);
-            getCheckbox(testSettings.chromeDriver).click();
-            if (       getExistingEmailWarning(testSettings.chromeDriver)
-                    && getPasswordWarning(testSettings.chromeDriver)
-                    && getRepeatPasswordWarning(testSettings.chromeDriver))
+            waitElementId(testSettings.chromeWaiter, loginId);
+
+            getElement(testSettings.chromeDriver, checkbox).click();
+            getElement(testSettings.chromeDriver, confirmButton).click();
+            waitElementXpath(testSettings.chromeWaiter, emailWarning);
+
+            if(     getElement(testSettings.chromeDriver, emailWarning).isDisplayed() &&
+                    getElement(testSettings.chromeDriver, passwordWarning).isDisplayed() &&
+                    getElement(testSettings.chromeDriver, repeatPasswordWarning).isDisplayed() &&
+                    getElement(testSettings.chromeDriver, walletWarning).isDisplayed())
             {
-                testSettings.chromeDriver.close();
                 System.out.println("RegistrationTest_AllFieldsMissed passed!");
+                testSettings.chromeDriver.close();
             }
 
         }catch (Exception e) {
