@@ -4,10 +4,7 @@ import org.junit.Test;
 import pages.LoginPage;
 import support.*;
 
-
-
-public class LoginTest extends LoginPage implements Domain {
-
+public class LoginTest extends LoginPage implements Domains {
 
     @Test
     public void LoginTest_Positive() throws Exception  {
@@ -16,7 +13,7 @@ public class LoginTest extends LoginPage implements Domain {
         try {
             testSettings.chromeDriver.get(LOGIN);
             waitElementXpath(testSettings.chromeWaiter, confirmButton);
-            setElementById(testSettings.chromeDriver, emailId, "evgqa1220@yopmail.com");
+            setElementById(testSettings.chromeDriver, loginId, "evgqa1220@yopmail.com");
             setElementById(testSettings.chromeDriver, passwordId, "12345678");
             getElementXpath(testSettings.chromeDriver, confirmButton).click();
             waitElementXpath(testSettings.chromeWaiter, footer);
@@ -39,7 +36,7 @@ public class LoginTest extends LoginPage implements Domain {
         testSettings.runMaximizeWindow();
         try {
             testSettings.chromeDriver.get(LOGIN);
-            waitElementXpath(testSettings.chromeWaiter, emailId);
+            waitElementXpath(testSettings.chromeWaiter, confirmButton);
             setElementById(testSettings.chromeDriver, passwordId, "12345678");
             getElementXpath(testSettings.chromeDriver, confirmButton).click();
             waitElementXpath(testSettings.chromeWaiter, emailWarning);
@@ -61,8 +58,8 @@ public class LoginTest extends LoginPage implements Domain {
         testSettings.runMaximizeWindow();
         try {
             testSettings.chromeDriver.get(LOGIN);
-            waitElementXpath(testSettings.chromeWaiter, passwordId);
-            setElementById(testSettings.chromeDriver, emailId, "evgqa1220@yopmail.com");
+            waitElementXpath(testSettings.chromeWaiter, confirmButton);
+            setElementById(testSettings.chromeDriver, loginId, "evgqa1220@yopmail.com");
             getElementXpath(testSettings.chromeDriver, confirmButton).click();
             waitElementXpath(testSettings.chromeWaiter, passwordWarning);
             if (getElementXpath(testSettings.chromeDriver, passwordWarning).isDisplayed()) {
@@ -82,7 +79,7 @@ public class LoginTest extends LoginPage implements Domain {
         testSettings.runMaximizeWindow();
         try {
             testSettings.chromeDriver.get(LOGIN);
-            waitElementXpath(testSettings.chromeWaiter, passwordId);
+            waitElementXpath(testSettings.chromeWaiter, confirmButton);
             getElementXpath(testSettings.chromeDriver, confirmButton).click();
             waitElementXpath(testSettings.chromeWaiter, emailWarning);
             waitElementXpath(testSettings.chromeWaiter, passwordWarning);
@@ -106,8 +103,8 @@ public class LoginTest extends LoginPage implements Domain {
         testSettings.runMaximizeWindow();
         try {
             testSettings.chromeDriver.get(LOGIN);
-            waitElementXpath(testSettings.chromeWaiter, emailId);
-            setElementById(testSettings.chromeDriver, emailId, "evgaddadaqa1220@yopmail.com");
+            waitElementXpath(testSettings.chromeWaiter, confirmButton);
+            setElementById(testSettings.chromeDriver, loginId, "evgaddadaqa1220@yopmail.com");
             setElementById(testSettings.chromeDriver, passwordId, "12345678");
             getElementXpath(testSettings.chromeDriver, confirmButton).click();
             waitElementXpath(testSettings.chromeWaiter, emailWarning);
@@ -128,8 +125,8 @@ public class LoginTest extends LoginPage implements Domain {
         testSettings.runMaximizeWindow();
         try{
             testSettings.chromeDriver.get(LOGIN);
-            waitElementXpath(testSettings.chromeWaiter, passwordId);
-            setElementById(testSettings.chromeDriver, emailId, "evgqa1220@yopmail.com");
+            waitElementXpath(testSettings.chromeWaiter, confirmButton);
+            setElementById(testSettings.chromeDriver, loginId, "evgqa1220@yopmail.com");
             setElementById(testSettings.chromeDriver, passwordId, "123446445678");
             getElementXpath(testSettings.chromeDriver, confirmButton).click();
             waitElementXpath(testSettings.chromeWaiter, passwordWarning);
