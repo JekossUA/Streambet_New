@@ -16,37 +16,10 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </select>
+    <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69d1e222-5815-4ea6-92e4-f4cf1bdece43" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/screenshots/RegistrationTest_CheckboxMissed - 03 07 2020_15 40.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/TestTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/screenshots/RegistrationTest_AllFieldsMissed - 03 07 2020_12 53.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/screenshots/RegistrationTest_EmptyRepeatPass - 03 07 2020_12 24.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/MainPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/RegistrationPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/support/TestSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/support/TestSettings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LoginTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/MainPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/MainPageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/RecoveryPass.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/RegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/RegistrationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/LoginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/LoginPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/MainPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/MainPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/RegistrationPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/RegistrationPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/support/TestSettings.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/support/TestSettings.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/LoginTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/LoginTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/MainPageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/MainPageTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/RegistrationTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/RegistrationTest.class" afterDir="false" />
-    </list>
+    <list default="true" id="69d1e222-5815-4ea6-92e4-f4cf1bdece43" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
