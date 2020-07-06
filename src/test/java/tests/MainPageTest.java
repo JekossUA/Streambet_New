@@ -2,10 +2,10 @@ package tests;
 
 import org.junit.Test;
 import pages.MainPage;
-import support.Domain;
+import support.Domains;
 import support.TestSettings;
 
-public class MainPageTest extends MainPage implements Domain {
+public class MainPageTest extends MainPage implements Domains {
 
     @Test
     public void MainPage_Positive() {

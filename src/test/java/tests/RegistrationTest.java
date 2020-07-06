@@ -5,7 +5,7 @@ import pages.RegistrationPage;
 import support.*;
 
 
-public class RegistrationTest extends RegistrationPage implements Domain {
+public class RegistrationTest extends RegistrationPage implements Domains {
     RandomUsers randomUsers = new RandomUsers();
 
     @Test
@@ -65,7 +65,6 @@ public class RegistrationTest extends RegistrationPage implements Domain {
             testSettings.runErrorCatch(testSettings.chromeDriver, "RegistrationTest_WrongLogin", e);
         }
     }
-
     @Test// more then 10 symbols
     public void RegistrationTest_HugeLogin ()throws Exception {
         TestSettings testSettings = new TestSettings();
@@ -94,7 +93,6 @@ public class RegistrationTest extends RegistrationPage implements Domain {
             testSettings.runErrorCatch(testSettings.chromeDriver, "RegistrationTest_HugeLogin", e);
         }
     }
-
     @Test
     public void RegistrationTest_ExistingEmail ()throws Exception {
         TestSettings testSettings = new TestSettings();
@@ -124,7 +122,6 @@ public class RegistrationTest extends RegistrationPage implements Domain {
             testSettings.runErrorCatch(testSettings.chromeDriver, "RegistrationTest_ExistingEmail", e);
         }
     }
-
     @Test
     public void RegistrationTest_WrongEmail () throws Exception{
         TestSettings testSettings = new TestSettings();
@@ -153,7 +150,6 @@ public class RegistrationTest extends RegistrationPage implements Domain {
             testSettings.runErrorCatch(testSettings.chromeDriver, "RegistrationTest_WrongEmail", e);
         }
     }
-
     @Test
     public void RegistrationTest_EmptyEmail ()throws Exception {
         TestSettings testSettings = new TestSettings();
@@ -181,7 +177,6 @@ public class RegistrationTest extends RegistrationPage implements Domain {
             testSettings.runErrorCatch(testSettings.chromeDriver, "RegistrationTest_EmptyEmail", e);
         }
     }
-
     @Test //contains less then 8 symbols
     public void RegistrationTest_WrongPass ()throws Exception {
         TestSettings testSettings = new TestSettings();
@@ -210,7 +205,6 @@ public class RegistrationTest extends RegistrationPage implements Domain {
             testSettings.runErrorCatch(testSettings.chromeDriver, "RegistrationTest_WrongPass", e);
         }
     }
-
     @Test
     public void RegistrationTest_EmptyPass ()throws Exception {
         TestSettings testSettings = new TestSettings();
@@ -239,7 +233,6 @@ public class RegistrationTest extends RegistrationPage implements Domain {
             testSettings.runErrorCatch(testSettings.chromeDriver, "RegistrationTest_EmptyPass", e);
         }
     }
-
     @Test
     public void RegistrationTest_WrongRepeatPass ()throws Exception {
         TestSettings testSettings = new TestSettings();
@@ -269,7 +262,6 @@ public class RegistrationTest extends RegistrationPage implements Domain {
             testSettings.runErrorCatch(testSettings.chromeDriver, "RegistrationTest_WrongRepeatPass", e);
         }
     }
-
     @Test
     public void RegistrationTest_EmptyRepeatPass ()throws Exception {
         TestSettings testSettings = new TestSettings();
@@ -298,7 +290,6 @@ public class RegistrationTest extends RegistrationPage implements Domain {
             testSettings.runErrorCatch(testSettings.chromeDriver, "RegistrationTest_EmptyRepeatPass", e);
         }
     }
-
     @Test
     public void RegistrationTest_CheckboxMissed () throws Exception{
         TestSettings testSettings = new TestSettings();
@@ -326,7 +317,6 @@ public class RegistrationTest extends RegistrationPage implements Domain {
             testSettings.runErrorCatch(testSettings.chromeDriver, "RegistrationTest_CheckboxMissed", e);
         }
     }
-
 //    @Test // need to finish
 //    public void RegistrationTest_WalletMissed ()throws Exception {
 //        TestSettings testSettings = new TestSettings();
@@ -355,7 +345,6 @@ public class RegistrationTest extends RegistrationPage implements Domain {
 //            testSettings.runErrorCatch(testSettings.chromeDriver, "RegistrationTest_WalletMissed", e);
 //        }
 //    }
-
     @Test
     public void RegistrationTest_AllFieldsMissed ()throws Exception {
         TestSettings testSettings = new TestSettings();
@@ -368,7 +357,6 @@ public class RegistrationTest extends RegistrationPage implements Domain {
             waitElementXpath(testSettings.chromeWaiter, emailWarning);
             if(     getElementXpath(testSettings.chromeDriver, emailWarning).isDisplayed() &&
                     getElementXpath(testSettings.chromeDriver, passwordWarning).isDisplayed() &&
-                    getElementXpath(testSettings.chromeDriver, repeatPasswordWarning).isDisplayed() &&
                     getElementXpath(testSettings.chromeDriver, walletWarning).isDisplayed())
             {
                 System.out.println("RegistrationTest_AllFieldsMissed passed!");
