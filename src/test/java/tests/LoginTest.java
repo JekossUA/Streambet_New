@@ -13,7 +13,7 @@ public class LoginTest extends LoginPage implements Domains {
         try {
             testSettings.chromeDriver.get(LOGIN);
             waitElementXpath(testSettings.chromeWaiter, confirmButton);
-            setElementById(testSettings.chromeDriver, loginId, "evgqa1220@yopmail.com");
+            setElementById(testSettings.chromeDriver, loginId, "evgqa66@yopmail.com");
             setElementById(testSettings.chromeDriver, passwordId, "12345678");
             getElementXpath(testSettings.chromeDriver, confirmButton).click();
             waitElementXpath(testSettings.chromeWaiter, footer);

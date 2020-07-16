@@ -240,7 +240,7 @@ public class MainPageTest extends MainPage implements Domains {
         }
     }
     @Test // finish test here
-    public void MainPage_OpenBetLine () {
+    public void MainPage_Prematch_OpenBetLine () {
         TestSettings testSettings = new TestSettings();
         testSettings.runMaximizeWindow();
         try {

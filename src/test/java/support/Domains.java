@@ -1,13 +1,13 @@
 package support;
 
 public interface Domains {
-     String REGISTRATION = "https://portal.streambet.dev/registration";
-     String LOGIN = "https://portal.streambet.dev/login";
-     String RECOVERYPASS = "https://portal.streambet.dev/recovery";
-     String MAINPAGE = "https://portal.streambet.dev";
-     String STREAMS = "https://portal.streambet.dev/stream";
-     String SPORT = "https://portal.streambet.dev/sport";
-     String SLOTS = "https://portal.streambet.dev/slots";
-     String PROFILE = "https://portal.streambet.dev/profile";
-     String NEWS = "https://portal.streambet.dev/news";
+     String REGISTRATION = "https://streambet.io/registration";
+     String LOGIN = "https://streambet.io/login";
+     String RECOVERYPASS = "https://streambet.io/recovery";
+     String MAINPAGE = "https://streambet.io";
+     String STREAMS = "https://streambet.io/stream";
+     String SPORT = "https://streambet.io/sport";
+     String SLOTS = "https://streambet.io/slots";
+     String PROFILE = "https://streambet.io/profile";
+     String NEWS = "https://streambet.io/news";
 }

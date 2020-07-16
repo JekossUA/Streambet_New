@@ -24,9 +24,9 @@ public class RegistrationTest extends RegistrationPage implements Domains {
             getElementXpath(testSettings.chromeDriver, checkbox).click();
             setElementDropdown(testSettings.chromeDriver, walletDropdownId, walletNumberTag, 2);
             getElementXpath(testSettings.chromeDriver, confirmButton).click();
-            waitElementXpath(testSettings.chromeWaiter, betLineContainer);
+            waitElementXpath(testSettings.chromeWaiter, successPage);
 
-            if(getElementXpath(testSettings.chromeDriver, betLineContainer).isDisplayed()) {
+            if(getElementXpath(testSettings.chromeDriver, successPage).isDisplayed()) {
                 System.out.println("Positive test passed!");
             } else  {
                 System.out.println("Positive test failed");
@@ -65,7 +65,7 @@ public class RegistrationTest extends RegistrationPage implements Domains {
             testSettings.runErrorCatch(testSettings.chromeDriver, "RegistrationTest_WrongLogin", e);
         }
     }
-    @Test// more then 10 symbols
+    @Test// more then 32 symbols
     public void RegistrationTest_HugeLogin ()throws Exception {
         TestSettings testSettings = new TestSettings();
         testSettings.runMaximizeWindow();
@@ -73,7 +73,7 @@ public class RegistrationTest extends RegistrationPage implements Domains {
             testSettings.chromeDriver.get(REGISTRATION);
             waitElementId(testSettings.chromeWaiter, loginId);
 
-            setElementById(testSettings.chromeDriver, loginId, "qfjgitosngsd");
+            setElementById(testSettings.chromeDriver, loginId, "qfjgitosngsdkfuthfjsnfhfysjrnshfns");
             setElementById(testSettings.chromeDriver, emailId, randomUsers.setRandomEmail());
             String randomPass = randomUsers.setRandomPhoneNum();
             setElementById(testSettings.chromeDriver, passwordId, randomPass);
@@ -102,7 +102,7 @@ public class RegistrationTest extends RegistrationPage implements Domains {
             waitElementId(testSettings.chromeWaiter, loginId);
 
             setElementById(testSettings.chromeDriver, loginId, randomUsers.setRandomFirstName());
-            setElementById(testSettings.chromeDriver, emailId, "evgqa1220@yopmail.com");
+            setElementById(testSettings.chromeDriver, emailId, "evgqa66@yopmail.com");
             String randomPass = randomUsers.setRandomPhoneNum();
             setElementById(testSettings.chromeDriver, passwordId, randomPass);
             setElementById(testSettings.chromeDriver, repeatPasswordId, randomPass);
@@ -355,9 +355,9 @@ public class RegistrationTest extends RegistrationPage implements Domains {
             getElementXpath(testSettings.chromeDriver, checkbox).click();
             getElementXpath(testSettings.chromeDriver, confirmButton).click();
             waitElementXpath(testSettings.chromeWaiter, emailWarning);
-            if(     getElementXpath(testSettings.chromeDriver, emailWarning).isDisplayed() &&
-                    getElementXpath(testSettings.chromeDriver, passwordWarning).isDisplayed() &&
-                    getElementXpath(testSettings.chromeDriver, walletWarning).isDisplayed())
+            if  (     getElementXpath(testSettings.chromeDriver, emailWarning).isDisplayed() &&
+                      getElementXpath(testSettings.chromeDriver, passwordWarning).isDisplayed()
+                )
             {
                 System.out.println("RegistrationTest_AllFieldsMissed passed!");
             } else  {
