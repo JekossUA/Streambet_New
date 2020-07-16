@@ -27,8 +27,8 @@ public class MainPage {
     public String watchButton = "/html/body/div[1]/div/div/div/div/div[2]/div[1]/div[2]/div[3]/div[2]/div[1]/div[2]/a";
     public String iframe = "/html/body/div[1]/div/div/div/div/div/div[2]/div[1]/iframe";
     public String liveSideButton = "/html/body/div[1]/div/div/div/div/div[2]/div[1]/div[2]/div[3]/div[2]/div[3]/a";
-    public String betLineSideButton = "/html/body/div[1]/div/div/div/div/div[2]/div[1]/div[2]/div[8]/div[8]/div[3]/a";
-    public String newsPage = "//*[@id=\"__next\"]/div/div";
+    public String prematchSideButton = "/html/body/div[1]/div/div/div/div/div[2]/div[1]/div[2]/div[8]/div[2]/div[3]/a";
+    public String prematchSlider = "/html/body/div[1]/div/div/div/div/div/div[1]/div[1]";
 
     //main page element
     public WebElement getElementXpath(WebDriver driver, String element) {
