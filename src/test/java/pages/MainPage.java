@@ -21,13 +21,16 @@ public class MainPage {
     public String slotsPage = "//*[@id=\"__next\"]/div/div/div/div/div/div[2]";
     public String eventsFilter = "/html/body/div[1]/div/div/div/div/div[2]/div[1]/div[2]/div[1]/div/button[1]";
     public String daysFilter = "/html/body/div[1]/div/div/div/div/div[2]/div[1]/div[2]/div[1]/div/button[2]";
-    public String allMatchesFilter = "/html/body/div[1]/div/div/div/div/div[2]/div[1]/div[2]/div[1]/button[1]";
+    public String allGamessFilter = "/html/body/div[1]/div/div/div/div/div[2]/div[1]/div[2]/div[1]/button[1]";
     public String liveMatchesFilter = "/html/body/div[1]/div/div/div/div/div[2]/div[1]/div[2]/div[1]/button[2]";
+    public String prematchFilter = "/html/body/div[1]/div/div/div/div/div[2]/div[1]/div[2]/div[1]/button[3]";
+    public String totalizatorFilter = "/html/body/div[1]/div/div/div/div/div[2]/div[1]/div[2]/div[1]/button[4]";
     public String firstLiveStream = "/html/body/div[1]/div/div/div/div/div[2]/div[1]/div[2]/div[3]/div[2]";
     public String watchButton = "/html/body/div[1]/div/div/div/div/div[2]/div[1]/div[2]/div[3]/div[2]/div[1]/div[2]/a";
-    public String iframe = "/html/body/div[1]/div/div/div/div/div/div[2]/div[1]/iframe";
+    public String iframeTotalizator = "/html/body/div[1]/div/div/div/div/div/div[2]/div/div[1]/iframe";
+    public String iframePrematch = "/html/body/div[1]/div/div/div/div/div/div[2]/div[1]/iframe";
     public String liveSideButton = "/html/body/div[1]/div/div/div/div/div[2]/div[1]/div[2]/div[3]/div[2]/div[3]/a";
-    public String prematchSideButton = "/html/body/div[1]/div/div/div/div/div[2]/div[1]/div[2]/div[8]/div[2]/div[3]/a";
+    public String prematchSideButton = "/html/body/div[1]/div/div/div/div/div[2]/div[1]/div[2]/div[2]/div[1]/div[2]/div[3]/a";
     public String prematchSlider = "/html/body/div[1]/div/div/div/div/div/div[1]/div[1]";
 
     //main page element
