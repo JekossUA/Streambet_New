@@ -14,16 +14,16 @@ public class RegistrationPage {
     public String emailId = "emeilId";
     public String passwordId = "passwordId";
     public String repeatPasswordId = "passwordRepeatId";
-    public String checkbox = "//*[@id=\"__next\"]/div/div/section/div/section/div[2]/div[2]/div[5]/div/label";
+    public String checkbox = "/html/body/div[1]/div/div/section/div/section/div[2]/div[2]/div[5]/div/label[1]";
     public String walletDropdownId = "selectId";
     public String walletNumberTag = "option";
     public String confirmButton = "/html/body/div[1]/div/div/section/div/section/div[2]/div[2]/div[7]/button";
     public String betLineContainer = "/html/body/div[1]/div/div/div/div/div[2]/div[1]/div[2]";
-    public String loginWarning = "//*[@id=\"__next\"]/div/div/section/div/section/div[2]/div[2]/div[1]/div/div";
-    public String emailWarning = "//*[@id=\"__next\"]/div/div/section/div/section/div[2]/div[2]/div[2]/div/div";
-    public String passwordWarning = "//*[@id=\"__next\"]/div/div/section/div/section/div[2]/div[2]/div[3]/div/div";
-    public String repeatPasswordWarning = "//*[@id=\"__next\"]/div/div/section/div/section/div[2]/div[2]/div[4]/div/div";
-    public String walletWarning = "";
+    public String loginWarning = "/html/body/div[1]/div/div/section/div/section/div[2]/div[2]/div[1]/div/div";
+    public String emailWarning = "/html/body/div[1]/div/div/section/div/section/div[2]/div[2]/div[2]/div/div";
+    public String passwordWarning = "/html/body/div[1]/div/div/section/div/section/div[2]/div[2]/div[3]/div/div";
+    public String repeatPasswordWarning = "/html/body/div[1]/div/div/section/div/section/div[2]/div[2]/div[4]/div/div";
+    public String successPage = "/html/body/div[1]/div/div/section/div/section/div[2]/div/h5";
 
 
     //get registration fields

@@ -240,18 +240,25 @@ public class MainPageTest extends MainPage implements Domains {
         }
     }
     @Test // finish test here
-    public void MainPage_OpenBetLine () {
+    public void MainPage_Prematch_OpenBetLine () {
         TestSettings testSettings = new TestSettings();
         testSettings.runMaximizeWindow();
         try {
             testSettings.chromeDriver.get(MAINPAGE);
-            waitElementXpath(testSettings.chromeWaiter, betLineSideButton);
-            getElementXpath(testSettings.chromeDriver, betLineSideButton).click();
-
+            waitElementXpath(testSettings.chromeWaiter, betLineContainer);
+            waitElementXpath(testSettings.chromeWaiter, prematchSideButton);
+            getElementXpath(testSettings.chromeDriver, prematchSideButton).click();
+            waitElementXpath(testSettings.chromeWaiter, prematchSlider);
+            if(getElementXpath(testSettings.chromeDriver, prematchSlider).isDisplayed()) {
+                System.out.println("prematchSlider displayed!");
+            }else {
+                System.out.println("prematchSlider is not displayed");
+                testSettings.screenshotBuilder.createScreenshot("MainPage_Prematch_OpenBetLine", testSettings.chromeDriver);
+            }
             testSettings.chromeDriver.close();
-
         } catch (Exception e) {
             testSettings.runErrorCatch(testSettings.chromeDriver, "MainPage_OpenBetLine", e);
+            System.out.println(e);
         }
     }
 }
