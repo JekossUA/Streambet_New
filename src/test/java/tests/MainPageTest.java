@@ -19,7 +19,7 @@ public class MainPageTest extends MainPage implements Domains {
                 System.out.println("header displayed!");
             } else {
                 System.out.println("header don't display");
-                testSettings.screenshotBuilder.createScreenshot("header ", testSettings.chromeDriver );
+                testSettings.screenshotBuilder.createScreenshot("header ", testSettings.chromeDriver);
             }
 
             waitElementXpath(testSettings.chromeWaiter, navigationButtons);
@@ -27,7 +27,7 @@ public class MainPageTest extends MainPage implements Domains {
                 System.out.println("navigationButtons displayed!");
             } else {
                 System.out.println("navigationButtons don't display");
-                testSettings.screenshotBuilder.createScreenshot("navigationButtons", testSettings.chromeDriver );
+                testSettings.screenshotBuilder.createScreenshot("navigationButtons", testSettings.chromeDriver);
             }
 
             waitElementXpath(testSettings.chromeWaiter, usersCorner);
@@ -35,7 +35,7 @@ public class MainPageTest extends MainPage implements Domains {
                 System.out.println("usersCorner displayed!");
             } else {
                 System.out.println("usersCorner don't display");
-                testSettings.screenshotBuilder.createScreenshot("usersCorner", testSettings.chromeDriver );
+                testSettings.screenshotBuilder.createScreenshot("usersCorner", testSettings.chromeDriver);
             }
 
             waitElementXpath(testSettings.chromeWaiter, gameFilters);
@@ -43,7 +43,7 @@ public class MainPageTest extends MainPage implements Domains {
                 System.out.println("gameFilters displayed!");
             } else {
                 System.out.println("gameFilters don't display");
-                testSettings.screenshotBuilder.createScreenshot("gameFilters", testSettings.chromeDriver );
+                testSettings.screenshotBuilder.createScreenshot("gameFilters", testSettings.chromeDriver);
             }
 
             waitElementXpath(testSettings.chromeWaiter, betLineContainer);
@@ -51,7 +51,7 @@ public class MainPageTest extends MainPage implements Domains {
                 System.out.println("betLineContainer displayed!");
             } else {
                 System.out.println("betLineContainer don't display");
-                testSettings.screenshotBuilder.createScreenshot("betLineContainer", testSettings.chromeDriver );
+                testSettings.screenshotBuilder.createScreenshot("betLineContainer", testSettings.chromeDriver);
             }
 
             waitElementXpath(testSettings.chromeWaiter, sideBar);
@@ -59,15 +59,16 @@ public class MainPageTest extends MainPage implements Domains {
                 System.out.println("sideBar displayed!");
             } else {
                 System.out.println("sideBar don't display");
-                testSettings.screenshotBuilder.createScreenshot("sideBar", testSettings.chromeDriver );
+                testSettings.screenshotBuilder.createScreenshot("sideBar", testSettings.chromeDriver);
             }
             testSettings.chromeDriver.close();
         } catch (Exception e) {
             testSettings.runErrorCatch(testSettings.chromeDriver, "MainPage_Positive", e);
         }
     }
+
     @Test
-    public void MainPage_NavButtons_Streams () {
+    public void MainPage_NavButtons_Streams() {
         TestSettings testSettings = new TestSettings();
         testSettings.runMaximizeWindow();
         try {
@@ -77,7 +78,7 @@ public class MainPageTest extends MainPage implements Domains {
             waitElementXpath(testSettings.chromeWaiter, streamPage);
             waitUrl(testSettings.chromeWaiter, STREAMS);
             String currentUrl = testSettings.chromeDriver.getCurrentUrl();
-            if(currentUrl.equals(STREAMS)) {
+            if (currentUrl.equals(STREAMS)) {
                 System.out.println("MainPage_NavButtons_Streams passed");
             } else {
                 System.out.println("MainPage_NavButtons_Streams failed");
@@ -88,8 +89,9 @@ public class MainPageTest extends MainPage implements Domains {
             testSettings.runErrorCatch(testSettings.chromeDriver, "MainPage_NavButtons_Streams", e);
         }
     }
+
     @Test
-    public void MainPage_NavButtons_Sport () {
+    public void MainPage_NavButtons_Sport() {
         TestSettings testSettings = new TestSettings();
         testSettings.runMaximizeWindow();
         try {
@@ -99,7 +101,7 @@ public class MainPageTest extends MainPage implements Domains {
             waitElementXpath(testSettings.chromeWaiter, sportPageSlider);
             waitUrl(testSettings.chromeWaiter, SPORT);
             String currentUrl = testSettings.chromeDriver.getCurrentUrl();
-            if(currentUrl.equals(SPORT)) {
+            if (currentUrl.equals(SPORT)) {
                 System.out.println("MainPage_NavButtons_Sport passed");
             } else {
                 System.out.println("MainPage_NavButtons_Sport failed");
@@ -110,8 +112,9 @@ public class MainPageTest extends MainPage implements Domains {
             testSettings.runErrorCatch(testSettings.chromeDriver, "MainPage_NavButtons_Sport", e);
         }
     }
+
     @Test
-    public void MainPage_NavButtons_Slot () {
+    public void MainPage_NavButtons_Slot() {
         TestSettings testSettings = new TestSettings();
         testSettings.runMaximizeWindow();
         try {
@@ -121,7 +124,7 @@ public class MainPageTest extends MainPage implements Domains {
             waitElementXpath(testSettings.chromeWaiter, slotsPage);
             waitUrl(testSettings.chromeWaiter, SLOTS);
             String currentUrl = testSettings.chromeDriver.getCurrentUrl();
-            if(currentUrl.equals(SLOTS)) {
+            if (currentUrl.equals(SLOTS)) {
                 System.out.println("MainPage_NavButtons_Slot passed");
             } else {
                 System.out.println("MainPage_NavButtons_Slot failed");
@@ -132,21 +135,22 @@ public class MainPageTest extends MainPage implements Domains {
             testSettings.runErrorCatch(testSettings.chromeDriver, "MainPage_NavButtons_Slot", e);
         }
     }
+
     @Test
-    public void MainPage_GameFilters () {
+    public void MainPage_GameFilters() {
         TestSettings testSettings = new TestSettings();
         testSettings.runMaximizeWindow();
         try {
             testSettings.chromeDriver.get(MAINPAGE);
             waitElementXpath(testSettings.chromeWaiter, gameFilters);
-            for (int i = 0; i<=13; i++) {
+            for (int i = 0; i <= 13; i++) {
                 getElementsContainerXpath(testSettings.chromeDriver, gameFilters, i).click();
                 getElementsContainerXpath(testSettings.chromeDriver, gameFilters, i).click();
                 waitElementXpath(testSettings.chromeWaiter, betLineContainer);
                 if (getElementXpath(testSettings.chromeDriver, betLineContainer).isDisplayed()) {
-                    System.out.println("filter number " + i +  " - worked");
+                    System.out.println("filter number " + i + " - worked");
                 } else {
-                    System.out.println("filter number " + i +  " - is not worked");
+                    System.out.println("filter number " + i + " - is not worked");
                     testSettings.screenshotBuilder.createScreenshot("filter failed ", testSettings.chromeDriver);
                 }
             }
@@ -155,8 +159,9 @@ public class MainPageTest extends MainPage implements Domains {
             testSettings.runErrorCatch(testSettings.chromeDriver, "MainPage_GameFilters", e);
         }
     }
+
     @Test
-    public void MainPage_BetLineFilters () {
+    public void MainPage_BetLineFilters() {
         TestSettings testSettings = new TestSettings();
         testSettings.runMaximizeWindow();
         try {
@@ -170,7 +175,23 @@ public class MainPageTest extends MainPage implements Domains {
                 System.out.println("Live matches failed");
                 testSettings.screenshotBuilder.createScreenshot("Live matches", testSettings.chromeDriver);
             }
-            getElementXpath(testSettings.chromeDriver, allMatchesFilter).click();
+            getElementXpath(testSettings.chromeDriver, prematchFilter).click();
+            waitElementXpath(testSettings.chromeWaiter, betLineContainer);
+            if (getElementXpath(testSettings.chromeDriver, betLineContainer).isDisplayed()) {
+                System.out.println("prematch filter passed");
+            } else {
+                System.out.println("prematch filter failed");
+                testSettings.screenshotBuilder.createScreenshot("prematchFilter", testSettings.chromeDriver);
+            }
+            getElementXpath(testSettings.chromeDriver, totalizatorFilter).click();
+            waitElementXpath(testSettings.chromeWaiter, betLineContainer);
+            if (getElementXpath(testSettings.chromeDriver, betLineContainer).isDisplayed()) {
+                System.out.println("totalizator filter passed");
+            } else {
+                System.out.println("totalizator filter failed");
+                testSettings.screenshotBuilder.createScreenshot("totalizatorFilter", testSettings.chromeDriver);
+            }
+            getElementXpath(testSettings.chromeDriver, allGamessFilter).click();
             waitElementXpath(testSettings.chromeWaiter, betLineContainer);
             if (getElementXpath(testSettings.chromeDriver, betLineContainer).isDisplayed()) {
                 System.out.println("allMatchesFilter passed");
@@ -199,6 +220,7 @@ public class MainPageTest extends MainPage implements Domains {
             testSettings.runErrorCatch(testSettings.chromeDriver, "MainPage_BetLineFilters", e);
         }
     }
+
     @Test
     public void MainPage_LiveMatches_WatchButton() {
         TestSettings testSettings = new TestSettings();
@@ -206,9 +228,11 @@ public class MainPageTest extends MainPage implements Domains {
         try {
             testSettings.chromeDriver.get(MAINPAGE);
             waitElementXpath(testSettings.chromeWaiter, firstLiveStream);
+            getElementXpath(testSettings.chromeDriver, liveMatchesFilter).click();
+            waitElementXpath(testSettings.chromeWaiter, watchButton);
             getElementXpath(testSettings.chromeDriver, watchButton).click();
-            waitElementXpath(testSettings.chromeWaiter, iframe);
-            if(getElementXpath(testSettings.chromeDriver, iframe).isDisplayed()) {
+            waitElementXpath(testSettings.chromeWaiter, iframeTotalizator);
+            if (getElementXpath(testSettings.chromeDriver, iframeTotalizator).isDisplayed()) {
                 System.out.println("iframe displayed");
             } else {
                 System.out.println("iframe did not displayed");
@@ -219,39 +243,44 @@ public class MainPageTest extends MainPage implements Domains {
             testSettings.runErrorCatch(testSettings.chromeDriver, "MainPage_LiveMatches_WatchButton", e);
         }
     }
+
     @Test
     public void MainPage_LiveMatches_SideButton() {
         TestSettings testSettings = new TestSettings();
         testSettings.runMaximizeWindow();
-        try{
+        try {
             testSettings.chromeDriver.get(MAINPAGE);
             waitElementXpath(testSettings.chromeWaiter, firstLiveStream);
+            getElementXpath(testSettings.chromeDriver, liveMatchesFilter).click();
+            waitElementXpath(testSettings.chromeWaiter, liveSideButton);
             getElementXpath(testSettings.chromeDriver, liveSideButton).click();
-            waitElementXpath(testSettings.chromeWaiter, iframe);
-            if(getElementXpath(testSettings.chromeDriver, iframe).isDisplayed()) {
+            waitElementXpath(testSettings.chromeWaiter, iframePrematch);
+            if (getElementXpath(testSettings.chromeDriver, iframePrematch).isDisplayed()) {
                 System.out.println("iframe displayed");
             } else {
                 System.out.println("iframe did not displayed");
                 testSettings.screenshotBuilder.createScreenshot("MainPage_LiveMatches_SideButton", testSettings.chromeDriver);
             }
             testSettings.chromeDriver.close();
-        }catch (Exception e) {
+        } catch (Exception e) {
             testSettings.runErrorCatch(testSettings.chromeDriver, "MainPage_LiveMatches_SideButton", e);
         }
     }
+
     @Test // finish test here
-    public void MainPage_Prematch_OpenBetLine () {
+    public void MainPage_Prematch_OpenBetLine() {
         TestSettings testSettings = new TestSettings();
         testSettings.runMaximizeWindow();
         try {
             testSettings.chromeDriver.get(MAINPAGE);
             waitElementXpath(testSettings.chromeWaiter, betLineContainer);
+            getElementXpath(testSettings.chromeDriver, prematchFilter).click();
             waitElementXpath(testSettings.chromeWaiter, prematchSideButton);
             getElementXpath(testSettings.chromeDriver, prematchSideButton).click();
             waitElementXpath(testSettings.chromeWaiter, prematchSlider);
-            if(getElementXpath(testSettings.chromeDriver, prematchSlider).isDisplayed()) {
+            if (getElementXpath(testSettings.chromeDriver, prematchSlider).isDisplayed()) {
                 System.out.println("prematchSlider displayed!");
-            }else {
+            } else {
                 System.out.println("prematchSlider is not displayed");
                 testSettings.screenshotBuilder.createScreenshot("MainPage_Prematch_OpenBetLine", testSettings.chromeDriver);
             }
