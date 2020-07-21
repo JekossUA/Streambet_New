@@ -10,9 +10,9 @@ public class LoginPage {
 
     public String loginId = "loginId";
     public String passwordId = "passwordId";
-    public String confirmButton = "/html/body/div[1]/div/div/section/div/section/div[2]/div[2]/div[3]/button";
-    public String emailWarning = "/html/body/div[1]/div/div/section/div/section/div[2]/div[2]/div[1]/div/div";
-    public String passwordWarning = "/html/body/div[1]/div/div/section/div/section/div[2]/div[2]/div[2]/div/div";
+    public String confirmButton = "/html/body/div[1]/div/div/section/div/section/div[2]/div[2]/div[3]/button"; //cssSelector button[css_test_confirm_button='css_test_confirm_button']
+    public String emailWarning = "/html/body/div[1]/div/div/section/div/section/div[2]/div[2]/div[1]/div/div"; //
+    public String passwordWarning = "/html/body/div[1]/div/div/section/div/section/div[2]/div[2]/div[2]/div/div"; //
     public String footer = "//*[@id=\"__next\"]/div/footer";
 
     //find elements
