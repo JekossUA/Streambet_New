@@ -21,8 +21,18 @@
   <component name="ChangeListManager">
     <list default="true" id="88beab37-3ecb-4ce2-8aa9-28b9b9842262" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/Run.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/LoginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/LoginPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/MainPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/MainPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/ProfilePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/ProfilePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/RegistrationPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/RegistrationPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/support/Domains.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/support/Domains.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/support/RandomUsers.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/support/RandomUsers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/support/ScreenshotBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/support/ScreenshotBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/support/TestSettings.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/support/TestSettings.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/LoginTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/LoginTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/MainPageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/MainPageTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/ProfileTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/ProfileTests.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/tests/RegistrationTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/RegistrationTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,15 +63,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3045977" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
-  <component name="RunManager" selected="JUnit.RegistrationTest">
-    <configuration name="LoginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.DrawlerCLass.run">
+    <configuration name="DrawlerCLass.run" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Streambet_New" />
-      <useClassPathOnly />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="tests.*" />
@@ -69,10 +78,9 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.LoginTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="PARAMETERS" value="" />
+      <option name="MAIN_CLASS_NAME" value="tests.DrawlerCLass" />
+      <option name="METHOD_NAME" value="run" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -149,11 +157,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DrawlerCLass.run" />
         <item itemvalue="JUnit.RegistrationTest" />
         <item itemvalue="JUnit.RegistrationTest.RegistrationTest_Positive" />
         <item itemvalue="JUnit.ProfileTests" />
         <item itemvalue="JUnit.MainPageTest" />
-        <item itemvalue="JUnit.LoginTest" />
       </list>
     </recent_temporary>
   </component>
@@ -219,22 +227,22 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="743" y="311" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1595428596010" />
-    <state width="1874" height="157" key="GridCell.Tab.0.bottom" timestamp="1595428600080">
+    <state width="1874" height="227" key="GridCell.Tab.0.bottom" timestamp="1595434803846">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="157" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1595428600080" />
-    <state width="1874" height="157" key="GridCell.Tab.0.center" timestamp="1595428600080">
+    <state width="1874" height="227" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1595434803846" />
+    <state width="1874" height="227" key="GridCell.Tab.0.center" timestamp="1595434803846">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="157" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1595428600080" />
-    <state width="1874" height="157" key="GridCell.Tab.0.left" timestamp="1595428600079">
+    <state width="1874" height="227" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1595434803846" />
+    <state width="1874" height="227" key="GridCell.Tab.0.left" timestamp="1595434803845">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="157" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1595428600079" />
-    <state width="1874" height="157" key="GridCell.Tab.0.right" timestamp="1595428600080">
+    <state width="1874" height="227" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1595434803845" />
+    <state width="1874" height="227" key="GridCell.Tab.0.right" timestamp="1595434803846">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="157" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1595428600080" />
+    <state width="1874" height="227" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1595434803846" />
     <state width="1874" height="340" key="GridCell.Tab.1.bottom" timestamp="1594903495917">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -251,17 +259,21 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1874" height="340" key="GridCell.Tab.1.right/0.27.1920.1053@0.27.1920.1053" timestamp="1594903495917" />
-    <state x="449" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1595232424947">
+    <state x="449" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1595433743636">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="449" y="188" width="1022" height="737" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1595232424947" />
+    <state x="449" y="188" width="1022" height="737" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1595433743636" />
     <state x="555" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1594103293354">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="555" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1920.1053@0.27.1920.1053" timestamp="1594103293354" />
-    <state x="269" y="155" width="1372" height="803" key="new project wizard" timestamp="1595428598701">
+    <state x="269" y="155" width="1372" height="803" key="new project wizard" timestamp="1595439595969">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="269" y="155" width="1372" height="803" key="new project wizard/0.27.1920.1053@0.27.1920.1053" timestamp="1595428598701" />
+    <state x="269" y="155" width="1372" height="803" key="new project wizard/0.27.1920.1053@0.27.1920.1053" timestamp="1595439595969" />
+    <state x="624" y="252" width="672" height="677" key="run.anything.popup" timestamp="1595449190573">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="624" y="252" width="672" height="677" key="run.anything.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1595449190573" />
   </component>
 </project>
