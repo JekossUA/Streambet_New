@@ -21,10 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="88beab37-3ecb-4ce2-8aa9-28b9b9842262" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/RegistrationPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/RegistrationPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/RegistrationPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/ProfileTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/ProfileTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/Run.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/support/Domains.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/support/Domains.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/RegistrationTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/RegistrationTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +52,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/postwoman/postwoman" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3045977" />
@@ -61,7 +60,8 @@
   </component>
   <component name="RunManager" selected="JUnit.RegistrationTest">
     <configuration name="LoginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Selenium_SB" />
+      <module name="Streambet_New" />
+      <useClassPathOnly />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="tests.*" />
@@ -70,13 +70,16 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.LoginTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="PARAMETERS" value="" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="MainPageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Selenium_SB" />
+      <module name="Streambet_New" />
+      <useClassPathOnly />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="tests.*" />
@@ -85,13 +88,16 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.MainPageTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="PARAMETERS" value="" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="ProfileTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Selenium_SB" />
+      <module name="Streambet_New" />
+      <useClassPathOnly />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="tests.*" />
@@ -100,29 +106,16 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.ProfileTests" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProfileTests.ProfileTest_BetHistory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Selenium_SB" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.ProfileTests" />
-      <option name="METHOD_NAME" value="ProfileTest_BetHistory" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PARAMETERS" value="" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="RegistrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Selenium_SB" />
+      <module name="Streambet_New" />
+      <useClassPathOnly />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="tests.*" />
@@ -131,7 +124,25 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.RegistrationTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegistrationTest.RegistrationTest_Positive" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Streambet_New" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.RegistrationTest" />
+      <option name="METHOD_NAME" value="RegistrationTest_Positive" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -139,10 +150,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.RegistrationTest" />
+        <item itemvalue="JUnit.RegistrationTest.RegistrationTest_Positive" />
         <item itemvalue="JUnit.ProfileTests" />
         <item itemvalue="JUnit.MainPageTest" />
         <item itemvalue="JUnit.LoginTest" />
-        <item itemvalue="JUnit.ProfileTests.ProfileTest_BetHistory" />
       </list>
     </recent_temporary>
   </component>
@@ -172,22 +183,26 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="506" y="168" width="898" height="778" key="#LoginTest" timestamp="1595232579342">
+    <state x="506" y="168" width="898" height="778" key="#LoginTest" timestamp="1595404186996">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="506" y="168" width="898" height="778" key="#LoginTest/0.27.1920.1053@0.27.1920.1053" timestamp="1595232579342" />
-    <state x="506" y="168" width="898" height="778" key="#MainPageTest" timestamp="1595232624048">
+    <state x="506" y="168" width="898" height="778" key="#LoginTest/0.27.1920.1053@0.27.1920.1053" timestamp="1595404186996" />
+    <state x="506" y="168" width="898" height="778" key="#MainPageTest" timestamp="1595404224637">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="506" y="168" width="898" height="778" key="#MainPageTest/0.27.1920.1053@0.27.1920.1053" timestamp="1595232624048" />
+    <state x="506" y="168" width="898" height="778" key="#MainPageTest/0.27.1920.1053@0.27.1920.1053" timestamp="1595404224637" />
     <state x="829" y="422" width="251" height="270" key="#Notifications" timestamp="1594103316282">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="829" y="422" width="251" height="270" key="#Notifications/0.27.1920.1053@0.27.1920.1053" timestamp="1594103316282" />
-    <state x="506" y="168" width="898" height="778" key="#RegistrationTest" timestamp="1595232434667">
+    <state x="506" y="168" width="898" height="778" key="#ProfileTests" timestamp="1595404341213">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="506" y="168" width="898" height="778" key="#RegistrationTest/0.27.1920.1053@0.27.1920.1053" timestamp="1595232434667" />
+    <state x="506" y="168" width="898" height="778" key="#ProfileTests/0.27.1920.1053@0.27.1920.1053" timestamp="1595404341213" />
+    <state x="506" y="168" width="898" height="778" key="#RegistrationTest" timestamp="1595428455101">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="506" y="168" width="898" height="778" key="#RegistrationTest/0.27.1920.1053@0.27.1920.1053" timestamp="1595428455101" />
     <state x="621" y="355" width="668" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1594894815979">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -196,26 +211,30 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="768" y="272" width="374" height="569" key="#com.intellij.ide.util.MemberChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1594820995067" />
-    <state x="743" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1595250246447">
+    <state x="687" y="349" width="525" height="423" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1595404173838">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="743" y="311" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1595250246447" />
-    <state width="1874" height="288" key="GridCell.Tab.0.bottom" timestamp="1595317980016">
+    <state x="687" y="349" width="525" height="423" key="#com.intellij.ide.util.TreeClassChooserDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1595404173838" />
+    <state x="743" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1595428596010">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="288" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1595317980016" />
-    <state width="1874" height="288" key="GridCell.Tab.0.center" timestamp="1595317980016">
+    <state x="743" y="311" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1595428596010" />
+    <state width="1874" height="157" key="GridCell.Tab.0.bottom" timestamp="1595428600080">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="288" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1595317980016" />
-    <state width="1874" height="288" key="GridCell.Tab.0.left" timestamp="1595317980015">
+    <state width="1874" height="157" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1595428600080" />
+    <state width="1874" height="157" key="GridCell.Tab.0.center" timestamp="1595428600080">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="288" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1595317980015" />
-    <state width="1874" height="288" key="GridCell.Tab.0.right" timestamp="1595317980016">
+    <state width="1874" height="157" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1595428600080" />
+    <state width="1874" height="157" key="GridCell.Tab.0.left" timestamp="1595428600079">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="288" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1595317980016" />
+    <state width="1874" height="157" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1595428600079" />
+    <state width="1874" height="157" key="GridCell.Tab.0.right" timestamp="1595428600080">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="157" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1595428600080" />
     <state width="1874" height="340" key="GridCell.Tab.1.bottom" timestamp="1594903495917">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -240,9 +259,9 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="555" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1920.1053@0.27.1920.1053" timestamp="1594103293354" />
-    <state x="269" y="155" width="1372" height="803" key="new project wizard" timestamp="1594903493069">
+    <state x="269" y="155" width="1372" height="803" key="new project wizard" timestamp="1595428598701">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="269" y="155" width="1372" height="803" key="new project wizard/0.27.1920.1053@0.27.1920.1053" timestamp="1594903493069" />
+    <state x="269" y="155" width="1372" height="803" key="new project wizard/0.27.1920.1053@0.27.1920.1053" timestamp="1595428598701" />
   </component>
 </project>
