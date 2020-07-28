@@ -28,7 +28,7 @@ public class MainPage {
     public String firstLiveStream = "/html/body/div[1]/div/div/div/div/div[2]/div[1]/div[2]/div[3]/div[2]";
     public String watchButton = "/html/body/div[1]/div/div/div/div/div[2]/div[1]/div[2]/div[3]/div[2]/div[1]/div[2]/a";
     public String iframeTotalizator = "/html/body/div[1]/div/div/div/div/div/div[2]/div/div[1]/iframe";
-    public String iframePrematch = "/html/body/div[1]/div/div/div/div/div/div[2]/div[1]/iframe";
+    public String iframePrematch = "/html/body/div[1]/div/div/div/div[1]/div/div/div/div[2]";
     public String liveSideButton = "/html/body/div[1]/div/div/div/div/div[2]/div[1]/div[2]/div[3]/div[2]/div[3]/a";
     public String prematchSideButton = "/html/body/div[1]/div/div/div/div/div[2]/div[1]/div[2]/div[2]/div[1]/div[2]/div[3]/a";
     public String prematchSlider = "/html/body/div[1]/div/div/div/div/div/div[1]/div[1]";

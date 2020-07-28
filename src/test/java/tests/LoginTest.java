@@ -28,6 +28,7 @@ public class LoginTest extends LoginPage implements Domains {
             testSettings.chromeDriver.close();
         } catch (Exception e){
             testSettings.runErrorCatch(testSettings.chromeDriver, "LoginTest_Positive", e);
+            testSettings.chromeDriver.close();
         }
     }
     @Test
@@ -49,6 +50,7 @@ public class LoginTest extends LoginPage implements Domains {
             testSettings.chromeDriver.close();
         }catch (Exception e){
             testSettings.runErrorCatch(testSettings.chromeDriver, "LoginTest_Negative_EmptyLogin", e);
+            testSettings.chromeDriver.close();
         }
 
     }
@@ -71,6 +73,7 @@ public class LoginTest extends LoginPage implements Domains {
             testSettings.chromeDriver.close();
         } catch (Exception e){
             testSettings.runErrorCatch(testSettings.chromeDriver, "LoginTest_Negative_EmptyPassword", e);
+            testSettings.chromeDriver.close();
         }
     }
     @Test
@@ -95,6 +98,7 @@ public class LoginTest extends LoginPage implements Domains {
             testSettings.chromeDriver.close();
         }catch (Exception e){
             testSettings.runErrorCatch(testSettings.chromeDriver, "LoginTest_Negative_EmptyFields", e);
+            testSettings.chromeDriver.close();
         }
     }
     @Test
@@ -117,6 +121,7 @@ public class LoginTest extends LoginPage implements Domains {
             testSettings.chromeDriver.close();
         }catch (Exception e){
             testSettings.runErrorCatch(testSettings.chromeDriver, "LoginTest_Negative_WrongLogin", e);
+            testSettings.chromeDriver.close();
         }
     }
     @Test
@@ -139,6 +144,17 @@ public class LoginTest extends LoginPage implements Domains {
             testSettings.chromeDriver.close();
         } catch (Exception e){
             testSettings.runErrorCatch(testSettings.chromeDriver, "LoginTest_Negative_WrongPassword", e);
+            testSettings.chromeDriver.close();
         }
     }
+
+    public void runLoginTests () throws Exception {
+        LoginTest_Positive();
+        LoginTest_Negative_EmptyLogin();
+        LoginTest_Negative_EmptyPassword();
+        LoginTest_Negative_EmptyFields();
+        LoginTest_Negative_WrongLogin();
+        LoginTest_Negative_WrongPassword();
+    }
+
 }

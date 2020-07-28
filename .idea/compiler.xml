@@ -6,8 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Selenium_SB" />
+        <module name="StreambetNew" />
         <module name="Streambet_New" />
+        <module name="Selenium_SB" />
       </profile>
     </annotationProcessing>
   </component>

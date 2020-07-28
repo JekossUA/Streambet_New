@@ -26,7 +26,6 @@ public class ProfileTests extends ProfilePage implements Domains {
             System.out.println(e);
         }
     }
-
     @Test
     public void ProfileTest_BetHistory () {
         try {
@@ -54,7 +53,6 @@ public class ProfileTests extends ProfilePage implements Domains {
         }
 
     }
-
     @Test
     public void ProfileTest_Deposit_Withdrawal () {
         try {
@@ -81,7 +79,6 @@ public class ProfileTests extends ProfilePage implements Domains {
             testSettings.runErrorCatch(testSettings.chromeDriver, "ProfileTest_Deposit_Withdrawal", e);
         }
     }
-
     @Test
     public void ProfileTest_PaymentHistory () {
         try {
@@ -108,4 +105,13 @@ public class ProfileTests extends ProfilePage implements Domains {
             testSettings.runErrorCatch(testSettings.chromeDriver, "ProfileTest_PaymentHistory", e);
         }
     }
+
+//    public void runProfileTests () throws Exception {
+//        runBeforeTest();
+//        ProfileTest_BetHistory();
+//        runBeforeTest();
+//        ProfileTest_Deposit_Withdrawal();
+//        runBeforeTest();
+//        ProfileTest_PaymentHistory();
+//    }
 }

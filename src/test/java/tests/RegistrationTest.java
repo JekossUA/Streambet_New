@@ -317,34 +317,6 @@ public class RegistrationTest extends RegistrationPage implements Domains {
             testSettings.runErrorCatch(testSettings.chromeDriver, "RegistrationTest_CheckboxMissed", e);
         }
     }
-//    @Test // need to finish
-//    public void RegistrationTest_WalletMissed ()throws Exception {
-//        TestSettings testSettings = new TestSettings();
-//        testSettings.runMaximizeWindow();
-//        String undefined = "undefined";
-//        try {
-//            testSettings.chromeDriver.get(REGISTRATION);
-//            waitEmailInput(testSettings.chromeWaiter);
-//
-//            setUserLogin(testSettings.chromeDriver, randomUsers.setRandomFirstName());
-//            setUserEmail(testSettings.chromeDriver, randomUsers.setRandomEmail());
-//            String randomPass = randomUsers.setRandomPhoneNum();
-//            setUserPassword(testSettings.chromeDriver, randomPass);
-//            setRepeatUserPassword(testSettings.chromeDriver, randomPass);
-//            getCheckbox(testSettings.chromeDriver).click();
-//            getConfirmButton(testSettings.chromeDriver).click();
-//            String some = testSettings.chromeDriver.findElement(By.id("selectId")).getCssValue(undefined);
-//            System.out.println(some);
-//
-//            if (some != null) {
-//                testSettings.chromeDriver.close();
-//                System.out.println("RegistrationTest_WalletMissed passed!");
-//            }
-//
-//        }catch (Exception e) {
-//            testSettings.runErrorCatch(testSettings.chromeDriver, "RegistrationTest_WalletMissed", e);
-//        }
-//    }
     @Test
     public void RegistrationTest_AllFieldsMissed ()throws Exception {
         TestSettings testSettings = new TestSettings();
@@ -368,5 +340,20 @@ public class RegistrationTest extends RegistrationPage implements Domains {
         }catch (Exception e) {
             testSettings.runErrorCatch(testSettings.chromeDriver, "RegistrationTest_AllFieldsMissed", e);
         }
+    }
+
+    public void runRegistrationTests () throws Exception {
+        RegistrationTest_Positive();
+        RegistrationTest_WrongLogin();
+        RegistrationTest_HugeLogin();
+        RegistrationTest_ExistingEmail();
+        RegistrationTest_WrongEmail();
+        RegistrationTest_EmptyEmail();
+        RegistrationTest_WrongPass();
+        RegistrationTest_EmptyPass();
+        RegistrationTest_WrongRepeatPass();
+        RegistrationTest_EmptyRepeatPass();
+        RegistrationTest_CheckboxMissed();
+        RegistrationTest_AllFieldsMissed();
     }
 }

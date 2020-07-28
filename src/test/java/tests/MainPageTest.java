@@ -66,7 +66,6 @@ public class MainPageTest extends MainPage implements Domains {
             testSettings.runErrorCatch(testSettings.chromeDriver, "MainPage_Positive", e);
         }
     }
-
     @Test
     public void MainPage_NavButtons_Streams() {
         TestSettings testSettings = new TestSettings();
@@ -89,7 +88,6 @@ public class MainPageTest extends MainPage implements Domains {
             testSettings.runErrorCatch(testSettings.chromeDriver, "MainPage_NavButtons_Streams", e);
         }
     }
-
     @Test
     public void MainPage_NavButtons_Sport() {
         TestSettings testSettings = new TestSettings();
@@ -112,7 +110,6 @@ public class MainPageTest extends MainPage implements Domains {
             testSettings.runErrorCatch(testSettings.chromeDriver, "MainPage_NavButtons_Sport", e);
         }
     }
-
     @Test
     public void MainPage_NavButtons_Slot() {
         TestSettings testSettings = new TestSettings();
@@ -135,7 +132,6 @@ public class MainPageTest extends MainPage implements Domains {
             testSettings.runErrorCatch(testSettings.chromeDriver, "MainPage_NavButtons_Slot", e);
         }
     }
-
     @Test
     public void MainPage_GameFilters() {
         TestSettings testSettings = new TestSettings();
@@ -159,7 +155,6 @@ public class MainPageTest extends MainPage implements Domains {
             testSettings.runErrorCatch(testSettings.chromeDriver, "MainPage_GameFilters", e);
         }
     }
-
     @Test
     public void MainPage_BetLineFilters() {
         TestSettings testSettings = new TestSettings();
@@ -220,7 +215,6 @@ public class MainPageTest extends MainPage implements Domains {
             testSettings.runErrorCatch(testSettings.chromeDriver, "MainPage_BetLineFilters", e);
         }
     }
-
     @Test
     public void MainPage_LiveMatches_WatchButton() {
         TestSettings testSettings = new TestSettings();
@@ -229,10 +223,10 @@ public class MainPageTest extends MainPage implements Domains {
             testSettings.chromeDriver.get(MAINPAGE);
             waitElementXpath(testSettings.chromeWaiter, firstLiveStream);
             getElementXpath(testSettings.chromeDriver, liveMatchesFilter).click();
-            waitElementXpath(testSettings.chromeWaiter, watchButton);
+            waitElementXpath(testSettings.chromeWaiter, betLineContainer);
             getElementXpath(testSettings.chromeDriver, watchButton).click();
-            waitElementXpath(testSettings.chromeWaiter, iframeTotalizator);
-            if (getElementXpath(testSettings.chromeDriver, iframeTotalizator).isDisplayed()) {
+            waitElementXpath(testSettings.chromeWaiter, iframePrematch);
+            if (getElementXpath(testSettings.chromeDriver, iframePrematch).isDisplayed()) {
                 System.out.println("iframe displayed");
             } else {
                 System.out.println("iframe did not displayed");
@@ -243,7 +237,6 @@ public class MainPageTest extends MainPage implements Domains {
             testSettings.runErrorCatch(testSettings.chromeDriver, "MainPage_LiveMatches_WatchButton", e);
         }
     }
-
     @Test
     public void MainPage_LiveMatches_SideButton() {
         TestSettings testSettings = new TestSettings();
@@ -266,8 +259,7 @@ public class MainPageTest extends MainPage implements Domains {
             testSettings.runErrorCatch(testSettings.chromeDriver, "MainPage_LiveMatches_SideButton", e);
         }
     }
-
-    @Test // finish test here
+    @Test
     public void MainPage_Prematch_OpenBetLine() {
         TestSettings testSettings = new TestSettings();
         testSettings.runMaximizeWindow();
@@ -289,6 +281,18 @@ public class MainPageTest extends MainPage implements Domains {
             testSettings.runErrorCatch(testSettings.chromeDriver, "MainPage_OpenBetLine", e);
             System.out.println(e);
         }
+    }
+
+    public void runMainPageTests () throws Exception {
+        MainPage_Positive();
+        MainPage_NavButtons_Streams();
+        MainPage_NavButtons_Sport();
+        MainPage_NavButtons_Slot();
+        MainPage_GameFilters();
+        MainPage_BetLineFilters();
+        MainPage_LiveMatches_WatchButton();
+        MainPage_LiveMatches_SideButton();
+        MainPage_Prematch_OpenBetLine();
     }
 }
 
