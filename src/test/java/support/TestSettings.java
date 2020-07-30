@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class TestSettings {
 
     public static ChromeDriver chromeDriver () {
-        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver_83");
+        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver_84");
         return new ChromeDriver();
     }
     public ChromeDriver chromeDriver = chromeDriver ();

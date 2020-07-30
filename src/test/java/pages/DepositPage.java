@@ -10,8 +10,6 @@ public class DepositPage {
    public String amountName = "amount";
    public String phoneName = "phone";
    public String depositBox = "/html/body/div[1]/div/div/section/div/div/div[2]/div[2]/div/div[1]/div/div";
-   public String amountError = "/html/body/div[1]/div/div/section/div/div/div[2]/div[2]/div/div[2]/div/div/div[1]/div/div";
-   public String phoneError = "//*[@id=\"__next\"]/div/div/section/div/div/div[2]/div[2]/div/div[2]/div/div/div[2]/div/div[2]";
    public String profileSettingsBox = "/html/body/div[1]/div/div/section/div/div/div[2]/div/div[2]";
    public String wrongAmountRub = "299";
    public String wrongPhone = "345678";
@@ -36,9 +34,17 @@ public class DepositPage {
     public void waitElementByName(WebDriverWait chromeWaiter, String elementName)  {
         chromeWaiter.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.name(elementName)));
     }
-    public boolean isClickable (WebDriverWait chromeWaiter, String elementName) {
+    public boolean isClickableName(WebDriverWait chromeWaiter, String elementName) {
         try {
             chromeWaiter.until(ExpectedConditions.elementToBeClickable(By.name(elementName)));
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+    public boolean isClickableXpath(WebDriverWait chromeWaiter, String elementXpath) {
+        try {
+            chromeWaiter.until(ExpectedConditions.elementToBeClickable(By.xpath(elementXpath)));
             return true;
         } catch (Exception e) {
             return false;

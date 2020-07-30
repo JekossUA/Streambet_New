@@ -106,12 +106,7 @@ public class ProfileTests extends ProfilePage implements Domains {
         }
     }
 
-//    public void runProfileTests () throws Exception {
-//        runBeforeTest();
-//        ProfileTest_BetHistory();
-//        runBeforeTest();
-//        ProfileTest_Deposit_Withdrawal();
-//        runBeforeTest();
-//        ProfileTest_PaymentHistory();
-//    }
+    public void runProfileTests () throws Exception {
+
+    }
 }

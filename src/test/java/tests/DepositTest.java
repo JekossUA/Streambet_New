@@ -2,6 +2,7 @@ package tests;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.Keys;
 import pages.DepositPage;
 import pages.LoginPage;
 import pages.ProfilePage;
@@ -10,12 +11,13 @@ import support.TestSettings;
 
 public class DepositTest extends DepositPage implements Domains {
     TestSettings testSettings = new TestSettings();
+    LoginPage loginPage = new LoginPage();
+    DepositPage depositPage = new DepositPage();
+    ProfilePage profilePage = new ProfilePage();
 
     @Before
     public void runBeforeTest () {
-        LoginPage loginPage = new LoginPage();
-        DepositPage depositPage = new DepositPage();
-        ProfilePage profilePage = new ProfilePage();
+
         try {
             testSettings.runMaximizeWindow();
             testSettings.chromeDriver.get(LOGIN);
@@ -36,38 +38,29 @@ public class DepositTest extends DepositPage implements Domains {
     @Test
     public  void runValidationCheck () {
         try {
-            for (int i=0; i<=depositBox.length(); i++) {
+            for (int i = 0; i < 10; i++) {
                 getElementsXpath(testSettings.chromeDriver, depositBox, i).click();
                 waitElementByName(testSettings.chromeWaiter, amountName);
-                setElementByName(testSettings.chromeDriver, amountName, wrongAmountRub);
-                if(isClickable(testSettings.chromeWaiter, phoneName)){
+                getElementByName(testSettings.chromeDriver, amountName).sendKeys(Keys.CONTROL + "a");
+                getElementByName(testSettings.chromeDriver, amountName).sendKeys(Keys.DELETE);
+                if (isClickableName(testSettings.chromeWaiter, phoneName)) {
+                    setElementByName(testSettings.chromeDriver, amountName, wrongAmountRub);
                     setElementByName(testSettings.chromeDriver, phoneName, wrongPhone);
-                    getElementXpath(testSettings.chromeDriver, confirmButton).click();
-                    waitElementXpath(testSettings.chromeWaiter, amountError);
-                    waitElementXpath(testSettings.chromeWaiter, phoneError);
-                    if(getElementXpath(testSettings.chromeDriver, amountError).isDisplayed() &&
-                            getElementXpath(testSettings.chromeDriver, phoneError).isDisplayed()){
-                        System.out.println("runValidationCheck passed");
-                    } else {
-                        testSettings.screenshotBuilder.createScreenshot("runValidationCheck failed ", testSettings.chromeDriver);
+                    if (isClickableXpath(testSettings.chromeWaiter, confirmButton)) {
+                        System.out.println("passed");
                     }
-                } else if (!isClickable(testSettings.chromeWaiter, phoneName)) {
-                    getElementXpath(testSettings.chromeDriver, confirmButton).click();
-                    waitElementXpath(testSettings.chromeWaiter, amountError);
-                    if(getElementXpath(testSettings.chromeDriver, amountError).isDisplayed()) {
-                        System.out.println("runValidationCheck passed");
-                    } else  {
-                        testSettings.screenshotBuilder.createScreenshot("runValidationCheck failed ", testSettings.chromeDriver);
-                    }
-                } else  {
-                    testSettings.screenshotBuilder.createScreenshot("runValidationCheck failed ", testSettings.chromeDriver);
-                }
-                testSettings.chromeDriver.close();
+                } else {
+                    setElementByName(testSettings.chromeDriver, amountName, wrongAmountRub);
+                    if(isClickableXpath(testSettings.chromeWaiter, confirmButton)) {
+                        System.out.println("passed");
+                    }}
             }
+            testSettings.chromeDriver.close();
 
         } catch (Exception e) {
             testSettings.runErrorCatch(testSettings.chromeDriver,"runValidationCheck", e);
             System.out.println(e);
+            testSettings.chromeDriver.close();
         }
     }
 }

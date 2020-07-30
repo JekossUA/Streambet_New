@@ -10,8 +10,8 @@ public class Run implements Domains {
         RegistrationTest registrationTest = new RegistrationTest();
 
         loginTest.runLoginTests();
-        mainPageTest.runMainPageTests();
         registrationTest.runRegistrationTests();
+        mainPageTest.runMainPageTests();
 //        profileTests.runProfileTests();
     }
 }
