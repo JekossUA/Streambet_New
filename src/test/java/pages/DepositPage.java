@@ -8,12 +8,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class DepositPage {
    public String amountName = "amount";
-   public String phoneName = "phone";
+   public String accountName = "phone";
    public String depositBox = "/html/body/div[1]/div/div/section/div/div/div[2]/div[2]/div/div[1]/div/div";
    public String profileSettingsBox = "/html/body/div[1]/div/div/section/div/div/div[2]/div/div[2]";
+   public String confirmButton = "/html/body/div[1]/div/div/section/div/div/div[2]/div[2]/div/div[2]/div/div/button";
    public String wrongAmountRub = "299";
    public String wrongPhone = "345678";
-   public String confirmButton = "/html/body/div[1]/div/div/section/div/div/div[2]/div[2]/div/div[2]/div/div/button";
+   public String correctAmountRub = "300";
+   public String correctAccountPhone = "380639882203";
 
     public void setElementByName (ChromeDriver chromeDriver, String fieldName , String inputValue) {
         chromeDriver.findElement(By.name(fieldName)).sendKeys(inputValue);
@@ -45,6 +47,14 @@ public class DepositPage {
     public boolean isClickableXpath(WebDriverWait chromeWaiter, String elementXpath) {
         try {
             chromeWaiter.until(ExpectedConditions.elementToBeClickable(By.xpath(elementXpath)));
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+    public boolean urlFractionRedirectionCheck (WebDriverWait chromeWaiter, String urlFraction) {
+        try{
+            chromeWaiter.until(ExpectedConditions.urlContains(urlFraction));
             return true;
         } catch (Exception e) {
             return false;

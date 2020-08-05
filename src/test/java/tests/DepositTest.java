@@ -12,13 +12,11 @@ import support.TestSettings;
 public class DepositTest extends DepositPage implements Domains {
     TestSettings testSettings = new TestSettings();
     LoginPage loginPage = new LoginPage();
-    DepositPage depositPage = new DepositPage();
     ProfilePage profilePage = new ProfilePage();
 
     @Before
     public void runBeforeTest () {
-
-        try {
+        try{
             testSettings.runMaximizeWindow();
             testSettings.chromeDriver.get(LOGIN);
             loginPage.waitElementXpath(testSettings.chromeWaiter, loginPage.confirmButton);
@@ -27,38 +25,95 @@ public class DepositTest extends DepositPage implements Domains {
             loginPage.getElementXpath(testSettings.chromeDriver, loginPage.confirmButton).click();
             loginPage.waitElementXpath(testSettings.chromeWaiter, loginPage.footer);
             testSettings.chromeDriver.get(PROFILE);
-            waitElementXpath(testSettings.chromeWaiter, depositPage.profileSettingsBox);
+            waitElementXpath(testSettings.chromeWaiter, profileSettingsBox);
             profilePage.getElementXpath(testSettings.chromeDriver, profilePage.depositXpath).click();
             waitElementXpath(testSettings.chromeWaiter, depositBox);
         } catch (Exception e) {
-            testSettings.screenshotBuilder.createScreenshot("runBeforeTest", testSettings.chromeDriver);
+            testSettings.runErrorCatch(testSettings.chromeDriver,"runBeforeTest", e);
             System.out.println(e);
+            testSettings.chromeDriver.close();
         }
     }
+
     @Test
-    public  void runValidationCheck () {
+    public void runValidationCheck () {
         try {
             for (int i = 0; i < 10; i++) {
                 getElementsXpath(testSettings.chromeDriver, depositBox, i).click();
                 waitElementByName(testSettings.chromeWaiter, amountName);
                 getElementByName(testSettings.chromeDriver, amountName).sendKeys(Keys.CONTROL + "a");
                 getElementByName(testSettings.chromeDriver, amountName).sendKeys(Keys.DELETE);
-                if (isClickableName(testSettings.chromeWaiter, phoneName)) {
+                if (isClickableName(testSettings.chromeWaiter, accountName)) {
                     setElementByName(testSettings.chromeDriver, amountName, wrongAmountRub);
-                    setElementByName(testSettings.chromeDriver, phoneName, wrongPhone);
-                    if (isClickableXpath(testSettings.chromeWaiter, confirmButton)) {
-                        System.out.println("passed");
+                    setElementByName(testSettings.chromeDriver, accountName, wrongPhone);
+                    if (!isClickableXpath(testSettings.chromeWaiter, confirmButton)) {
+                        System.out.println("runValidationCheck number " + i + " passed");
+                    } else {
+                        System.out.println("runValidationCheck number " + i + " failed");
+                        testSettings.screenshotBuilder.createScreenshot("runValidationCheck", testSettings.chromeDriver);
+                        testSettings.chromeDriver.close();
+                        assert false;
                     }
                 } else {
                     setElementByName(testSettings.chromeDriver, amountName, wrongAmountRub);
-                    if(isClickableXpath(testSettings.chromeWaiter, confirmButton)) {
-                        System.out.println("passed");
-                    }}
+                    if(!isClickableXpath(testSettings.chromeWaiter, confirmButton)) {
+                        System.out.println("runValidationCheck number " + i + " passed");
+                    } else {
+                        System.out.println("runValidationCheck number " + i + " failed");
+                        testSettings.screenshotBuilder.createScreenshot("runValidationCheck", testSettings.chromeDriver);
+                        testSettings.chromeDriver.close();
+                        assert false;
+                    }
+                }
             }
             testSettings.chromeDriver.close();
 
         } catch (Exception e) {
             testSettings.runErrorCatch(testSettings.chromeDriver,"runValidationCheck", e);
+            System.out.println(e);
+            testSettings.chromeDriver.close();
+        }
+    }
+    @Test
+    public void runPositiveVisa () {
+        try {
+            waitElementByName(testSettings.chromeWaiter, amountName);
+            setElementByName(testSettings.chromeDriver, amountName,correctAmountRub);
+            getElementXpath(testSettings.chromeDriver, confirmButton).click();
+            if(urlFractionRedirectionCheck(testSettings.chromeWaiter, "card")) {
+                System.out.println("runPositiveVisa passed");
+            } else {
+                System.out.println("runPositiveVisa failed");
+                testSettings.screenshotBuilder.createScreenshot("runPositiveVisa", testSettings.chromeDriver);
+                testSettings.chromeDriver.close();
+                assert false;
+            }
+            testSettings.chromeDriver.close();
+        } catch (Exception e) {
+            testSettings.runErrorCatch(testSettings.chromeDriver,"runPositiveVisa", e);
+            System.out.println(e);
+            testSettings.chromeDriver.close();
+        }
+    }
+    @Test
+    public void runPositiveQiwi () {
+        try {
+            getElementsXpath(testSettings.chromeDriver, depositBox, 1).click();
+            waitElementByName(testSettings.chromeWaiter, amountName);
+            setElementByName(testSettings.chromeDriver, amountName,correctAmountRub);
+            setElementByName(testSettings.chromeDriver, accountName, correctAccountPhone);
+            getElementXpath(testSettings.chromeDriver, confirmButton).click();
+            if(urlFractionRedirectionCheck(testSettings.chromeWaiter, "oplata.qiwi")) {
+                System.out.println("runPositiveQiwi passed");
+            } else {
+                System.out.println("runPositiveQiwi failed");
+                testSettings.screenshotBuilder.createScreenshot("runPositiveQiwi", testSettings.chromeDriver);
+                testSettings.chromeDriver.close();
+                assert false;
+            }
+            testSettings.chromeDriver.close();
+        } catch (Exception e) {
+            testSettings.runErrorCatch(testSettings.chromeDriver,"runPositiveQiwi", e);
             System.out.println(e);
             testSettings.chromeDriver.close();
         }

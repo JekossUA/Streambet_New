@@ -28,6 +28,7 @@ public class ProfileTests extends ProfilePage implements Domains {
     }
     @Test
     public void ProfileTest_BetHistory () {
+
         try {
             testSettings.chromeDriver.get(PROFILE);
             waitElementXpath(testSettings.chromeWaiter, resetPasswordButton);
@@ -106,7 +107,4 @@ public class ProfileTests extends ProfilePage implements Domains {
         }
     }
 
-    public void runProfileTests () throws Exception {
-
-    }
 }
