@@ -2,7 +2,7 @@ package support;
 
 public interface Domains {
 
-     String BASICDOMAIN = "https://streambet.io";
+     String BASICDOMAIN = "https://streambet.com";
      String REGISTRATION = BASICDOMAIN + "/registration";
      String LOGIN = BASICDOMAIN + "/login";
      String RECOVERYPASS = BASICDOMAIN + "/recovery";

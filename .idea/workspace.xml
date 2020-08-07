@@ -23,15 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="88beab37-3ecb-4ce2-8aa9-28b9b9842262" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/DepositPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/DepositPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/WithdrawalPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/WithdrawalPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/support/Domains.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/support/Domains.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/DepositTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/DepositTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/ProfileTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/ProfileTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/Run.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/Run.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/RestAssuredClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/RestAssuredClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/support/Domains.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/support/Domains.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/tests/LoginTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/LoginTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/tests/MainPageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/MainPageTest.class" afterDir="false" />
@@ -72,8 +67,8 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../telegram_bot" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/rest-assured" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3045977" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
@@ -83,7 +78,7 @@
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.WithdrawalTest">
+  <component name="RunManager" selected="JUnit.RestAssuredClass">
     <configuration name="Run" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="tests.Run" />
       <module name="StreambetNew" />
@@ -93,21 +88,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DepositTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="StreambetNew" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.DepositTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -122,6 +102,21 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.ProfileTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RestAssuredClass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StreambetNew" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.RestAssuredClass" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -143,7 +138,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WithdrawalTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RestAssuredClass.rejectLastPaymentPortalAdmin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="StreambetNew" />
       <extension name="coverage">
         <pattern>
@@ -152,19 +147,20 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.WithdrawalTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="tests.RestAssuredClass" />
+      <option name="METHOD_NAME" value="rejectLastPaymentPortalAdmin" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.WithdrawalTest" />
-        <item itemvalue="JUnit.DepositTest" />
-        <item itemvalue="JUnit.ProfileTests" />
-        <item itemvalue="Application.Run" />
+        <item itemvalue="JUnit.RestAssuredClass" />
+        <item itemvalue="JUnit.RestAssuredClass.rejectLastPaymentPortalAdmin" />
         <item itemvalue="JUnit.RestAssuredClass.getLastPendingWithdrawalRequest" />
+        <item itemvalue="Application.Run" />
+        <item itemvalue="JUnit.ProfileTests" />
       </list>
     </recent_temporary>
   </component>
@@ -219,54 +215,62 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="621" y="355" width="668" height="403" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1594894815979" />
-    <state x="768" y="272" width="374" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1594820995067">
+    <state x="768" y="272" width="374" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1596726494029">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="768" y="272" width="374" height="569" key="#com.intellij.ide.util.MemberChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1594820995067" />
+    <state x="768" y="272" width="374" height="569" key="#com.intellij.ide.util.MemberChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1596726494029" />
     <state x="687" y="349" width="525" height="423" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1595404173838">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="687" y="349" width="525" height="423" key="#com.intellij.ide.util.TreeClassChooserDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1595404173838" />
-    <state x="743" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1596564958596">
+    <state x="693" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1596718791310">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="743" y="311" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1596564958596" />
-    <state width="1874" height="91" key="GridCell.Tab.0.bottom" timestamp="1596556367426">
+    <state x="693" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1596718791310" />
+    <state x="743" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1596720174850">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="91" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1596556367426" />
-    <state width="1874" height="91" key="GridCell.Tab.0.center" timestamp="1596556367426">
+    <state x="743" y="311" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1596720174850" />
+    <state width="1874" height="496" key="GridCell.Tab.0.bottom" timestamp="1596809715691">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="91" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1596556367426" />
-    <state width="1874" height="91" key="GridCell.Tab.0.left" timestamp="1596556367426">
+    <state width="1874" height="496" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1596809715691" />
+    <state width="1874" height="496" key="GridCell.Tab.0.center" timestamp="1596809715691">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="91" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1596556367426" />
-    <state width="1874" height="91" key="GridCell.Tab.0.right" timestamp="1596556367426">
+    <state width="1874" height="496" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1596809715691" />
+    <state width="1874" height="496" key="GridCell.Tab.0.left" timestamp="1596809715691">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="91" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1596556367426" />
-    <state width="1874" height="239" key="GridCell.Tab.1.bottom" timestamp="1595867164707">
+    <state width="1874" height="496" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1596809715691" />
+    <state width="1874" height="496" key="GridCell.Tab.0.right" timestamp="1596809715691">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="239" key="GridCell.Tab.1.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1595867164707" />
-    <state width="1874" height="239" key="GridCell.Tab.1.center" timestamp="1595867164707">
+    <state width="1874" height="496" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1596809715691" />
+    <state width="1874" height="59" key="GridCell.Tab.1.bottom" timestamp="1596807209691">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="239" key="GridCell.Tab.1.center/0.27.1920.1053@0.27.1920.1053" timestamp="1595867164707" />
-    <state width="1874" height="239" key="GridCell.Tab.1.left" timestamp="1595867164704">
+    <state width="1874" height="59" key="GridCell.Tab.1.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1596807209691" />
+    <state width="1874" height="59" key="GridCell.Tab.1.center" timestamp="1596807209690">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="239" key="GridCell.Tab.1.left/0.27.1920.1053@0.27.1920.1053" timestamp="1595867164704" />
-    <state width="1874" height="239" key="GridCell.Tab.1.right" timestamp="1595867164707">
+    <state width="1874" height="59" key="GridCell.Tab.1.center/0.27.1920.1053@0.27.1920.1053" timestamp="1596807209690" />
+    <state width="1874" height="59" key="GridCell.Tab.1.left" timestamp="1596807209690">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="239" key="GridCell.Tab.1.right/0.27.1920.1053@0.27.1920.1053" timestamp="1595867164707" />
-    <state x="449" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1596461104427">
+    <state width="1874" height="59" key="GridCell.Tab.1.left/0.27.1920.1053@0.27.1920.1053" timestamp="1596807209690" />
+    <state width="1874" height="59" key="GridCell.Tab.1.right" timestamp="1596807209691">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="449" y="188" width="1022" height="737" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1596461104427" />
+    <state width="1874" height="59" key="GridCell.Tab.1.right/0.27.1920.1053@0.27.1920.1053" timestamp="1596807209691" />
+    <state x="493" y="211" width="924" height="691" key="Maven.ArtifactSearchDialog" timestamp="1596717656924">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="493" y="211" width="924" height="691" key="Maven.ArtifactSearchDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1596717656924" />
+    <state x="449" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1596718243184">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="449" y="188" width="1022" height="737" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1596718243184" />
     <state x="555" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1594103293354">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
