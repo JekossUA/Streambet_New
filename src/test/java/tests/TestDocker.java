@@ -14,7 +14,7 @@ public class TestDocker {
         DesiredCapabilities dcap = DesiredCapabilities.chrome();
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver_84");
 
-        URL gamelan = new URL("http://localhost:32768/wd/hub");
+        URL gamelan = new URL("http://localhost:32769/wd/hub");
         WebDriver driver = new RemoteWebDriver(gamelan, dcap);
 
         driver.get("https://www.google.com/");

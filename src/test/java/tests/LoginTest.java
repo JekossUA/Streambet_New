@@ -9,7 +9,7 @@ public class LoginTest extends LoginPage implements Domains {
     @Test
     public void LoginTest_Positive() throws Exception  {
         TestSettings testSettings = new TestSettings();
-        testSettings.runMaximizeWindow();
+//        testSettings.runMaximizeWindow();
         try {
             testSettings.chromeDriver.get(LOGIN);
             waitElementXpath(testSettings.chromeWaiter, confirmButton);
@@ -17,10 +17,8 @@ public class LoginTest extends LoginPage implements Domains {
             setElementById(testSettings.chromeDriver, passwordId, "12345678");
             getElementXpath(testSettings.chromeDriver, confirmButton).click();
             waitElementXpath(testSettings.chromeWaiter, footer);
-            String token = testSettings.chromeDriver.getLocalStorage().getItem("token");
-            if (token != null) {
+            if (getElementXpath(testSettings.chromeDriver, confirmButton) != null) {
                 System.out.println("LoginTest_Positive passed");
-                System.out.println(token);
             } else  {
                 System.out.println("LoginTest_Positive failed");
                 testSettings.screenshotBuilder.createScreenshot("LoginTest_Positive", testSettings.chromeDriver);
