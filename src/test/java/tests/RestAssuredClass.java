@@ -9,15 +9,15 @@ import io.restassured.RestAssured;
 
 
 public class RestAssuredClass {
-    public String baseUrlPayments = "https://portal-admin.streambet.dev/api/transactions/api/payments";
-    public String basePathSearch = "/search";
-    public String basePathReject = "/reject";
 
     @Test
     public void rejectLastPaymentPortalAdmin () {
-        String token = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjlGdTdzQXlKZ21WZkgycmJWQkktcSJ9.eyJnaXZlbl9uYW1lIjoiRXVnZW5lIiwiZmFtaWx5X25hbWUiOiJNaWhheWxvdiIsIm5pY2tuYW1lIjoibWloYXlsb3Zza2l5ZXVnZW55IiwibmFtZSI6IkV1Z2VuZSBNaWhheWxvdiIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS0vQU9oMTRHZ3VkcVY5bVVoWW1TWDZhRkNnbi1WZU4yV0lhNmpxRU9UdmJjUlMiLCJsb2NhbGUiOiJydSIsInVwZGF0ZWRfYXQiOiIyMDIwLTA4LTA3VDEzOjI3OjMxLjA2NVoiLCJlbWFpbCI6Im1paGF5bG92c2tpeWV1Z2VueUBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6Ly9zdHJlYW1iZXQuZXUuYXV0aDAuY29tLyIsInN1YiI6Imdvb2dsZS1vYXV0aDJ8MTAyNDUwODA4Njg2NTU4NzQyNjA5IiwiYXVkIjoiRnFXaklyWmxUdVdLdWRxRHh1eG13YUdIV3VpQm53aTMiLCJpYXQiOjE1OTY4MDY4NTIsImV4cCI6MTU5Njg0Mjg1Miwibm9uY2UiOiJUVXRIV1dOeGJWQXlRVlZzUTBaa1pUTjBhMUJ3T1hCcmRHVjVNV0p5YlhOUGJHNXdZbVZoTVRock9BPT0ifQ.Ia-5cs9teqEsyKuHUkY2CfeG0YwDIjdg6fmksgmRoUVZg0tWfaa6sm7JUxp1ligCyHs5GhSstl2mWZdSJ80J96JGa3jEfwATIq_lRr1Mc_PXeygu5oObwhq_aLSOpV94lLHxtbgQac9wCPQ8onWYVxI6aubFzHUCS8ho2svOpzYhahHU0oIoILQ7h8Wm2o5HRa7rVbvZuD6BY197WxLTbNFiqvEDpqV9ALv2asH2paMTfgjOx_uy70kDXdZID__dxOpqzF3gTNYZ_YYnCYsro4vv-_KPDeHwAiNpi5V-coYVH-ov3NECqniM6WfxgSj1OhGOuRIW7Y1sazl_nkM3Zw";
+        String token = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjlGdTdzQXlKZ21WZkgycmJWQkktcSJ9.eyJuaWNrbmFtZSI6ImRlbmlza3VkaW40MTEiLCJuYW1lIjoiZGVuaXNrdWRpbjQxMUBnbWFpbC5jb20iLCJwaWN0dXJlIjoiaHR0cHM6Ly9zLmdyYXZhdGFyLmNvbS9hdmF0YXIvOWM2ODc5MjBlNzJjOWU5MzBjY2RjYTQwY2UyZjA0YmM_cz00ODAmcj1wZyZkPWh0dHBzJTNBJTJGJTJGY2RuLmF1dGgwLmNvbSUyRmF2YXRhcnMlMkZkZS5wbmciLCJ1cGRhdGVkX2F0IjoiMjAyMC0wOC0xMFQwODowOTowMy4zOThaIiwiZW1haWwiOiJkZW5pc2t1ZGluNDExQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiaXNzIjoiaHR0cHM6Ly9zdHJlYW1iZXQuZXUuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDVmMGQ5OTc1NmIyNTYxMDAxOTE3NTIyNSIsImF1ZCI6IkZxV2pJclpsVHVXS3VkcUR4dXhtd2FHSFd1aUJud2kzIiwiaWF0IjoxNTk3MDQ2OTQ0LCJleHAiOjE1OTcwODI5NDQsIm5vbmNlIjoiU0VWcFdtSXhiMDQzTW5KRGVYZDJhblpqUTNKUFZuNXFieTFpWm5kS01YaFhWamR4YjFBeGIwVXpaQT09In0.HGMDAu5sCx4SooXRzF_UdlkFdhk9IgOl6fHgA4dwwZ-G5E2K5d_ORrfBuN1VRrTB3vunre9BAX4xKdzVk5BBIiq96VhBTXuYWQhnqunpfUrE4lG5pWJDdJJJxiuPwb4RvrLa1gtBn5GdKCIIyk5YNlM69vaAdnFqMUA5RpYall0dKsSnP0gRCrJKr8U4i5tPZYT7Ir5KJA5rQMcjppOAra05KioWXZ1zHWJniyPDUN3_u41MrSzCF0a153r0vgMdF6H1T9haJukeesmAGjVF5JwYQ5ibJnzh6e5xHlKvx9FCcooGoF3nhUd-WdSFWCT-wZrtW6QEHsUFLDsn1sr9kQ";
         String paymentsBody = "{\"where\":{\"direction\":\"WITHDRAWAL\",\"merchant\":\"PIASTRIX\",\"status\":\"PENDING\"},\"order\":{\"updatedAt\":\"DESC\"},\"skip\":0,\"take\":1}";
         String rejectBody = "{\"userComment\": \"UserComment\", \"internalComment\": \"InternalComment\"}";
+        String baseUrlPayments = "https://portal-admin.streambet.io/api/transactions/api/payments";
+        String basePathSearch = "/search";
+        String basePathReject = "/reject";
 
         try {
             Response response = RestAssured
@@ -47,5 +47,10 @@ public class RestAssuredClass {
             e.printStackTrace();
             assert false;
         }
+    }
+
+    @Test
+    public void runAuth0Authorization () {
+        
     }
 }
