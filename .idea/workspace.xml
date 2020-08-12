@@ -24,7 +24,6 @@
   <component name="ChangeListManager">
     <list default="true" id="88beab37-3ecb-4ce2-8aa9-28b9b9842262" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/RestAssuredClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/RestAssuredClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +70,7 @@
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DepositTest">
+  <component name="RunManager" selected="JUnit.TestDocker.runTestDocker">
     <configuration name="Run" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="tests.Run" />
       <module name="StreambetNew" />
@@ -115,7 +114,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RestAssuredClass.rejectLastPaymentPortalAdmin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestDocker.runTestDocker" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="StreambetNew" />
       <extension name="coverage">
         <pattern>
@@ -124,8 +123,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.RestAssuredClass" />
-      <option name="METHOD_NAME" value="rejectLastPaymentPortalAdmin" />
+      <option name="MAIN_CLASS_NAME" value="tests.TestDocker" />
+      <option name="METHOD_NAME" value="runTestDocker" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -148,11 +147,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestDocker.runTestDocker" />
         <item itemvalue="JUnit.DepositTest" />
         <item itemvalue="JUnit.WithdrawalTest" />
         <item itemvalue="JUnit.ProfileTests" />
         <item itemvalue="Application.Run" />
-        <item itemvalue="JUnit.RestAssuredClass.rejectLastPaymentPortalAdmin" />
       </list>
     </recent_temporary>
   </component>
@@ -223,22 +222,22 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="743" y="311" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1596957602020" />
-    <state width="1874" height="263" key="GridCell.Tab.0.bottom" timestamp="1597219002645">
+    <state width="914" height="263" key="GridCell.Tab.0.bottom" timestamp="1597225592564">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="263" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1597219002645" />
-    <state width="1874" height="263" key="GridCell.Tab.0.center" timestamp="1597219002645">
+    <state width="914" height="263" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1597225592564" />
+    <state width="914" height="263" key="GridCell.Tab.0.center" timestamp="1597225592563">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="263" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1597219002645" />
-    <state width="1874" height="263" key="GridCell.Tab.0.left" timestamp="1597219002645">
+    <state width="914" height="263" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1597225592563" />
+    <state width="914" height="263" key="GridCell.Tab.0.left" timestamp="1597225592563">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="263" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1597219002645" />
-    <state width="1874" height="263" key="GridCell.Tab.0.right" timestamp="1597219002645">
+    <state width="914" height="263" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1597225592563" />
+    <state width="914" height="263" key="GridCell.Tab.0.right" timestamp="1597225592564">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="263" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1597219002645" />
+    <state width="914" height="263" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1597225592564" />
     <state width="1874" height="59" key="GridCell.Tab.1.bottom" timestamp="1596809777651">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
