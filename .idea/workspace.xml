@@ -24,17 +24,27 @@
   <component name="ChangeListManager">
     <list default="true" id="88beab37-3ecb-4ce2-8aa9-28b9b9842262" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/support/ScreenshotBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/support/ScreenshotBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/DepositPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/DepositPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/MainPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/ProfilePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ProfilePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/RegistrationPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/WithdrawalPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/WithdrawalPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/support/Domains.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/support/Domains.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/support/TestSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/support/TestSettings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/DepositTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/DepositTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LoginTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/MainPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/MainPageTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/ProfileTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/ProfileTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/RegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/RegistrationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/Run.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/Run.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/TestDocker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TestDocker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/TestDocker.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/WithdrawalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/WithdrawalTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/MainPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/MainPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/ProfilePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/ProfilePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/RegistrationPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/RegistrationPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/support/Domains.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/support/Domains.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/support/TestSettings.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/support/TestSettings.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/LoginTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/LoginTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/MainPageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/MainPageTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +107,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DepositTest.runValidationCheck" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StreambetNew" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.DepositTest" />
+      <option name="METHOD_NAME" value="runValidationCheck" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LoginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="StreambetNew" />
       <extension name="coverage">
@@ -128,7 +154,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestDocker" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MainPageTest.MainPage_Positive" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="StreambetNew" />
       <extension name="coverage">
         <pattern>
@@ -137,23 +163,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.TestDocker" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestDocker.runTestDocker" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="StreambetNew" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.TestDocker" />
-      <option name="METHOD_NAME" value="runTestDocker" />
+      <option name="MAIN_CLASS_NAME" value="tests.MainPageTest" />
+      <option name="METHOD_NAME" value="MainPage_Positive" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -162,10 +173,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.LoginTest.LoginTest_Positive" />
-        <item itemvalue="JUnit.TestDocker" />
-        <item itemvalue="JUnit.TestDocker.runTestDocker" />
-        <item itemvalue="JUnit.LoginTest" />
+        <item itemvalue="JUnit.DepositTest.runValidationCheck" />
         <item itemvalue="JUnit.DepositTest" />
+        <item itemvalue="JUnit.LoginTest" />
+        <item itemvalue="JUnit.MainPageTest.MainPage_Positive" />
       </list>
     </recent_temporary>
   </component>
@@ -236,22 +247,22 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="743" y="311" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1596957602020" />
-    <state width="1874" height="326" key="GridCell.Tab.0.bottom" timestamp="1597238330355">
+    <state width="1874" height="486" key="GridCell.Tab.0.bottom" timestamp="1597249240496">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="326" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1597238330355" />
-    <state width="1874" height="326" key="GridCell.Tab.0.center" timestamp="1597238330354">
+    <state width="1874" height="486" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1597249240496" />
+    <state width="1874" height="486" key="GridCell.Tab.0.center" timestamp="1597249240496">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="326" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1597238330354" />
-    <state width="1874" height="326" key="GridCell.Tab.0.left" timestamp="1597238330354">
+    <state width="1874" height="486" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1597249240496" />
+    <state width="1874" height="486" key="GridCell.Tab.0.left" timestamp="1597249240495">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="326" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1597238330354" />
-    <state width="1874" height="326" key="GridCell.Tab.0.right" timestamp="1597238330355">
+    <state width="1874" height="486" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1597249240495" />
+    <state width="1874" height="486" key="GridCell.Tab.0.right" timestamp="1597249240496">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="326" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1597238330355" />
+    <state width="1874" height="486" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1597249240496" />
     <state width="1874" height="59" key="GridCell.Tab.1.bottom" timestamp="1596809777651">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>

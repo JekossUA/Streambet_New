@@ -1,15 +1,22 @@
 package tests;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 import pages.LoginPage;
 import support.*;
 
 public class LoginTest extends LoginPage implements Domains {
 
+//    @Before
+//    public void setWinSize () throws Exception {
+//        TestSettings testSettings = new TestSettings();
+//        testSettings.setWindowSize(testSettings.chromeDriver);
+//    }
+
     @Test
     public void LoginTest_Positive() throws Exception  {
         TestSettings testSettings = new TestSettings();
-//        testSettings.runMaximizeWindow();
         try {
             testSettings.chromeDriver.get(LOGIN);
             waitElementXpath(testSettings.chromeWaiter, confirmButton);
@@ -17,7 +24,7 @@ public class LoginTest extends LoginPage implements Domains {
             setElementById(testSettings.chromeDriver, passwordId, "12345678");
             getElementXpath(testSettings.chromeDriver, confirmButton).click();
             waitElementXpath(testSettings.chromeWaiter, footer);
-            if (getElementXpath(testSettings.chromeDriver, confirmButton) != null) {
+            if (getElementXpath(testSettings.chromeDriver, footer) != null) {
                 System.out.println("LoginTest_Positive passed");
             } else  {
                 System.out.println("LoginTest_Positive failed");
@@ -32,7 +39,6 @@ public class LoginTest extends LoginPage implements Domains {
     @Test
     public void LoginTest_Negative_EmptyLogin() throws Exception {
         TestSettings testSettings = new TestSettings();
-        testSettings.runMaximizeWindow();
         try {
             testSettings.chromeDriver.get(LOGIN);
             waitElementXpath(testSettings.chromeWaiter, confirmButton);
@@ -55,7 +61,6 @@ public class LoginTest extends LoginPage implements Domains {
     @Test
     public void LoginTest_Negative_EmptyPassword() throws Exception {
         TestSettings testSettings = new TestSettings();
-        testSettings.runMaximizeWindow();
         try {
             testSettings.chromeDriver.get(LOGIN);
             waitElementXpath(testSettings.chromeWaiter, confirmButton);
@@ -77,7 +82,6 @@ public class LoginTest extends LoginPage implements Domains {
     @Test
     public void LoginTest_Negative_EmptyFields() throws Exception {
         TestSettings testSettings = new TestSettings();
-        testSettings.runMaximizeWindow();
         try {
             testSettings.chromeDriver.get(LOGIN);
             waitElementXpath(testSettings.chromeWaiter, confirmButton);
@@ -102,7 +106,6 @@ public class LoginTest extends LoginPage implements Domains {
     @Test
     public void LoginTest_Negative_WrongLogin() throws Exception {
         TestSettings testSettings = new TestSettings();
-        testSettings.runMaximizeWindow();
         try {
             testSettings.chromeDriver.get(LOGIN);
             waitElementXpath(testSettings.chromeWaiter, confirmButton);
@@ -125,7 +128,6 @@ public class LoginTest extends LoginPage implements Domains {
     @Test
     public void LoginTest_Negative_WrongPassword() throws Exception {
         TestSettings testSettings = new TestSettings();
-        testSettings.runMaximizeWindow();
         try{
             testSettings.chromeDriver.get(LOGIN);
             waitElementXpath(testSettings.chromeWaiter, confirmButton);
@@ -144,6 +146,12 @@ public class LoginTest extends LoginPage implements Domains {
             testSettings.runErrorCatch(testSettings.chromeDriver, "LoginTest_Negative_WrongPassword", e);
             testSettings.chromeDriver.close();
         }
+    }
+
+    @After
+    public void closeDriver () throws Exception {
+        TestSettings testSettings = new TestSettings();
+        testSettings.chromeDriver.close();
     }
 
     public void runLoginTests () throws Exception {

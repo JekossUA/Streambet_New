@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -17,16 +18,16 @@ public class DepositPage {
    public String correctAmountRub = "300";
    public String correctAccountPhone = "380639882203";
 
-    public void setElementByName (ChromeDriver chromeDriver, String fieldName , String inputValue) {
+    public void setElementByName (RemoteWebDriver chromeDriver, String fieldName , String inputValue) {
         chromeDriver.findElement(By.name(fieldName)).sendKeys(inputValue);
     }
-    public WebElement getElementByName(ChromeDriver chromeDriver, String fieldName) {
+    public WebElement getElementByName(RemoteWebDriver chromeDriver, String fieldName) {
         return chromeDriver.findElement(By.name(fieldName));
     }
-    public WebElement getElementsXpath(ChromeDriver chromeDriver, String xpath, int index) {
+    public WebElement getElementsXpath(RemoteWebDriver chromeDriver, String xpath, int index) {
         return chromeDriver.findElements(By.xpath(xpath)).get(index);
     }
-    public WebElement getElementXpath(ChromeDriver chromeDriver, String xpath) {
+    public WebElement getElementXpath(RemoteWebDriver chromeDriver, String xpath) {
         return chromeDriver.findElement(By.xpath(xpath));
     }
 
