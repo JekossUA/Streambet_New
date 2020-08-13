@@ -1,6 +1,5 @@
 package tests;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.Keys;
@@ -16,7 +15,6 @@ public class DepositTest extends DepositPage implements Domains {
     TestSettings testSettings = new TestSettings();
     LoginPage loginPage = new LoginPage();
     ProfilePage profilePage = new ProfilePage();
-
     public DepositTest() throws MalformedURLException {
     }
 
@@ -124,9 +122,4 @@ public class DepositTest extends DepositPage implements Domains {
         }
     }
 
-    @After
-    public void closeDriver () throws Exception {
-        TestSettings testSettings = new TestSettings();
-        testSettings.chromeDriver.close();
-    }
 }

@@ -330,18 +330,4 @@ public class RegistrationTest extends RegistrationPage implements Domains {
         }
     }
 
-    public void runRegistrationTests () throws Exception {
-        RegistrationTest_Positive();
-        RegistrationTest_WrongLogin();
-        RegistrationTest_HugeLogin();
-        RegistrationTest_ExistingEmail();
-        RegistrationTest_WrongEmail();
-        RegistrationTest_EmptyEmail();
-        RegistrationTest_WrongPass();
-        RegistrationTest_EmptyPass();
-        RegistrationTest_WrongRepeatPass();
-        RegistrationTest_EmptyRepeatPass();
-        RegistrationTest_CheckboxMissed();
-        RegistrationTest_AllFieldsMissed();
-    }
 }

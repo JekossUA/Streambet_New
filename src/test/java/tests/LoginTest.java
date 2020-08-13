@@ -1,12 +1,14 @@
 package tests;
 
 import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 import pages.LoginPage;
 import support.*;
 
 
 public class LoginTest extends LoginPage implements Domains {
+
     @Test
     public void LoginTest_Positive() throws Exception  {
         TestSettings testSettings = new TestSettings();
@@ -147,13 +149,5 @@ public class LoginTest extends LoginPage implements Domains {
         testSettings.chromeDriver.close();
     }
 
-    public void runLoginTests () throws Exception {
-        LoginTest_Positive();
-        LoginTest_Negative_EmptyLogin();
-        LoginTest_Negative_EmptyPassword();
-        LoginTest_Negative_EmptyFields();
-        LoginTest_Negative_WrongLogin();
-        LoginTest_Negative_WrongPassword();
-    }
 
 }

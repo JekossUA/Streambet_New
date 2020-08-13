@@ -16,22 +16,17 @@ public class TestSettings implements Domains {
         ChromeOptions chromeOptions = new ChromeOptions();
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver_84");
 
-        URL gamelan = new URL(dockerHost);
-        chromeOptions.addArguments("incognito","disable-extensions");
-        return new RemoteWebDriver(gamelan, chromeOptions);
+        URL remoteUrl = new URL(dockerHost);
+        chromeOptions.addArguments("--no-sandbox", "--start-maximized", "--disable-dev-shm-usage");
+        return new RemoteWebDriver(remoteUrl, chromeOptions);
     }
-    public RemoteWebDriver chromeDriver = chromeDriver ();
+    public RemoteWebDriver chromeDriver = chromeDriver();
     public WebDriverWait chromeWaiter = new WebDriverWait(chromeDriver, 5);
     public ScreenshotBuilder screenshotBuilder = new ScreenshotBuilder();
-
-    public void setWindowSize (RemoteWebDriver driver) {
-        driver.manage().window().maximize();
-    }
 
     public void runErrorCatch (RemoteWebDriver driver, String testName, Exception exception) {
         screenshotBuilder.createScreenshot(testName,  chromeDriver);
         System.out.println(exception);
-        driver.close();
         assert false;
     }
 }

@@ -1,11 +1,15 @@
-version: "3"
+version: "3.8"
 
 services:
   chrome:
-    image: selenium/standalone-chrome
+    container_name: "SB_Container_Chrome"
+    image: selenium/standalone-chrome-debug
+    build:
+      context: .
+      shm_size: '2gb'
     ports:
-      - 4444:4444
-#    environment:
-#      - SCREEN_WIDTH=1920
-#      - SCREEN_HEIGHT=1080
-#      - SCREEN_DEPTH=24
+      - "4444:4444"
+    stdin_open: true
+    environment:
+      - SCREEN_WIDTH=1920
+      - SCREEN_HEIGHT=1080

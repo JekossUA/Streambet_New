@@ -1,7 +1,6 @@
 package tests;
 
-import org.junit.After;
-import org.junit.AfterClass;
+import org.junit.Before;
 import org.junit.Test;
 import pages.MainPage;
 import support.Domains;
@@ -10,17 +9,23 @@ import support.TestSettings;
 import java.net.MalformedURLException;
 
 public class MainPageTest extends MainPage implements Domains {
-    TestSettings testSettings = new TestSettings();
 
+    TestSettings testSettings = new TestSettings();
     public MainPageTest() throws MalformedURLException {
     }
-
-    @Test
-    public void MainPage_Positive() throws MalformedURLException {
-        TestSettings testSettings = new TestSettings();
+    @Before
+    public void runBefore () {
         try {
             testSettings.chromeDriver.get(MAINPAGE);
-
+            waitElementXpath(testSettings.chromeWaiter, header);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    @Test
+    public void MainPage_Positive() {
+        try {
+//            testSettings.setWindowMaximize();
             waitElementXpath(testSettings.chromeWaiter, header);
             if (getElementXpath(testSettings.chromeDriver, header).isDisplayed()) {
                 System.out.println("header displayed!");
@@ -60,24 +65,14 @@ public class MainPageTest extends MainPage implements Domains {
                 System.out.println("betLineContainer don't display");
                 testSettings.screenshotBuilder.createScreenshot("betLineContainer", testSettings.chromeDriver);
             }
-
-            waitElementXpath(testSettings.chromeWaiter, sideBar);
-            if (getElementXpath(testSettings.chromeDriver, sideBar).isDisplayed()) {
-                System.out.println("sideBar displayed!");
-            } else {
-                System.out.println("sideBar don't display");
-                testSettings.screenshotBuilder.createScreenshot("sideBar", testSettings.chromeDriver);
-            }
             testSettings.chromeDriver.close();
         } catch (Exception e) {
             testSettings.runErrorCatch(testSettings.chromeDriver, "MainPage_Positive", e);
         }
     }
     @Test
-    public void MainPage_NavButtons_Streams() throws MalformedURLException {
-        TestSettings testSettings = new TestSettings();
+    public void MainPage_NavButtons_Streams() {
         try {
-            testSettings.chromeDriver.get(MAINPAGE);
             waitElementXpath(testSettings.chromeWaiter, navigationButtons);
             getElementsContainerXpath(testSettings.chromeDriver, navigationButtons, 1).click();
             waitElementXpath(testSettings.chromeWaiter, streamPage);
@@ -95,10 +90,8 @@ public class MainPageTest extends MainPage implements Domains {
         }
     }
     @Test
-    public void MainPage_NavButtons_Sport() throws MalformedURLException {
-        TestSettings testSettings = new TestSettings();
+    public void MainPage_NavButtons_Sport() {
         try {
-            testSettings.chromeDriver.get(MAINPAGE);
             waitElementXpath(testSettings.chromeWaiter, navigationButtons);
             getElementsContainerXpath(testSettings.chromeDriver, navigationButtons, 2).click();
             waitElementXpath(testSettings.chromeWaiter, sportPageSlider);
@@ -116,10 +109,8 @@ public class MainPageTest extends MainPage implements Domains {
         }
     }
     @Test
-    public void MainPage_NavButtons_Slot() throws MalformedURLException {
-        TestSettings testSettings = new TestSettings();
+    public void MainPage_NavButtons_Slot() {
         try {
-            testSettings.chromeDriver.get(MAINPAGE);
             waitElementXpath(testSettings.chromeWaiter, navigationButtons);
             getElementsContainerXpath(testSettings.chromeDriver, navigationButtons, 3).click();
             waitElementXpath(testSettings.chromeWaiter, slotsPage);
@@ -137,12 +128,10 @@ public class MainPageTest extends MainPage implements Domains {
         }
     }
     @Test
-    public void MainPage_GameFilters() throws MalformedURLException {
-        TestSettings testSettings = new TestSettings();
+    public void MainPage_GameFilters() {
         try {
-            testSettings.chromeDriver.get(MAINPAGE);
             waitElementXpath(testSettings.chromeWaiter, gameFilters);
-            for (int i = 0; i <= 13; i++) {
+            for (int i = 0; i <= 15; i++) {
                 getElementsContainerXpath(testSettings.chromeDriver, gameFilters, i).click();
                 getElementsContainerXpath(testSettings.chromeDriver, gameFilters, i).click();
                 waitElementXpath(testSettings.chromeWaiter, betLineContainer);
@@ -159,10 +148,8 @@ public class MainPageTest extends MainPage implements Domains {
         }
     }
     @Test
-    public void MainPage_BetLineFilters() throws MalformedURLException {
-        TestSettings testSettings = new TestSettings();
+    public void MainPage_BetLineFilters() {
         try {
-            testSettings.chromeDriver.get(MAINPAGE);
             waitElementXpath(testSettings.chromeWaiter, betLineContainer);
             getElementXpath(testSettings.chromeDriver, liveMatchesFilter).click();
             waitElementXpath(testSettings.chromeWaiter, betLineContainer);
@@ -218,13 +205,11 @@ public class MainPageTest extends MainPage implements Domains {
         }
     }
     @Test
-    public void MainPage_LiveMatches_WatchButton() throws MalformedURLException {
-        TestSettings testSettings = new TestSettings();
+    public void MainPage_LiveMatches_WatchButton() {
         try {
-            testSettings.chromeDriver.get(MAINPAGE);
             waitElementXpath(testSettings.chromeWaiter, firstLiveStream);
             getElementXpath(testSettings.chromeDriver, liveMatchesFilter).click();
-            waitElementXpath(testSettings.chromeWaiter, betLineContainer);
+            waitElementXpath(testSettings.chromeWaiter, watchButton);
             getElementXpath(testSettings.chromeDriver, watchButton).click();
             waitElementXpath(testSettings.chromeWaiter, iframePrematch);
             if (getElementXpath(testSettings.chromeDriver, iframePrematch).isDisplayed()) {
@@ -235,14 +220,14 @@ public class MainPageTest extends MainPage implements Domains {
             }
             testSettings.chromeDriver.close();
         } catch (Exception e) {
+            e.printStackTrace();
             testSettings.runErrorCatch(testSettings.chromeDriver, "MainPage_LiveMatches_WatchButton", e);
         }
     }
     @Test
-    public void MainPage_LiveMatches_SideButton() throws MalformedURLException {
-        TestSettings testSettings = new TestSettings();
+    public void MainPage_LiveMatches_SideButton() {
         try {
-            testSettings.chromeDriver.get(MAINPAGE);
+//            testSettings.setWindowMaximize();
             waitElementXpath(testSettings.chromeWaiter, firstLiveStream);
             getElementXpath(testSettings.chromeDriver, liveMatchesFilter).click();
             waitElementXpath(testSettings.chromeWaiter, liveSideButton);
@@ -257,12 +242,12 @@ public class MainPageTest extends MainPage implements Domains {
             testSettings.chromeDriver.close();
         } catch (Exception e) {
             testSettings.runErrorCatch(testSettings.chromeDriver, "MainPage_LiveMatches_SideButton", e);
+            e.printStackTrace();
         }
     }
     @Test
-    public void MainPage_Prematch_OpenBetLine() throws MalformedURLException {
+    public void MainPage_Prematch_OpenBetLine() {
         try {
-            testSettings.chromeDriver.get(MAINPAGE);
             waitElementXpath(testSettings.chromeWaiter, betLineContainer);
             getElementXpath(testSettings.chromeDriver, prematchFilter).click();
             waitElementXpath(testSettings.chromeWaiter, prematchSideButton);
@@ -279,30 +264,6 @@ public class MainPageTest extends MainPage implements Domains {
             testSettings.runErrorCatch(testSettings.chromeDriver, "MainPage_OpenBetLine", e);
             System.out.println(e);
         }
-    }
-
-    @After
-    public void closeDriver (){
-        TestSettings testSettings = null;
-        try {
-            testSettings = new TestSettings();
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        }
-        assert testSettings != null;
-        testSettings.chromeDriver.close();
-    }
-
-    public void runMainPageTests () throws Exception {
-        MainPage_Positive();
-        MainPage_NavButtons_Streams();
-        MainPage_NavButtons_Sport();
-        MainPage_NavButtons_Slot();
-        MainPage_GameFilters();
-        MainPage_BetLineFilters();
-        MainPage_LiveMatches_WatchButton();
-        MainPage_LiveMatches_SideButton();
-        MainPage_Prematch_OpenBetLine();
     }
 }
 
