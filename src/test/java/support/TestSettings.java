@@ -1,6 +1,5 @@
 package support;
 
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -18,7 +17,7 @@ public class TestSettings implements Domains {
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver_84");
 
         URL gamelan = new URL(dockerHost);
-        chromeOptions.addArguments("incognito","disable-extensions", "disable-infobars");
+        chromeOptions.addArguments("incognito","disable-extensions");
         return new RemoteWebDriver(gamelan, chromeOptions);
     }
     public RemoteWebDriver chromeDriver = chromeDriver ();
@@ -26,8 +25,7 @@ public class TestSettings implements Domains {
     public ScreenshotBuilder screenshotBuilder = new ScreenshotBuilder();
 
     public void setWindowSize (RemoteWebDriver driver) {
-        Dimension d = new Dimension(1900, 1080);
-        driver.manage().window().setSize(d);
+        driver.manage().window().maximize();
     }
 
     public void runErrorCatch (RemoteWebDriver driver, String testName, Exception exception) {

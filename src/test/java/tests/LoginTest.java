@@ -1,19 +1,12 @@
 package tests;
 
 import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 import pages.LoginPage;
 import support.*;
 
+
 public class LoginTest extends LoginPage implements Domains {
-
-//    @Before
-//    public void setWinSize () throws Exception {
-//        TestSettings testSettings = new TestSettings();
-//        testSettings.setWindowSize(testSettings.chromeDriver);
-//    }
-
     @Test
     public void LoginTest_Positive() throws Exception  {
         TestSettings testSettings = new TestSettings();

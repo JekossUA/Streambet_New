@@ -23,7 +23,6 @@ public class DepositTest extends DepositPage implements Domains {
     @Before
     public void runBeforeTest () {
         try{
-            testSettings.setWindowSize(testSettings.chromeDriver);
             testSettings.chromeDriver.get(LOGIN);
             loginPage.waitElementXpath(testSettings.chromeWaiter, loginPage.confirmButton);
             loginPage.setElementById(testSettings.chromeDriver, loginPage.loginId, "evgqa66@yopmail.com");
