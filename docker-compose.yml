@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  chrome:
+    container_name: "SB_Container_Chrome"
+    image: selenium/standalone-chrome-debug
+    build:
+      context: .
+      shm_size: '2gb'
+    ports:
+      - "4444:4444"
+    stdin_open: true
+    environment:
+      - SCREEN_WIDTH=1920
+      - SCREEN_HEIGHT=1080

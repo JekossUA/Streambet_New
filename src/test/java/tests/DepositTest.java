@@ -9,15 +9,18 @@ import pages.ProfilePage;
 import support.Domains;
 import support.TestSettings;
 
+import java.net.MalformedURLException;
+
 public class DepositTest extends DepositPage implements Domains {
     TestSettings testSettings = new TestSettings();
     LoginPage loginPage = new LoginPage();
     ProfilePage profilePage = new ProfilePage();
+    public DepositTest() throws MalformedURLException {
+    }
 
     @Before
     public void runBeforeTest () {
         try{
-            testSettings.runMaximizeWindow();
             testSettings.chromeDriver.get(LOGIN);
             loginPage.waitElementXpath(testSettings.chromeWaiter, loginPage.confirmButton);
             loginPage.setElementById(testSettings.chromeDriver, loginPage.loginId, "evgqa66@yopmail.com");
@@ -118,4 +121,5 @@ public class DepositTest extends DepositPage implements Domains {
             testSettings.chromeDriver.close();
         }
     }
+
 }

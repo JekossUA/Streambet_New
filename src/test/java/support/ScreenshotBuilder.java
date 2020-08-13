@@ -1,6 +1,7 @@
 package support;
 
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import ru.yandex.qatools.ashot.AShot;
 import ru.yandex.qatools.ashot.Screenshot;
 
@@ -11,7 +12,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class ScreenshotBuilder {
-    public void createScreenshot (String testName, ChromeDriver driver) {
+    public void createScreenshot (String testName, RemoteWebDriver driver) {
         String timeStamp;
         String screenshotPath = "src/main/screenshots/";
         try {

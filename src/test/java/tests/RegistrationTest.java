@@ -11,7 +11,6 @@ public class RegistrationTest extends RegistrationPage implements Domains {
     @Test
     public void RegistrationTest_Positive() throws Exception {
         TestSettings testSettings = new TestSettings();
-        testSettings.runMaximizeWindow();
         try {
             testSettings.chromeDriver.get(REGISTRATION);
             waitElementId(testSettings.chromeWaiter, loginId);
@@ -40,7 +39,6 @@ public class RegistrationTest extends RegistrationPage implements Domains {
     @Test //less then 3 symbols
     public void RegistrationTest_WrongLogin ()throws Exception {
         TestSettings testSettings = new TestSettings();
-        testSettings.runMaximizeWindow();
         try {
             testSettings.chromeDriver.get(REGISTRATION);
             waitElementId(testSettings.chromeWaiter, loginId);
@@ -68,7 +66,6 @@ public class RegistrationTest extends RegistrationPage implements Domains {
     @Test// more then 32 symbols
     public void RegistrationTest_HugeLogin ()throws Exception {
         TestSettings testSettings = new TestSettings();
-        testSettings.runMaximizeWindow();
         try {
             testSettings.chromeDriver.get(REGISTRATION);
             waitElementId(testSettings.chromeWaiter, loginId);
@@ -96,7 +93,6 @@ public class RegistrationTest extends RegistrationPage implements Domains {
     @Test
     public void RegistrationTest_ExistingEmail ()throws Exception {
         TestSettings testSettings = new TestSettings();
-        testSettings.runMaximizeWindow();
         try {
             testSettings.chromeDriver.get(REGISTRATION);
             waitElementId(testSettings.chromeWaiter, loginId);
@@ -125,7 +121,6 @@ public class RegistrationTest extends RegistrationPage implements Domains {
     @Test
     public void RegistrationTest_WrongEmail () throws Exception{
         TestSettings testSettings = new TestSettings();
-        testSettings.runMaximizeWindow();
         try {
             testSettings.chromeDriver.get(REGISTRATION);
             waitElementId(testSettings.chromeWaiter, loginId);
@@ -153,7 +148,6 @@ public class RegistrationTest extends RegistrationPage implements Domains {
     @Test
     public void RegistrationTest_EmptyEmail ()throws Exception {
         TestSettings testSettings = new TestSettings();
-        testSettings.runMaximizeWindow();
         try {
             testSettings.chromeDriver.get(REGISTRATION);
             waitElementId(testSettings.chromeWaiter, loginId);
@@ -180,7 +174,6 @@ public class RegistrationTest extends RegistrationPage implements Domains {
     @Test //contains less then 8 symbols
     public void RegistrationTest_WrongPass ()throws Exception {
         TestSettings testSettings = new TestSettings();
-        testSettings.runMaximizeWindow();
         try {
             testSettings.chromeDriver.get(REGISTRATION);
             waitElementId(testSettings.chromeWaiter, loginId);
@@ -208,7 +201,6 @@ public class RegistrationTest extends RegistrationPage implements Domains {
     @Test
     public void RegistrationTest_EmptyPass ()throws Exception {
         TestSettings testSettings = new TestSettings();
-        testSettings.runMaximizeWindow();
         try {
             testSettings.chromeDriver.get(REGISTRATION);
             waitElementId(testSettings.chromeWaiter, loginId);
@@ -236,7 +228,6 @@ public class RegistrationTest extends RegistrationPage implements Domains {
     @Test
     public void RegistrationTest_WrongRepeatPass ()throws Exception {
         TestSettings testSettings = new TestSettings();
-        testSettings.runMaximizeWindow();
         try {
             testSettings.chromeDriver.get(REGISTRATION);
             waitElementId(testSettings.chromeWaiter, loginId);
@@ -265,7 +256,6 @@ public class RegistrationTest extends RegistrationPage implements Domains {
     @Test
     public void RegistrationTest_EmptyRepeatPass ()throws Exception {
         TestSettings testSettings = new TestSettings();
-        testSettings.runMaximizeWindow();
         try {
             testSettings.chromeDriver.get(REGISTRATION);
             waitElementId(testSettings.chromeWaiter, loginId);
@@ -293,7 +283,6 @@ public class RegistrationTest extends RegistrationPage implements Domains {
     @Test
     public void RegistrationTest_CheckboxMissed () throws Exception{
         TestSettings testSettings = new TestSettings();
-        testSettings.runMaximizeWindow();
         try {
             testSettings.chromeDriver.get(REGISTRATION);
             waitElementId(testSettings.chromeWaiter, loginId);
@@ -320,7 +309,6 @@ public class RegistrationTest extends RegistrationPage implements Domains {
     @Test
     public void RegistrationTest_AllFieldsMissed ()throws Exception {
         TestSettings testSettings = new TestSettings();
-        testSettings.runMaximizeWindow();
         try {
             testSettings.chromeDriver.get(REGISTRATION);
             waitElementId(testSettings.chromeWaiter, loginId);
@@ -342,18 +330,4 @@ public class RegistrationTest extends RegistrationPage implements Domains {
         }
     }
 
-    public void runRegistrationTests () throws Exception {
-        RegistrationTest_Positive();
-        RegistrationTest_WrongLogin();
-        RegistrationTest_HugeLogin();
-        RegistrationTest_ExistingEmail();
-        RegistrationTest_WrongEmail();
-        RegistrationTest_EmptyEmail();
-        RegistrationTest_WrongPass();
-        RegistrationTest_EmptyPass();
-        RegistrationTest_WrongRepeatPass();
-        RegistrationTest_EmptyRepeatPass();
-        RegistrationTest_CheckboxMissed();
-        RegistrationTest_AllFieldsMissed();
-    }
 }

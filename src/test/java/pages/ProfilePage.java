@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -18,7 +19,7 @@ public class ProfilePage {
     public String resetPasswordButton = "/html/body/div[1]/div/div/section/div/div/div[2]/div/div[2]/div/div[5]/a";
 
     // get element
-    public WebElement getElementXpath (ChromeDriver driver, String element) {
+    public WebElement getElementXpath (RemoteWebDriver driver, String element) {
         return driver.findElement(By.xpath(element));
     }
 

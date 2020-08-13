@@ -10,13 +10,18 @@ import pages.WithdrawalPage;
 import support.Domains;
 import support.TestSettings;
 
+import java.net.MalformedURLException;
+
 public class WithdrawalTest extends WithdrawalPage implements Domains {
     TestSettings testSettings = new TestSettings();
     LoginPage loginPage = new LoginPage();
     ProfilePage profilePage = new ProfilePage();
+
+    public WithdrawalTest() throws MalformedURLException {
+    }
+
     @Before
     public void rubBeforeTest () {
-        testSettings.runMaximizeWindow();
         testSettings.chromeDriver.get(LOGIN);
         loginPage.waitElementXpath(testSettings.chromeWaiter, loginPage.confirmButton);
         loginPage.setElementById(testSettings.chromeDriver, loginPage.loginId, "evgqa66@yopmail.com");
@@ -77,7 +82,6 @@ public class WithdrawalTest extends WithdrawalPage implements Domains {
             testSettings.chromeDriver.close();
         }
     }
-
     @After
     public void rejectWithdrawals () {
 

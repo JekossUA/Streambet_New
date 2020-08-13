@@ -7,14 +7,18 @@ import pages.ProfilePage;
 import support.Domains;
 import support.TestSettings;
 
+import java.net.MalformedURLException;
+
 public class ProfileTests extends ProfilePage implements Domains {
     TestSettings testSettings = new TestSettings();
+
+    public ProfileTests() throws MalformedURLException {
+    }
 
     @Before
     public void runBeforeTest () {
         LoginPage loginPage = new LoginPage();
         try {
-            testSettings.runMaximizeWindow();
             testSettings.chromeDriver.get(LOGIN);
             loginPage.waitElementXpath(testSettings.chromeWaiter, loginPage.confirmButton);
             loginPage.setElementById(testSettings.chromeDriver, loginPage.loginId, "evgqa66@yopmail.com");

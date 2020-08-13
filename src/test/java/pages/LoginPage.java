@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -16,10 +17,10 @@ public class LoginPage {
     public String footer = "//*[@id=\"__next\"]/div/footer";
 
     //find elements
-    public void setElementById (ChromeDriver chromeDriver, String fieldId , String inputValue) {
+    public void setElementById (RemoteWebDriver chromeDriver, String fieldId , String inputValue) {
         chromeDriver.findElement(By.id(fieldId)).sendKeys(inputValue);
     }
-    public WebElement getElementXpath(ChromeDriver chromeDriver, String elementName) {
+    public WebElement getElementXpath(RemoteWebDriver chromeDriver, String elementName) {
         return chromeDriver.findElement(By.xpath(elementName));
     }
 

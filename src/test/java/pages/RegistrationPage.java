@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -26,15 +27,15 @@ public class RegistrationPage {
 
 
     //get registration fields
-    public void setElementById (ChromeDriver chromeDriver, String fieldId , String inputValue) {
+    public void setElementById (RemoteWebDriver chromeDriver, String fieldId , String inputValue) {
         chromeDriver.findElement(By.id(fieldId)).sendKeys(inputValue);
     }
-    public WebElement getElementXpath(ChromeDriver chromeDriver, String element) {
+    public WebElement getElementXpath(RemoteWebDriver chromeDriver, String element) {
         return chromeDriver.findElement(By.xpath(element));
     }
 
 
-    public void setElementDropdown (ChromeDriver chromeDriver,String elementId, String elementDropdownTag, Integer elementNumber) {
+    public void setElementDropdown (RemoteWebDriver chromeDriver,String elementId, String elementDropdownTag, Integer elementNumber) {
         WebElement elementDropdown = chromeDriver.findElement(By.id(elementId));
         elementDropdown.click();
         elementDropdown.findElements(By.tagName(elementDropdownTag)).get(elementNumber).click();
