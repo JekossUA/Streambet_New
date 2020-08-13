@@ -19,7 +19,7 @@ public class WithdrawalTest extends WithdrawalPage implements Domains {
 
     public WithdrawalTest() throws MalformedURLException {
     }
-//
+
     @Before
     public void rubBeforeTest () {
         testSettings.chromeDriver.get(LOGIN);
